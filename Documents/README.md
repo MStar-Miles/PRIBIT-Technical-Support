@@ -1,4 +1,4 @@
-## Documentation 
+# PRIBIT Connect Documentation 
 
 
-### [Gateway Configurations](Gateway-Configuration.md)
+## [Gateway Configurations](/Documents/Connect%20Gateway/Gateway%20Configurations.md)
