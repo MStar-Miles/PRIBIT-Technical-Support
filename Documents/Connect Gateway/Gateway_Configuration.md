@@ -1,4 +1,4 @@
-# PRIBIT VPN Gateway Configurations
+# PRIBIT VPN Gateway Configuration
 
 
 ```
