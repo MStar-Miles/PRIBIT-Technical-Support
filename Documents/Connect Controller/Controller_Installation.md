@@ -212,7 +212,45 @@
     2025-08-12 11:29:29 | systemd add connect controller service
     2025-08-12 11:29:32 | systemd add connect controller service SUCCESS
     =========================================================================================
-
+    2025-08-12 11:29:32 | openssl build
+    2025-08-12 11:37:57 | openssl configure make install                                     
+    2025-08-12 11:37:57 | openssl build SUCCESS
+    =========================================================================================
+    2025-08-12 11:37:57 | nginx build
+    2025-08-12 11:40:07 | nginx configure make install                                     
+    2025-08-12 11:40:07 | nginx make install build SUCCESS
+    =========================================================================================
+    2025-08-12 11:40:07 | redis-server add apt repository set
+    2025-08-12 11:40:08 | OFF-LINE mode do not need add redis-server apt repository set
+    =========================================================================================
+    2025-08-12 11:40:08 | redis-server install
+    2025-08-12 11:40:48 | redis-server installation                                     
+    2025-08-12 11:40:48 | redis-server install SUCCESS
+    =========================================================================================
+    2025-08-12 11:40:48 | redis-server add json plugin
+    2025-08-12 11:40:54 | redis-server add json plugin(librejson.so)                                     
+    2025-08-12 11:40:54 | redis-server add json plugin(librejson.so) SUCCESS
+    =========================================================================================
+    2025-08-12 11:40:54 | redis set
+    2025-08-12 11:41:09 | redis setting                                     
+    2025-08-12 11:41:09 | redis set SUCCESS
+    =========================================================================================
+    2025-08-12 11:41:09 | keepalived install
+    2025-08-12 11:41:23 | keepalived installation                                     
+    2025-08-12 11:41:23 | keepalived install SUCCESS
+    =========================================================================================
+    2025-08-12 11:41:23 | snmpd install
+    2025-08-12 11:41:33 | snmpd installation                                     
+    2025-08-12 11:41:33 | snmpd install SUCCESS
+    =========================================================================================
+    2025-08-12 11:41:33 | snmp install
+    2025-08-12 11:41:38 | snmp installation                                     
+    2025-08-12 11:41:38 | snmp install SUCCESS
+    =========================================================================================
+    2025-08-12 11:41:38 | bwm-ng install
+    2025-08-12 11:41:45 | bwm-ng installation                                     
+    2025-08-12 11:41:45 | bwm-ng install SUCCESS
+    =========================================================================================
     ```
     PCC 실행에 필요한 라이브러리들을 설치합니다.
 
@@ -220,21 +258,18 @@
 
     ```
     =========================================================================================
-    [2025-08-11T18:27:53,590] [INFO] PCC Start Setup......
-    [2025-08-11T18:28:03,581] [INFO] PCC Setup Completed......
-    2025-08-11 18:28:03 | make properties files SUCCESS
+    2025-08-12 11:41:46 | file access setting
+    2025-08-12 11:41:47 | file access setting SUCCESS
     =========================================================================================
-    2025-08-11 18:28:03 | remove install files
+    2025-08-12 11:41:48 | make properties files
+    2025-08-12 11:42:00 | making properties files                                     
+    2025-08-12 11:42:00 | make properties files SUCCESS
     =========================================================================================
-    2025-08-11 18:28:05 | remove install files SUCCESS
+    2025-08-12 11:42:00 | remove install files
+    2025-08-12 11:42:01 | remove install files SUCCESS
     =========================================================================================
-    2025-08-11 18:28:05 | Start PRIBIT Connect Controller
-    [2025-08-11T18:28:16,218] [INFO] PCC Legacy Table Setting Start......
-    [2025-08-11T18:28:16,511] [INFO] Already setting TB_EVDC and TB_EVDC_LEGACY SUCCESS
-    [2025-08-11T18:28:16,573] [INFO] Already setting TB_CORE_USER_ACT_LOG and TB_CORE_USER_ACT_LEGACY_LOG SUCCESS
-    [2025-08-11T18:28:16,574] [INFO] PCC Legacy Table Setting Completed......
-    =========================================================================================
-    2025-08-11 18:29:39 | The installation was completed normally.
+    2025-08-12 11:43:37 | Start PRIBIT Connect Controller                                     
+    2025-08-12 11:43:37 | The installation was completed normally.
     =========================================================================================
     OS Version              : Ubuntu 20.04.6 LTS
     OS Kernel Version       : 5.4.0-144-generic
@@ -258,26 +293,35 @@
     - 모든 모듈이 정상적으로 기동되었는지 확인합니다. 
 
     - Process 확인
-        - controller web
-        - controller api
-        - controller rpc 
-        - controller check    
+        - Web
+            - controller web
+            - controller api
+            - controller rpc 
+            - controller check 
 
-    ```
-    # ps -ef | grep controller
-    root       74231       1  0 Aug11 ?        00:04:20 /usr/bin/java -server -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms512M -Xmx1024M -XX:+UseParallelGC -jar /opt/connect/controller/web/controller-web-1.0.war
-    root       74380       1  0 Aug11 ?        00:03:41 /usr/bin/java -server -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms512M -Xmx1024M -XX:+UseParallelGC -jar /opt/connect/controller/api/controller-api-1.0.jar
-    root       74753       1  6 Aug11 ?        01:00:32 /usr/bin/java -server -Dpgct=connect-controller -Dpgct.home=/opt/connect/controller -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms2048m -Xmx3072m -jar /opt/connect/controller/rpc/controller-rpc-1.0.jar
-    root       74990       1  0 Aug11 ?        00:08:18 /usr/bin/java -Djdk.lang.Process.launchMechanism=vfork -jar /opt/connect/controller/check/controller-check-1.0.jar
-    ```
+        ```
+        # ps -ef | grep controller
+        root       74231       1  0 Aug11 ?        00:04:20 /usr/bin/java -server -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms512M -Xmx1024M -XX:+UseParallelGC -jar /opt/connect/controller/web/controller-web-1.0.war
+        root       74380       1  0 Aug11 ?        00:03:41 /usr/bin/java -server -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms512M -Xmx1024M -XX:+UseParallelGC -jar /opt/connect/controller/api/controller-api-1.0.jar
+        root       74753       1  6 Aug11 ?        01:00:32 /usr/bin/java -server -Dpgct=connect-controller -Dpgct.home=/opt/connect/controller -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms2048m -Xmx3072m -jar /opt/connect/controller/rpc/controller-rpc-1.0.jar
+        root       74990       1  0 Aug11 ?        00:08:18 /usr/bin/java -Djdk.lang.Process.launchMechanism=vfork -jar /opt/connect/controller/check/controller-check-1.0.jar
+        ```
 
-    - Port 확인 
+        - Database / Redis 
+
+        ```
+        # ps -ef | grep -E mariadb\|redis
+        redis     133681       1  0 11:41 ?        00:00:31 /usr/bin/redis-server 127.0.0.1:6379
+        mysql     136330       1  0 11:42 ?        00:00:19 /usr/sbin/mariadbd
+        ```
+
+    - Web Listen Port 확인 
         - TCP PORT 443: 
         - TCP PORT 5996: 
         - TCP PORT 5997: 
         - TCP PORT 5999: 
     ```
-    # # netstat -an | grep -E '443'\|'5996'\|'5997'\|'5999'       
+    # netstat -an | grep -E '443'\|'5996'\|'5997'\|'5999'       
     tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN     
     tcp        0      0 0.0.0.0:5996            0.0.0.0:*               LISTEN     
     tcp        0      0 0.0.0.0:5997            0.0.0.0:*               LISTEN  
@@ -290,10 +334,13 @@
     - PCC 가 정상적으로 기동되면 관리자 PC 에서 PCC Console 에 접속하여 라이선스를 적용합니다. 
     - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 및 라이선스 적용([라이선스 적용](/Documents/Connect%20Controller/License.md))은 관련 페이지를 참고하세요. 
 
+<br><br>
 
 ## Troubleshooting
 
 - [Troubleshooting](./TroubleShooting.md) 페이지를 참고하세요.
+
+<br><br>
 
 ## Support
 
