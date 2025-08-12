@@ -1,9 +1,6 @@
 # Troubleshooting Guide for PRIBIT Connect Controller Installation
 
-
-
-
-
+<br>
 
 ### "dpkg: error: dpkg frontend lock is locked by another process"
 
@@ -17,36 +14,10 @@ sudo rm /var/cache/apt/archives/lock
 sudo rm /var/lib/dpkg/lock* 
 ```
 
-***
+---
 
-## 1. Controller Not Powering On
-- Ensure the power cable is securely connected.
-- Verify the power outlet is functioning.
-- Check for any visible damage to the controller or cables.
 
-## 2. Controller Not Detected by System
-- Confirm USB or network cables are properly connected.
-- Try connecting to a different USB port or network switch.
-- Restart both the controller and the host system.
 
-## 3. Firmware Update Issues
-- Ensure you are using the latest firmware version.
-- Follow the official update instructions step by step.
-- If the update fails, restart the controller and try again.
-
-## 4. Communication Errors
-- Check network settings (IP address, subnet mask, gateway).
-- Disable any firewall or antivirus that may block communication.
-- Use the diagnostic tool to test connectivity.
-
-## 5. LED Indicators Not Working
-- Refer to the user manual for LED status meanings.
-- If all LEDs are off, check the power supply.
-- If LEDs show error codes, consult the error code table.
-
-## 6. Additional Support
-- Refer to the official documentation for detailed instructions.
-- Contact PRIBIT Technical Support with your controller’s serial number and a description of the issue.
 
 ---
 *This guide is for initial troubleshooting. For advanced issues, contact PRIBIT support.*

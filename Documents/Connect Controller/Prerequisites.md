@@ -1,11 +1,11 @@
 # Prerequisites: Required Environment for Pre-Installation
 
-PRIBIT Connect Controller 를 설치하기 위해 사전 요구되는 시스템 환경에 대한 가이드를 제공합니다. 
+PRIBIT Connect Controller 를 설치하기 위해 사전 요구되는 시스템 환경에 대한 안내를 제공합니다. 
 
 ## Hardware Requirements
 - Minimum 2 GHz dual-core processor
 - At least 4 GB RAM
-- 10 GB available disk space
+- Minimum 100 GB available disk space
 
 ## Operating System
 - Ubuntu 20.04.6 LTS or later
