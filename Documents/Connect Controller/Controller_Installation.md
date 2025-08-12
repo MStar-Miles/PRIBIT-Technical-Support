@@ -79,6 +79,7 @@
     =========================================================================================
     2025-08-11 08:24:01 | OS Auto Update Disable Setting SUCCESS
     =========================================================================================
+    (Continue)
     ```
     `./install_offline.sh` 명령어를 실행합니다. 
 
@@ -89,6 +90,7 @@
     Enter DBMS root new password: [패스워드 입력]
     Re-enter DBMS root new password: [패스워드 재입력]
     =========================================================================================
+    (Continue)
     ``` 
     Database 의 root 계정 패스워드를 입력합니다. 
     
@@ -100,6 +102,7 @@
     Create database User : pribit
     Enter pribit new password: [패스워드 입력]
     Re-enter pribit new password: [패스워드 입력]
+    (Continue)
     ```
     Database User 를 생성하고 계정의 패스워드를 입력합니다. 
 
@@ -112,6 +115,7 @@
     =========================================================================================
     Enter Allowed IP for PRIBIT Connect Controller : [접근 허용 IP Address]
     Re-enter Allowed IP for PRIBIT Connect Controller : [접근 허용 IP Address]
+    (Continue)
     ```
     설치되는 PRIBIT Connect Controller 관리자 페이지에  접속 허용 할 IP Address 정보를 입력합니다. 
     
@@ -249,6 +253,7 @@
     2025-08-12 11:41:45 | bwm-ng installation                                     
     2025-08-12 11:41:45 | bwm-ng install SUCCESS
     =========================================================================================
+    (Continue)
     ```
     PCC 실행에 필요한 라이브러리들을 설치합니다.
 
