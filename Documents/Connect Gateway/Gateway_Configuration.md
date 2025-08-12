@@ -1,16 +1,12 @@
 # PRIBIT VPN Gateway Configuration
 
-
-```
 💡Gateway Configuration 파일(server.conf)은 PRIBIT Connect VPN Gateway 서버 설정을 관리합니다. 
-이 페이지에서는 설정 파일 위치 및 주요 설정 값을 문서화합니다.
-```
+이 페이지에서는 설정 파일 위치 및 주요 설정 값을 안내합니다. 
 
 
 ⚙️ **설정 파일 위치**  
 
-**OS: Linux Ubuntu 20.04.6 LTS : _/var/connect/connect-vpn/conf/server.conf_** 
-
+OS: Linux Ubuntu 20.04.6 LTS : _**/var/connect/connect-vpn/conf/server.conf**_ 
 
 
 | **설정** | **설명** | **값** | **범위** |

@@ -61,7 +61,7 @@
 
     <br><br>
 
-    #### install_offline.sh
+    #### 설치 스크립트 install_offline.sh 실행
     ``` 
     # ./install_offline.sh 
     =========================================================================================
@@ -84,11 +84,7 @@
 
     <br><br>
 
-3. **PCC DataBase 설치**
-    - PCC 가 사용할 Database를 설치합니다. 
-    
-    <br><br>
-
+    #### PCC 가 사용할 Database 설치    
     ```    
     Enter DBMS root new password: [패스워드 입력]
     Re-enter DBMS root new password: [패스워드 재입력]
@@ -111,6 +107,7 @@
 
     <br><br>
     
+    #### PCC Console 에 접근 허용할 IP Address 설정
     ```
     =========================================================================================
     Enter Allowed IP for PRIBIT Connect Controller : [접근 허용 IP Address]
@@ -122,6 +119,7 @@
 
     <br><br>
 
+    #### PCC 에서 사용하는 라이브러리 설치 
     ```
     =========================================================================================
     2025-08-12 02:25:23 | apt-get update
@@ -256,6 +254,7 @@
 
     <br><br>
 
+    #### PCC 설치 마무리 
     ```
     =========================================================================================
     2025-08-12 11:41:46 | file access setting
@@ -288,7 +287,7 @@
 
     <br><br>
 
-4. **Connect Controller Process 확인**
+3. **PCC Process 확인**
     - 설치가 정상적으로 완료되면 PCC 가 자동으로 실행되도록 되어 있습니다.
     - 모든 모듈이 정상적으로 기동되었는지 확인합니다. 
 
@@ -330,7 +329,7 @@
 
     <br><br>
 
-5. **초기 설정 및 라이선스 적용**
+4. **초기 설정 및 라이선스 적용**
     - PCC 가 정상적으로 기동되면 관리자 PC 에서 PCC Console 에 접속하여 라이선스를 적용합니다. 
     - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 및 라이선스 적용([라이선스 적용](/Documents/Connect%20Controller/License.md))은 관련 페이지를 참고하세요. 
 

@@ -1,0 +1,2063 @@
+=========================================================================================
+Enter in-memory DB new AUTH: 
+Re-enter in-memory DB new AUTH:
+remove unused package
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Package 'tftpd-hpa' is not installed, so not removed
+Package 'nis' is not installed, so not removed
+Package 'tftpd' is not installed, so not removed
+Package 'libssl-dev' is not installed, so not removed
+Package 'atftpd' is not installed, so not removed
+The following packages were automatically installed and are no longer required:
+  git-man liberror-perl squashfs-tools
+Use 'apt autoremove' to remove them.
+The following packages will be REMOVED:
+  ftp* git* snapd* telnet* ubuntu-server* ubuntu-standard* ufw*
+0 upgraded, 0 newly installed, 7 to remove and 64 not upgraded.
+After this operation, 142 MB disk space will be freed.
+(Reading database ... 109114 files and directories currently installed.)
+Removing ubuntu-standard (1.450.2) ...
+Removing ftp (0.17-34.1) ...
+Removing ubuntu-server (1.450.2) ...
+Removing git (1:2.25.1-1ubuntu3.14) ...
+Removing snapd (2.63+20.04ubuntu0.1) ...
+Stopping snap.lxd.activate.service
+Stopping unit snap.lxd.activate.service
+Waiting until unit snap.lxd.activate.service is stopped [attempt 1]
+snap.lxd.activate.service is stopped.
+Stopping snap.lxd.daemon.service
+Stopping unit snap.lxd.daemon.service
+Waiting until unit snap.lxd.daemon.service is stopped [attempt 1]
+snap.lxd.daemon.service is stopped.
+Stopping snap.lxd.daemon.unix.socket
+Stopping unit snap.lxd.daemon.unix.socket
+Waiting until unit snap.lxd.daemon.unix.socket is stopped [attempt 1]
+snap.lxd.daemon.unix.socket is stopped.
+Warning: Stopping snapd.service, but it can still be activated by:
+  snapd.socket
+Removing telnet (0.17-41.2build1) ...
+Removing ufw (0.36-6ubuntu1) ...
+Skip stopping firewall: ufw (not enabled)
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for dbus (1.12.16-2ubuntu2.3) ...
+Processing triggers for mime-support (3.64ubuntu1) ...
+(Reading database ... 108161 files and directories currently installed.)
+Purging configuration files for snapd (2.63+20.04ubuntu0.1) ...
+Stopping snap.lxd.activate.service
+Stopping unit snap.lxd.activate.service
+Waiting until unit snap.lxd.activate.service is stopped [attempt 1]
+snap.lxd.activate.service is stopped.
+Removing snap.lxd.activate.service
+Stopping snap.lxd.daemon.service
+Stopping unit snap.lxd.daemon.service
+Waiting until unit snap.lxd.daemon.service is stopped [attempt 1]
+snap.lxd.daemon.service is stopped.
+Removing snap.lxd.daemon.service
+Stopping snap-core20-2434.mount
+Stopping unit snap-core20-2434.mount
+Waiting until unit snap-core20-2434.mount is stopped [attempt 1]
+snap-core20-2434.mount is stopped.
+Removing snap core20 and revision 2434
+Removing snap-core20-2434.mount
+Stopping snap-core20-2599.mount
+Stopping unit snap-core20-2599.mount
+Waiting until unit snap-core20-2599.mount is stopped [attempt 1]
+snap-core20-2599.mount is stopped.
+Removing snap core20 and revision 2599
+Removing snap-core20-2599.mount
+Stopping snap-lxd-29619.mount
+Stopping unit snap-lxd-29619.mount
+Waiting until unit snap-lxd-29619.mount is stopped [attempt 1]
+snap-lxd-29619.mount is stopped.
+Removing snap lxd and revision 29619
+Stopping unit snap.lxd.daemon.unix.socket
+Waiting until unit snap.lxd.daemon.unix.socket is stopped [attempt 1]
+snap.lxd.daemon.unix.socket is stopped.
+Stopping unit snap.lxd.daemon.unix.socket
+Warning: The unit file, source configuration file or drop-ins of snap.lxd.daemon.unix.socket changed on disk. Run 'systemctl daemon-reload' to reload units.
+Waiting until unit snap.lxd.daemon.unix.socket is stopped [attempt 1]
+snap.lxd.daemon.unix.socket is stopped.
+Removing snap-lxd-29619.mount
+Stopping snap-lxd-32662.mount
+Stopping unit snap-lxd-32662.mount
+Waiting until unit snap-lxd-32662.mount is stopped [attempt 1]
+snap-lxd-32662.mount is stopped.
+Removing snap lxd and revision 32662
+Removing snap-lxd-32662.mount
+Stopping snap-snapd-23545.mount
+Stopping unit snap-snapd-23545.mount
+Waiting until unit snap-snapd-23545.mount is stopped [attempt 1]
+snap-snapd-23545.mount is stopped.
+Removing snap snapd and revision 23545
+Removing snap-snapd-23545.mount
+Stopping snap-snapd-24792.mount
+Stopping unit snap-snapd-24792.mount
+Waiting until unit snap-snapd-24792.mount is stopped [attempt 1]
+snap-snapd-24792.mount is stopped.
+Removing snap snapd and revision 24792
+Removing snap-snapd-24792.mount
+Discarding preserved snap namespaces
+Final directory cleanup
+Removing extra snap-confine apparmor rules
+Removing snapd cache
+Removing snapd state
+Purging configuration files for telnet (0.17-41.2build1) ...
+Purging configuration files for ufw (0.36-6ubuntu1) ...
+Purging configuration files for git (1:2.25.1-1ubuntu3.14) ...
+Processing triggers for systemd (245.4-4ubuntu3.20) ...
+Processing triggers for rsyslog (8.2001.0-1ubuntu1.3) ...
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following packages will be REMOVED:
+  git-man liberror-perl squashfs-tools
+0 upgraded, 0 newly installed, 3 to remove and 64 not upgraded.
+After this operation, 2,250 kB disk space will be freed.
+(Reading database ... 108143 files and directories currently installed.)
+Removing git-man (1:2.25.1-1ubuntu3.14) ...
+Removing liberror-perl (0.17029-1) ...
+Removing squashfs-tools (1:4.4-1ubuntu0.3) ...
+Processing triggers for man-db (2.9.1-1) ...
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+install PacketGo Gateway
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+lsb-release is already the newest version (11.1.0ubuntu2).
+lsb-release set to manually installed.
+curl is already the newest version (7.68.0-1ubuntu2.25).
+gpg is already the newest version (2.2.19-3ubuntu2.5).
+gpg set to manually installed.
+0 upgraded, 0 newly installed, 0 to remove and 64 not upgraded.
+deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb focal main
+Get:1 https://packages.redis.io/deb focal InRelease [3,821 B]
+Get:2 https://packages.redis.io/deb focal/main all Packages [7,930 B]
+Get:3 https://packages.redis.io/deb focal/main amd64 Packages [40.0 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu focal InRelease   
+Hit:5 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:6 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:7 http://archive.ubuntu.com/ubuntu focal-security InRelease
+Fetched 51.7 kB in 5s (10.3 kB/s)
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+python3 is already the newest version (3.8.2-0ubuntu2).
+python3 set to manually installed.
+The following additional packages will be installed:
+  automake autotools-dev binutils binutils-common binutils-x86-64-linux-gnu ca-certificates-java cmake-data cpp cpp-9
+  cracklib-runtime dpkg-dev fakeroot fontconfig-config fonts-dejavu-core g++ g++-9 gcc gcc-9 gcc-9-base icu-devtools ipvsadm
+  java-common libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libavahi-client3
+  libavahi-common-data libavahi-common3 libbinutils libbotan-2-12 libc-dev-bin libc6-dev libcc1-0 libcrack2 libcroco3 libcrypt-dev
+  libcrypto++6 libctf-nobfd0 libctf0 libcups2 libdpkg-perl libexpat1-dev libfakeroot libfile-fcntllock-perl libfl-dev
+  libfontconfig1 libfontconfig1-dev libfreetype-dev libfreetype6-dev libgcc-9-dev libgd3 libgmpxx4ldbl libgomp1 libgpg-error-dev
+  libgraphite2-3 libharfbuzz0b libhiredis0.14 libice-dev libice6 libicu-dev libirs-export161 libisccfg-export163 libisl22 libitm1
+  libjbig-dev libjbig0 libjpeg-dev libjpeg-turbo8 libjpeg-turbo8-dev libjpeg8 libjpeg8-dev libjsoncpp1 liblcms2-2 liblsan0
+  libltdl-dev liblzma-dev libmpc3 libmysqlclient21 libnetfilter-queue1 libnfnetlink-dev libpcre16-3 libpcre32-3 libpcrecpp0v5
+  libpcsclite1 libpng-dev libpng-tools libpthread-stubs0-dev libpwquality-common libpwquality1 libquadmath0 librhash0
+  libsensors-config libsensors5 libsm-dev libsm6 libsnmp-base libsnmp35 libstdc++-9-dev libtiff-dev libtiff5 libtiffxx5 libtool
+  libtsan0 libtspi1 libubsan1 libvpx-dev libvpx6 libwebp6 libwolfssl24 libx11-dev libxau-dev libxcb1-dev libxdmcp-dev libxpm-dev
+  libxpm4 libxt-dev libxt6 linux-libc-dev m4 make manpages-dev mysql-common pkg-config python3-apparmor python3-libapparmor
+  python3-pyinotify redis-tools wamerican whois x11-common x11proto-core-dev x11proto-dev xorg-sgml-doctools xtrans-dev
+Suggested packages:
+  vim-addon-manager autoconf-archive gnu-standards autoconf-doc binutils-doc bison-doc cmake-doc ninja-build cpp-doc gcc-9-locales
+  debian-keyring mailx monit sqlite3 flex-doc g++-multilib g++-9-multilib gcc-9-doc gcc-multilib gdb gcc-doc gcc-9-multilib
+  gettext-doc autopoint libasprintf-dev libgettextpo-dev heartbeat ldirectord isc-dhcp-server-ldap policycoreutils default-jre
+  glibc-doc cups-common git bzr freetype2-doc libgcrypt20-doc libgd-tools gmp-doc libgmp10-doc libmpfr-dev libice-doc icu-doc
+  liblcms2-utils libtool-doc liblzma-doc pcscd lm-sensors libsm-doc snmp-mibs-downloader libstdc++-9-doc gfortran
+  | fortran95-compiler gcj-jdk libx11-doc libxcb-doc libxt-doc m4-doc make-doc iptables-persistent libnss-mdns fonts-dejavu-extra
+  fonts-ipafont-gothic fonts-ipafont-mincho fonts-wqy-microhei | fonts-wqy-zenhei fonts-indic python-pyinotify-doc snmptrapd
+The following NEW packages will be installed:
+  apparmor-utils autoconf automake autotools-dev binutils binutils-common binutils-x86-64-linux-gnu bison build-essential bwm-ng
+  ca-certificates-java cmake cmake-data cpp cpp-9 cracklib-runtime dpkg-dev fail2ban fakeroot flex fontconfig-config
+  fonts-dejavu-core g++ g++-9 gcc gcc-9 gcc-9-base gettext gperf icu-devtools ipvsadm isc-dhcp-server java-common keepalived
+  libalgorithm-diff-perl libalgorithm-diff-xs-perl libalgorithm-merge-perl libasan5 libatomic1 libavahi-client3
+  libavahi-common-data libavahi-common3 libbinutils libbotan-2-12 libbotan-2-dev libc-dev-bin libc6-dev libcc1-0 libcrack2
+  libcroco3 libcrypt-dev libcrypto++-dev libcrypto++6 libctf-nobfd0 libctf0 libcups2 libdpkg-perl libexpat1-dev libfakeroot
+  libfile-fcntllock-perl libfl-dev libfontconfig1 libfontconfig1-dev libfreetype-dev libfreetype6-dev libgcc-9-dev libgcrypt20-dev
+  libgd-dev libgd3 libgmp-dev libgmpxx4ldbl libgomp1 libgpg-error-dev libgraphite2-3 libharfbuzz0b libhiredis-dev libhiredis0.14
+  libice-dev libice6 libicu-dev libirs-export161 libisccfg-export163 libisl22 libitm1 libjbig-dev libjbig0 libjpeg-dev
+  libjpeg-turbo8 libjpeg-turbo8-dev libjpeg8 libjpeg8-dev libjsoncpp-dev libjsoncpp1 liblcms2-2 liblsan0 libltdl-dev liblzma-dev
+  libmpc3 libmysqlclient21 libnetfilter-queue-dev libnetfilter-queue1 libnfnetlink-dev libpam-pwquality libpcre16-3 libpcre3-dev
+  libpcre32-3 libpcrecpp0v5 libpcsclite1 libpng-dev libpng-tools libpthread-stubs0-dev libpwquality-common libpwquality1
+  libquadmath0 librhash0 libsensors-config libsensors5 libsm-dev libsm6 libsnmp-base libsnmp35 libstdc++-9-dev libtiff-dev libtiff5
+  libtiffxx5 libtool libtool-bin libtsan0 libtspi1 libtss2-tcti-tabrmd0 libubsan1 libvpx-dev libvpx6 libwebp6 libwolfssl-dev
+  libwolfssl24 libx11-dev libxau-dev libxcb1-dev libxdmcp-dev libxml2-dev libxpm-dev libxpm4 libxt-dev libxt6 linux-libc-dev m4
+  make manpages-dev mysql-common netfilter-persistent openjdk-17-jre-headless pkg-config python3-apparmor python3-libapparmor
+  python3-pyinotify rdate redis-server redis-tools shc snmp snmpd uuid-dev wamerican whois x11-common x11proto-core-dev
+  x11proto-dev xorg-sgml-doctools xtrans-dev zlib1g-dev
+0 upgraded, 171 newly installed, 0 to remove and 64 not upgraded.
+Need to get 138 MB of archives.
+After this operation, 618 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 m4 amd64 1.4.18-4 [199 kB]
+Get:2 https://packages.redis.io/deb focal/main amd64 redis-tools amd64 6:8.0.3-1rl1~focal1 [502 kB]
+Get:3 http://archive.ubuntu.com/ubuntu focal/main amd64 flex amd64 2.6.4-6.2 [317 kB]
+Get:4 http://archive.ubuntu.com/ubuntu focal/main amd64 mysql-common all 5.8+1.0.5ubuntu2 [7,496 B]
+Get:5 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libmysqlclient21 amd64 8.0.42-0ubuntu0.20.04.1 [1,303 kB]
+Get:6 https://packages.redis.io/deb focal/main amd64 redis-server amd64 6:8.0.3-1rl1~focal1 [4,577 kB]
+Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsensors-config all 1:3.6.0-2ubuntu1.1 [6,052 B]
+Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsensors5 amd64 1:3.6.0-2ubuntu1.1 [27.2 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsnmp-base all 5.8+dfsg-2ubuntu2.9 [205 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libsnmp35 amd64 5.8+dfsg-2ubuntu2.9 [978 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 keepalived amd64 1:2.0.19-2ubuntu0.2 [361 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 netfilter-persistent all 1.0.14ubuntu1 [7,268 B]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 snmpd amd64 5.8+dfsg-2ubuntu2.9 [56.4 kB]
+Get:14 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-libapparmor amd64 2.13.3-7ubuntu5.4 [26.9 kB]
+Get:15 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 python3-apparmor amd64 2.13.3-7ubuntu5.4 [79.8 kB]
+Get:16 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apparmor-utils amd64 2.13.3-7ubuntu5.4 [51.1 kB]
+Get:17 http://archive.ubuntu.com/ubuntu focal/main amd64 autoconf all 2.69-11.1 [321 kB]
+Get:18 http://archive.ubuntu.com/ubuntu focal/main amd64 autotools-dev all 20180224.1 [39.6 kB]
+Get:19 http://archive.ubuntu.com/ubuntu focal/main amd64 automake all 1:1.16.1-4ubuntu6 [522 kB]
+Get:20 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-common amd64 2.34-6ubuntu1.11 [208 kB]
+Get:21 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libbinutils amd64 2.34-6ubuntu1.11 [475 kB]
+Get:22 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf-nobfd0 amd64 2.34-6ubuntu1.11 [48.2 kB]
+Get:23 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libctf0 amd64 2.34-6ubuntu1.11 [46.6 kB]
+Get:24 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils-x86-64-linux-gnu amd64 2.34-6ubuntu1.11 [1,612 kB]
+Get:25 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 binutils amd64 2.34-6ubuntu1.11 [3,380 B]
+Get:26 http://archive.ubuntu.com/ubuntu focal/main amd64 bison amd64 2:3.5.1+dfsg-1 [657 kB]
+Get:27 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc-dev-bin amd64 2.31-0ubuntu9.18 [71.7 kB]
+Get:28 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 linux-libc-dev amd64 5.4.0-216.236 [1,111 kB]
+Get:29 http://archive.ubuntu.com/ubuntu focal/main amd64 libcrypt-dev amd64 1:4.4.10-10ubuntu4 [104 kB]
+Get:30 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libc6-dev amd64 2.31-0ubuntu9.18 [2,520 kB]
+Get:31 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9-base amd64 9.4.0-1ubuntu1~20.04.2 [18.9 kB]
+Get:32 http://archive.ubuntu.com/ubuntu focal/main amd64 libisl22 amd64 0.22.1-1 [592 kB]
+Get:33 http://archive.ubuntu.com/ubuntu focal/main amd64 libmpc3 amd64 1.1.0-1 [40.8 kB]
+Get:34 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cpp-9 amd64 9.4.0-1ubuntu1~20.04.2 [7,502 kB]
+Get:35 http://archive.ubuntu.com/ubuntu focal/main amd64 cpp amd64 4:9.3.0-1ubuntu2 [27.6 kB]                                       
+Get:36 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcc1-0 amd64 10.5.0-1ubuntu1~20.04 [48.8 kB]                     
+Get:37 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgomp1 amd64 10.5.0-1ubuntu1~20.04 [102 kB]                      
+Get:38 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libitm1 amd64 10.5.0-1ubuntu1~20.04 [26.2 kB]                      
+Get:39 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libatomic1 amd64 10.5.0-1ubuntu1~20.04 [9,284 B]                   
+Get:40 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libasan5 amd64 9.4.0-1ubuntu1~20.04.2 [2,752 kB]                   
+Get:41 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 liblsan0 amd64 10.5.0-1ubuntu1~20.04 [835 kB]                      
+Get:42 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtsan0 amd64 10.5.0-1ubuntu1~20.04 [2,016 kB]                    
+Get:43 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libubsan1 amd64 10.5.0-1ubuntu1~20.04 [785 kB]                     
+Get:44 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libquadmath0 amd64 10.5.0-1ubuntu1~20.04 [146 kB]                  
+Get:45 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcc-9-dev amd64 9.4.0-1ubuntu1~20.04.2 [2,359 kB]               
+Get:46 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 gcc-9 amd64 9.4.0-1ubuntu1~20.04.2 [8,276 kB]                      
+Get:47 http://archive.ubuntu.com/ubuntu focal/main amd64 gcc amd64 4:9.3.0-1ubuntu2 [5,208 B]                                       
+Get:48 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libstdc++-9-dev amd64 9.4.0-1ubuntu1~20.04.2 [1,722 kB]            
+Get:49 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 g++-9 amd64 9.4.0-1ubuntu1~20.04.2 [8,421 kB]                      
+Get:50 http://archive.ubuntu.com/ubuntu focal/main amd64 g++ amd64 4:9.3.0-1ubuntu2 [1,604 B]                                       
+Get:51 http://archive.ubuntu.com/ubuntu focal/main amd64 make amd64 4.2.1-1.2 [162 kB]                                              
+Get:52 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libdpkg-perl all 1.19.7ubuntu3.2 [231 kB]                          
+Get:53 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 dpkg-dev all 1.19.7ubuntu3.2 [679 kB]                              
+Get:54 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 build-essential amd64 12.8ubuntu1.1 [4,664 B]                      
+Get:55 http://archive.ubuntu.com/ubuntu focal/universe amd64 bwm-ng amd64 0.6.2-1 [33.1 kB]                                         
+Get:56 http://archive.ubuntu.com/ubuntu focal/main amd64 java-common all 0.72 [6,816 B]                                             
+Get:57 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libavahi-common-data amd64 0.7-4ubuntu7.3 [21.4 kB]                
+Get:58 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libavahi-common3 amd64 0.7-4ubuntu7.3 [21.9 kB]                    
+Get:59 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libavahi-client3 amd64 0.7-4ubuntu7.3 [25.5 kB]                    
+Get:60 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcups2 amd64 2.3.1-9ubuntu1.9 [234 kB]                           
+Get:61 http://archive.ubuntu.com/ubuntu focal/main amd64 fonts-dejavu-core all 2.37-1 [1,041 kB]                                    
+Get:62 http://archive.ubuntu.com/ubuntu focal/main amd64 fontconfig-config all 2.13.1-2ubuntu3 [28.8 kB]                            
+Get:63 http://archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1 amd64 2.13.1-2ubuntu3 [114 kB]                              
+Get:64 http://archive.ubuntu.com/ubuntu focal/main amd64 liblcms2-2 amd64 2.9-4 [140 kB]                                            
+Get:65 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjpeg-turbo8 amd64 2.0.3-0ubuntu1.20.04.3 [118 kB]               
+Get:66 http://archive.ubuntu.com/ubuntu focal/main amd64 libjpeg8 amd64 8c-2ubuntu8 [2,194 B]                                       
+Get:67 http://archive.ubuntu.com/ubuntu focal/main amd64 libgraphite2-3 amd64 1.3.13-11build1 [73.5 kB]                             
+Get:68 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libharfbuzz0b amd64 2.6.4-1ubuntu4.3 [391 kB]                      
+Get:69 http://archive.ubuntu.com/ubuntu focal/main amd64 libpcsclite1 amd64 1.8.26-3 [22.0 kB]                                      
+Get:70 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 openjdk-17-jre-headless amd64 17.0.15+6~us1-0ubuntu1~20.04 [43.8 MB]
+Get:71 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 ca-certificates-java all 20190405ubuntu1.1 [12.4 kB]               
+Get:72 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cmake-data all 3.16.3-1ubuntu1.20.04.1 [1,613 kB]                  
+Get:73 http://archive.ubuntu.com/ubuntu focal/main amd64 libjsoncpp1 amd64 1.7.4-3.1ubuntu2 [75.6 kB]                               
+Get:74 http://archive.ubuntu.com/ubuntu focal/main amd64 librhash0 amd64 1.3.9-1 [113 kB]                                           
+Get:75 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 cmake amd64 3.16.3-1ubuntu1.20.04.1 [3,668 kB]                     
+Get:76 http://archive.ubuntu.com/ubuntu focal/main amd64 libcrack2 amd64 2.9.6-3.2 [28.3 kB]                                        
+Get:77 http://archive.ubuntu.com/ubuntu focal/main amd64 cracklib-runtime amd64 2.9.6-3.2 [140 kB]                                  
+Get:78 http://archive.ubuntu.com/ubuntu focal/universe amd64 fail2ban all 0.11.1-1 [375 kB]                                         
+Get:79 http://archive.ubuntu.com/ubuntu focal/main amd64 libfakeroot amd64 1.24-1 [25.7 kB]                                         
+Get:80 http://archive.ubuntu.com/ubuntu focal/main amd64 fakeroot amd64 1.24-1 [62.6 kB]                                            
+Get:81 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libcroco3 amd64 0.6.13-1ubuntu0.1 [82.4 kB]                        
+Get:82 http://archive.ubuntu.com/ubuntu focal/main amd64 gettext amd64 0.19.8.1-10build1 [895 kB]                                   
+Get:83 http://archive.ubuntu.com/ubuntu focal/universe amd64 gperf amd64 3.1-1build1 [103 kB]                                       
+Get:84 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 icu-devtools amd64 66.1-2ubuntu2.1 [189 kB]                        
+Get:85 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libisccfg-export163 amd64 1:9.11.16+dfsg-3~ubuntu1 [45.9 kB]       
+Get:86 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libirs-export161 amd64 1:9.11.16+dfsg-3~ubuntu1 [18.6 kB]          
+Get:87 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 isc-dhcp-server amd64 4.4.1-2.1ubuntu5.20.04.5 [455 kB]            
+Get:88 http://archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-perl all 1.19.03-2 [46.6 kB]                             
+Get:89 http://archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-diff-xs-perl amd64 0.04-6 [11.3 kB]                           
+Get:90 http://archive.ubuntu.com/ubuntu focal/main amd64 libalgorithm-merge-perl all 0.08-3 [12.0 kB]                               
+Get:91 http://archive.ubuntu.com/ubuntu focal/universe amd64 libtspi1 amd64 0.3.14+fixed1-1build1 [145 kB]                          
+Get:92 http://archive.ubuntu.com/ubuntu focal/universe amd64 libbotan-2-12 amd64 2.12.1-2build1 [1,617 kB]                          
+Get:93 http://archive.ubuntu.com/ubuntu focal/universe amd64 libbotan-2-dev amd64 2.12.1-2build1 [2,438 kB]                         
+Get:94 http://archive.ubuntu.com/ubuntu focal/universe amd64 libcrypto++6 amd64 5.6.4-9build1 [889 kB]                              
+Get:95 http://archive.ubuntu.com/ubuntu focal/universe amd64 libcrypto++-dev amd64 5.6.4-9build1 [1,377 kB]                         
+Get:96 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libexpat1-dev amd64 2.2.9-1ubuntu0.8 [117 kB]                      
+Get:97 http://archive.ubuntu.com/ubuntu focal/main amd64 libfile-fcntllock-perl amd64 0.22-3build4 [33.1 kB]                        
+Get:98 http://archive.ubuntu.com/ubuntu focal/main amd64 libfl-dev amd64 2.6.4-6.2 [6,316 B]                                        
+Get:99 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 zlib1g-dev amd64 1:1.2.11.dfsg-2ubuntu1.5 [155 kB]                 
+Get:100 http://archive.ubuntu.com/ubuntu focal/main amd64 libpng-dev amd64 1.6.37-2 [175 kB]                                        
+Get:101 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfreetype-dev amd64 2.10.1-2ubuntu0.4 [493 kB]                  
+Get:102 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libfreetype6-dev amd64 2.10.1-2ubuntu0.4 [9,808 B]                
+Get:103 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 uuid-dev amd64 2.34-0.1ubuntu9.6 [33.6 kB]                        
+Get:104 http://archive.ubuntu.com/ubuntu focal/main amd64 pkg-config amd64 0.29.1-0ubuntu4 [45.5 kB]                                
+Get:105 http://archive.ubuntu.com/ubuntu focal/main amd64 libfontconfig1-dev amd64 2.13.1-2ubuntu3 [731 kB]                         
+Get:106 http://archive.ubuntu.com/ubuntu focal/main amd64 libgpg-error-dev amd64 1.37-1 [109 kB]                                    
+Get:107 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgcrypt20-dev amd64 1.8.5-5ubuntu1.1 [471 kB]                   
+Get:108 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjbig0 amd64 2.1-3.1ubuntu0.20.04.1 [27.3 kB]                   
+Get:109 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libwebp6 amd64 0.6.1-2ubuntu0.20.04.3 [185 kB]                    
+Get:110 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtiff5 amd64 4.1.0+git191117-2ubuntu0.20.04.14 [164 kB]         
+Get:111 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxpm4 amd64 1:3.5.12-1ubuntu0.20.04.2 [34.9 kB]                 
+Get:112 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgd3 amd64 2.2.5-5.2ubuntu2.4 [118 kB]                          
+Get:113 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjpeg-turbo8-dev amd64 2.0.3-0ubuntu1.20.04.3 [238 kB]          
+Get:114 http://archive.ubuntu.com/ubuntu focal/main amd64 libjpeg8-dev amd64 8c-2ubuntu8 [1,552 B]                                  
+Get:115 http://archive.ubuntu.com/ubuntu focal/main amd64 libjpeg-dev amd64 8c-2ubuntu8 [1,546 B]                                   
+Get:116 http://archive.ubuntu.com/ubuntu focal/main amd64 xorg-sgml-doctools all 1:1.11-1 [12.9 kB]                                 
+Get:117 http://archive.ubuntu.com/ubuntu focal/main amd64 x11proto-dev all 2019.2-1ubuntu1 [594 kB]                                 
+Get:118 http://archive.ubuntu.com/ubuntu focal/main amd64 x11proto-core-dev all 2019.2-1ubuntu1 [2,620 B]                           
+Get:119 http://archive.ubuntu.com/ubuntu focal/main amd64 libxau-dev amd64 1:1.0.9-0ubuntu1 [9,552 B]                               
+Get:120 http://archive.ubuntu.com/ubuntu focal/main amd64 libxdmcp-dev amd64 1:1.1.3-0ubuntu1 [25.3 kB]                             
+Get:121 http://archive.ubuntu.com/ubuntu focal/main amd64 xtrans-dev all 1.4.0-1 [68.9 kB]                                          
+Get:122 http://archive.ubuntu.com/ubuntu focal/main amd64 libpthread-stubs0-dev amd64 0.4-1 [5,384 B]                               
+Get:123 http://archive.ubuntu.com/ubuntu focal/main amd64 libxcb1-dev amd64 1.14-2 [80.5 kB]                                        
+Get:124 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libx11-dev amd64 2:1.6.9-2ubuntu1.6 [648 kB]                      
+Get:125 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxpm-dev amd64 1:3.5.12-1ubuntu0.20.04.2 [88.2 kB]              
+Get:126 http://archive.ubuntu.com/ubuntu focal/main amd64 x11-common all 1:7.7+19ubuntu14 [22.3 kB]                                 
+Get:127 http://archive.ubuntu.com/ubuntu focal/main amd64 libice6 amd64 2:1.0.10-0ubuntu1 [41.0 kB]                                 
+Get:128 http://archive.ubuntu.com/ubuntu focal/main amd64 libsm6 amd64 2:1.2.3-1 [16.1 kB]                                          
+Get:129 http://archive.ubuntu.com/ubuntu focal/main amd64 libxt6 amd64 1:1.1.5-1 [160 kB]                                           
+Get:130 http://archive.ubuntu.com/ubuntu focal/main amd64 libice-dev amd64 2:1.0.10-0ubuntu1 [47.8 kB]                              
+Get:131 http://archive.ubuntu.com/ubuntu focal/main amd64 libsm-dev amd64 2:1.2.3-1 [17.0 kB]                                       
+Get:132 http://archive.ubuntu.com/ubuntu focal/main amd64 libxt-dev amd64 1:1.1.5-1 [395 kB]                                        
+Get:133 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libvpx6 amd64 1.8.2-1ubuntu0.4 [819 kB]                           
+Get:134 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libvpx-dev amd64 1.8.2-1ubuntu0.4 [944 kB]                        
+Get:135 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libjbig-dev amd64 2.1-3.1ubuntu0.20.04.1 [25.7 kB]                
+Get:136 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 liblzma-dev amd64 5.2.4-1ubuntu1.1 [147 kB]                       
+Get:137 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtiffxx5 amd64 4.1.0+git191117-2ubuntu0.20.04.14 [5,884 B]      
+Get:138 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libtiff-dev amd64 4.1.0+git191117-2ubuntu0.20.04.14 [287 kB]      
+Get:139 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgd-dev amd64 2.2.5-5.2ubuntu2.4 [245 kB]                       
+Get:140 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgmpxx4ldbl amd64 2:6.2.0+dfsg-4ubuntu0.1 [9,144 B]             
+Get:141 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libgmp-dev amd64 2:6.2.0+dfsg-4ubuntu0.1 [320 kB]                 
+Get:142 http://archive.ubuntu.com/ubuntu focal/universe amd64 libhiredis0.14 amd64 0.14.0-6 [30.2 kB]                               
+Get:143 http://archive.ubuntu.com/ubuntu focal/universe amd64 libhiredis-dev amd64 0.14.0-6 [48.9 kB]                               
+Get:144 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libicu-dev amd64 66.1-2ubuntu2.1 [9,451 kB]                       
+Get:145 http://archive.ubuntu.com/ubuntu focal/main amd64 libltdl-dev amd64 2.4.6-14 [162 kB]                                       
+Get:146 http://archive.ubuntu.com/ubuntu focal/universe amd64 libnetfilter-queue1 amd64 1.0.3-1 [12.4 kB]                           
+Get:147 http://archive.ubuntu.com/ubuntu focal/main amd64 libnfnetlink-dev amd64 1.0.1-3build1 [6,544 B]                            
+Get:148 http://archive.ubuntu.com/ubuntu focal/universe amd64 libnetfilter-queue-dev amd64 1.0.3-1 [5,264 B]                        
+Get:149 http://archive.ubuntu.com/ubuntu focal/main amd64 libpwquality-common all 1.4.2-1build1 [7,744 B]                           
+Get:150 http://archive.ubuntu.com/ubuntu focal/main amd64 libpwquality1 amd64 1.4.2-1build1 [12.7 kB]                               
+Get:151 http://archive.ubuntu.com/ubuntu focal/main amd64 libpam-pwquality amd64 1.4.2-1build1 [11.2 kB]                            
+Get:152 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpcre16-3 amd64 2:8.39-12ubuntu0.1 [150 kB]                     
+Get:153 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpcre32-3 amd64 2:8.39-12ubuntu0.1 [140 kB]                     
+Get:154 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpcrecpp0v5 amd64 2:8.39-12ubuntu0.1 [15.5 kB]                  
+Get:155 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libpcre3-dev amd64 2:8.39-12ubuntu0.1 [540 kB]                    
+Get:156 http://archive.ubuntu.com/ubuntu focal/main amd64 libpng-tools amd64 1.6.37-2 [26.1 kB]                                     
+Get:157 http://archive.ubuntu.com/ubuntu focal/main amd64 libtool all 2.4.6-14 [161 kB]                                             
+Get:158 http://archive.ubuntu.com/ubuntu focal/main amd64 libtool-bin amd64 2.4.6-14 [80.1 kB]                                      
+Get:159 http://archive.ubuntu.com/ubuntu focal/universe amd64 libtss2-tcti-tabrmd0 amd64 2.3.1-1 [54.3 kB]                          
+Get:160 http://archive.ubuntu.com/ubuntu focal/universe amd64 libwolfssl24 amd64 4.3.0+dfsg-2 [527 kB]                              
+Get:161 http://archive.ubuntu.com/ubuntu focal/universe amd64 libwolfssl-dev amd64 4.3.0+dfsg-2 [782 kB]                            
+Get:162 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libxml2-dev amd64 2.9.10+dfsg-5ubuntu0.20.04.10 [735 kB]          
+Get:163 http://archive.ubuntu.com/ubuntu focal/main amd64 manpages-dev all 5.05-1 [2,266 kB]                                        
+Get:164 http://archive.ubuntu.com/ubuntu focal/main amd64 python3-pyinotify all 0.9.6-1.2ubuntu1 [24.8 kB]                          
+Get:165 http://archive.ubuntu.com/ubuntu focal/main amd64 rdate amd64 1:1.10-2 [17.6 kB]                                            
+Get:166 http://archive.ubuntu.com/ubuntu focal/universe amd64 shc amd64 4.0.3-0.1 [22.2 kB]                                         
+Get:167 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 snmp amd64 5.8+dfsg-2ubuntu2.9 [167 kB]                           
+Get:168 http://archive.ubuntu.com/ubuntu focal/main amd64 wamerican all 2018.04.16-1 [210 kB]                                       
+Get:169 http://archive.ubuntu.com/ubuntu focal/main amd64 whois amd64 5.5.6 [44.7 kB]                                               
+Get:170 http://archive.ubuntu.com/ubuntu focal/main amd64 ipvsadm amd64 1:1.31-1 [40.2 kB]                                          
+Get:171 http://archive.ubuntu.com/ubuntu focal/main amd64 libjsoncpp-dev amd64 1.7.4-3.1ubuntu2 [91.1 kB]                           
+Fetched 138 MB in 20s (7,047 kB/s)                                                                                                  
+Extracting templates from packages: 100%
+Preconfiguring packages ...
+Selecting previously unselected package m4.
+(Reading database ... 107949 files and directories currently installed.)
+Preparing to unpack .../000-m4_1.4.18-4_amd64.deb ...
+Unpacking m4 (1.4.18-4) ...
+Selecting previously unselected package flex.
+Preparing to unpack .../001-flex_2.6.4-6.2_amd64.deb ...
+Unpacking flex (2.6.4-6.2) ...
+Selecting previously unselected package mysql-common.
+Preparing to unpack .../002-mysql-common_5.8+1.0.5ubuntu2_all.deb ...
+Unpacking mysql-common (5.8+1.0.5ubuntu2) ...
+Selecting previously unselected package libmysqlclient21:amd64.
+Preparing to unpack .../003-libmysqlclient21_8.0.42-0ubuntu0.20.04.1_amd64.deb ...
+Unpacking libmysqlclient21:amd64 (8.0.42-0ubuntu0.20.04.1) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../004-libsensors-config_1%3a3.6.0-2ubuntu1.1_all.deb ...
+Unpacking libsensors-config (1:3.6.0-2ubuntu1.1) ...
+Selecting previously unselected package libsensors5:amd64.
+Preparing to unpack .../005-libsensors5_1%3a3.6.0-2ubuntu1.1_amd64.deb ...
+Unpacking libsensors5:amd64 (1:3.6.0-2ubuntu1.1) ...
+Selecting previously unselected package libsnmp-base.
+Preparing to unpack .../006-libsnmp-base_5.8+dfsg-2ubuntu2.9_all.deb ...
+Unpacking libsnmp-base (5.8+dfsg-2ubuntu2.9) ...
+Selecting previously unselected package libsnmp35:amd64.
+Preparing to unpack .../007-libsnmp35_5.8+dfsg-2ubuntu2.9_amd64.deb ...
+Unpacking libsnmp35:amd64 (5.8+dfsg-2ubuntu2.9) ...
+Selecting previously unselected package keepalived.
+Preparing to unpack .../008-keepalived_1%3a2.0.19-2ubuntu0.2_amd64.deb ...
+Unpacking keepalived (1:2.0.19-2ubuntu0.2) ...
+Selecting previously unselected package netfilter-persistent.
+Preparing to unpack .../009-netfilter-persistent_1.0.14ubuntu1_all.deb ...
+Unpacking netfilter-persistent (1.0.14ubuntu1) ...
+Selecting previously unselected package snmpd.
+Preparing to unpack .../010-snmpd_5.8+dfsg-2ubuntu2.9_amd64.deb ...
+Unpacking snmpd (5.8+dfsg-2ubuntu2.9) ...
+Selecting previously unselected package python3-libapparmor.
+Preparing to unpack .../011-python3-libapparmor_2.13.3-7ubuntu5.4_amd64.deb ...
+Unpacking python3-libapparmor (2.13.3-7ubuntu5.4) ...
+Selecting previously unselected package python3-apparmor.
+Preparing to unpack .../012-python3-apparmor_2.13.3-7ubuntu5.4_amd64.deb ...
+Unpacking python3-apparmor (2.13.3-7ubuntu5.4) ...
+Selecting previously unselected package apparmor-utils.
+Preparing to unpack .../013-apparmor-utils_2.13.3-7ubuntu5.4_amd64.deb ...
+Unpacking apparmor-utils (2.13.3-7ubuntu5.4) ...
+Selecting previously unselected package autoconf.
+Preparing to unpack .../014-autoconf_2.69-11.1_all.deb ...
+Unpacking autoconf (2.69-11.1) ...
+Selecting previously unselected package autotools-dev.
+Preparing to unpack .../015-autotools-dev_20180224.1_all.deb ...
+Unpacking autotools-dev (20180224.1) ...
+Selecting previously unselected package automake.
+Preparing to unpack .../016-automake_1%3a1.16.1-4ubuntu6_all.deb ...
+Unpacking automake (1:1.16.1-4ubuntu6) ...
+Selecting previously unselected package binutils-common:amd64.
+Preparing to unpack .../017-binutils-common_2.34-6ubuntu1.11_amd64.deb ...
+Unpacking binutils-common:amd64 (2.34-6ubuntu1.11) ...
+Selecting previously unselected package libbinutils:amd64.
+Preparing to unpack .../018-libbinutils_2.34-6ubuntu1.11_amd64.deb ...
+Unpacking libbinutils:amd64 (2.34-6ubuntu1.11) ...
+Selecting previously unselected package libctf-nobfd0:amd64.
+Preparing to unpack .../019-libctf-nobfd0_2.34-6ubuntu1.11_amd64.deb ...
+Unpacking libctf-nobfd0:amd64 (2.34-6ubuntu1.11) ...
+Selecting previously unselected package libctf0:amd64.
+Preparing to unpack .../020-libctf0_2.34-6ubuntu1.11_amd64.deb ...
+Unpacking libctf0:amd64 (2.34-6ubuntu1.11) ...
+Selecting previously unselected package binutils-x86-64-linux-gnu.
+Preparing to unpack .../021-binutils-x86-64-linux-gnu_2.34-6ubuntu1.11_amd64.deb ...
+Unpacking binutils-x86-64-linux-gnu (2.34-6ubuntu1.11) ...
+Selecting previously unselected package binutils.
+Preparing to unpack .../022-binutils_2.34-6ubuntu1.11_amd64.deb ...
+Unpacking binutils (2.34-6ubuntu1.11) ...
+Selecting previously unselected package bison.
+Preparing to unpack .../023-bison_2%3a3.5.1+dfsg-1_amd64.deb ...
+Unpacking bison (2:3.5.1+dfsg-1) ...
+Selecting previously unselected package libc-dev-bin.
+Preparing to unpack .../024-libc-dev-bin_2.31-0ubuntu9.18_amd64.deb ...
+Unpacking libc-dev-bin (2.31-0ubuntu9.18) ...
+Selecting previously unselected package linux-libc-dev:amd64.
+Preparing to unpack .../025-linux-libc-dev_5.4.0-216.236_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (5.4.0-216.236) ...
+Selecting previously unselected package libcrypt-dev:amd64.
+Preparing to unpack .../026-libcrypt-dev_1%3a4.4.10-10ubuntu4_amd64.deb ...
+Unpacking libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+Selecting previously unselected package libc6-dev:amd64.
+Preparing to unpack .../027-libc6-dev_2.31-0ubuntu9.18_amd64.deb ...
+Unpacking libc6-dev:amd64 (2.31-0ubuntu9.18) ...
+Selecting previously unselected package gcc-9-base:amd64.
+Preparing to unpack .../028-gcc-9-base_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+Unpacking gcc-9-base:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+Selecting previously unselected package libisl22:amd64.
+Preparing to unpack .../029-libisl22_0.22.1-1_amd64.deb ...
+Unpacking libisl22:amd64 (0.22.1-1) ...
+Selecting previously unselected package libmpc3:amd64.
+Preparing to unpack .../030-libmpc3_1.1.0-1_amd64.deb ...
+Unpacking libmpc3:amd64 (1.1.0-1) ...
+Selecting previously unselected package cpp-9.
+Preparing to unpack .../031-cpp-9_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+Unpacking cpp-9 (9.4.0-1ubuntu1~20.04.2) ...
+Selecting previously unselected package cpp.
+Preparing to unpack .../032-cpp_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking cpp (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package libcc1-0:amd64.
+Preparing to unpack .../033-libcc1-0_10.5.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libcc1-0:amd64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libgomp1:amd64.
+Preparing to unpack .../034-libgomp1_10.5.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libgomp1:amd64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libitm1:amd64.
+Preparing to unpack .../035-libitm1_10.5.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libitm1:amd64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libatomic1:amd64.
+Preparing to unpack .../036-libatomic1_10.5.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libatomic1:amd64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libasan5:amd64.
+Preparing to unpack .../037-libasan5_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+Unpacking libasan5:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+Selecting previously unselected package liblsan0:amd64.
+Preparing to unpack .../038-liblsan0_10.5.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking liblsan0:amd64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libtsan0:amd64.
+Preparing to unpack .../039-libtsan0_10.5.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libtsan0:amd64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libubsan1:amd64.
+Preparing to unpack .../040-libubsan1_10.5.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libubsan1:amd64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libquadmath0:amd64.
+Preparing to unpack .../041-libquadmath0_10.5.0-1ubuntu1~20.04_amd64.deb ...
+Unpacking libquadmath0:amd64 (10.5.0-1ubuntu1~20.04) ...
+Selecting previously unselected package libgcc-9-dev:amd64.
+Preparing to unpack .../042-libgcc-9-dev_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+Unpacking libgcc-9-dev:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+Selecting previously unselected package gcc-9.
+Preparing to unpack .../043-gcc-9_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+Unpacking gcc-9 (9.4.0-1ubuntu1~20.04.2) ...
+Selecting previously unselected package gcc.
+Preparing to unpack .../044-gcc_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking gcc (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package libstdc++-9-dev:amd64.
+Preparing to unpack .../045-libstdc++-9-dev_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+Unpacking libstdc++-9-dev:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+Selecting previously unselected package g++-9.
+Preparing to unpack .../046-g++-9_9.4.0-1ubuntu1~20.04.2_amd64.deb ...
+Unpacking g++-9 (9.4.0-1ubuntu1~20.04.2) ...
+Selecting previously unselected package g++.
+Preparing to unpack .../047-g++_4%3a9.3.0-1ubuntu2_amd64.deb ...
+Unpacking g++ (4:9.3.0-1ubuntu2) ...
+Selecting previously unselected package make.
+Preparing to unpack .../048-make_4.2.1-1.2_amd64.deb ...
+Unpacking make (4.2.1-1.2) ...
+Selecting previously unselected package libdpkg-perl.
+Preparing to unpack .../049-libdpkg-perl_1.19.7ubuntu3.2_all.deb ...
+Unpacking libdpkg-perl (1.19.7ubuntu3.2) ...
+Selecting previously unselected package dpkg-dev.
+Preparing to unpack .../050-dpkg-dev_1.19.7ubuntu3.2_all.deb ...
+Unpacking dpkg-dev (1.19.7ubuntu3.2) ...
+Selecting previously unselected package build-essential.
+Preparing to unpack .../051-build-essential_12.8ubuntu1.1_amd64.deb ...
+Unpacking build-essential (12.8ubuntu1.1) ...
+Selecting previously unselected package bwm-ng.
+Preparing to unpack .../052-bwm-ng_0.6.2-1_amd64.deb ...
+Unpacking bwm-ng (0.6.2-1) ...
+Selecting previously unselected package java-common.
+Preparing to unpack .../053-java-common_0.72_all.deb ...
+Unpacking java-common (0.72) ...
+Selecting previously unselected package libavahi-common-data:amd64.
+Preparing to unpack .../054-libavahi-common-data_0.7-4ubuntu7.3_amd64.deb ...
+Unpacking libavahi-common-data:amd64 (0.7-4ubuntu7.3) ...
+Selecting previously unselected package libavahi-common3:amd64.
+Preparing to unpack .../055-libavahi-common3_0.7-4ubuntu7.3_amd64.deb ...
+Unpacking libavahi-common3:amd64 (0.7-4ubuntu7.3) ...
+Selecting previously unselected package libavahi-client3:amd64.
+Preparing to unpack .../056-libavahi-client3_0.7-4ubuntu7.3_amd64.deb ...
+Unpacking libavahi-client3:amd64 (0.7-4ubuntu7.3) ...
+Selecting previously unselected package libcups2:amd64.
+Preparing to unpack .../057-libcups2_2.3.1-9ubuntu1.9_amd64.deb ...
+Unpacking libcups2:amd64 (2.3.1-9ubuntu1.9) ...
+Selecting previously unselected package fonts-dejavu-core.
+Preparing to unpack .../058-fonts-dejavu-core_2.37-1_all.deb ...
+Unpacking fonts-dejavu-core (2.37-1) ...
+Selecting previously unselected package fontconfig-config.
+Preparing to unpack .../059-fontconfig-config_2.13.1-2ubuntu3_all.deb ...
+Unpacking fontconfig-config (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libfontconfig1:amd64.
+Preparing to unpack .../060-libfontconfig1_2.13.1-2ubuntu3_amd64.deb ...
+Unpacking libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Selecting previously unselected package liblcms2-2:amd64.
+Preparing to unpack .../061-liblcms2-2_2.9-4_amd64.deb ...
+Unpacking liblcms2-2:amd64 (2.9-4) ...
+Selecting previously unselected package libjpeg-turbo8:amd64.
+Preparing to unpack .../062-libjpeg-turbo8_2.0.3-0ubuntu1.20.04.3_amd64.deb ...
+Unpacking libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+Selecting previously unselected package libjpeg8:amd64.
+Preparing to unpack .../063-libjpeg8_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libgraphite2-3:amd64.
+Preparing to unpack .../064-libgraphite2-3_1.3.13-11build1_amd64.deb ...
+Unpacking libgraphite2-3:amd64 (1.3.13-11build1) ...
+Selecting previously unselected package libharfbuzz0b:amd64.
+Preparing to unpack .../065-libharfbuzz0b_2.6.4-1ubuntu4.3_amd64.deb ...
+Unpacking libharfbuzz0b:amd64 (2.6.4-1ubuntu4.3) ...
+Selecting previously unselected package libpcsclite1:amd64.
+Preparing to unpack .../066-libpcsclite1_1.8.26-3_amd64.deb ...
+Unpacking libpcsclite1:amd64 (1.8.26-3) ...
+Selecting previously unselected package openjdk-17-jre-headless:amd64.
+Preparing to unpack .../067-openjdk-17-jre-headless_17.0.15+6~us1-0ubuntu1~20.04_amd64.deb ...
+Unpacking openjdk-17-jre-headless:amd64 (17.0.15+6~us1-0ubuntu1~20.04) ...
+Selecting previously unselected package ca-certificates-java.
+Preparing to unpack .../068-ca-certificates-java_20190405ubuntu1.1_all.deb ...
+Unpacking ca-certificates-java (20190405ubuntu1.1) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../069-cmake-data_3.16.3-1ubuntu1.20.04.1_all.deb ...
+Unpacking cmake-data (3.16.3-1ubuntu1.20.04.1) ...
+Selecting previously unselected package libjsoncpp1:amd64.
+Preparing to unpack .../070-libjsoncpp1_1.7.4-3.1ubuntu2_amd64.deb ...
+Unpacking libjsoncpp1:amd64 (1.7.4-3.1ubuntu2) ...
+Selecting previously unselected package librhash0:amd64.
+Preparing to unpack .../071-librhash0_1.3.9-1_amd64.deb ...
+Unpacking librhash0:amd64 (1.3.9-1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../072-cmake_3.16.3-1ubuntu1.20.04.1_amd64.deb ...
+Unpacking cmake (3.16.3-1ubuntu1.20.04.1) ...
+Selecting previously unselected package libcrack2:amd64.
+Preparing to unpack .../073-libcrack2_2.9.6-3.2_amd64.deb ...
+Unpacking libcrack2:amd64 (2.9.6-3.2) ...
+Selecting previously unselected package cracklib-runtime.
+Preparing to unpack .../074-cracklib-runtime_2.9.6-3.2_amd64.deb ...
+Unpacking cracklib-runtime (2.9.6-3.2) ...
+Selecting previously unselected package fail2ban.
+Preparing to unpack .../075-fail2ban_0.11.1-1_all.deb ...
+Unpacking fail2ban (0.11.1-1) ...
+Selecting previously unselected package libfakeroot:amd64.
+Preparing to unpack .../076-libfakeroot_1.24-1_amd64.deb ...
+Unpacking libfakeroot:amd64 (1.24-1) ...
+Selecting previously unselected package fakeroot.
+Preparing to unpack .../077-fakeroot_1.24-1_amd64.deb ...
+Unpacking fakeroot (1.24-1) ...
+Selecting previously unselected package libcroco3:amd64.
+Preparing to unpack .../078-libcroco3_0.6.13-1ubuntu0.1_amd64.deb ...
+Unpacking libcroco3:amd64 (0.6.13-1ubuntu0.1) ...
+Selecting previously unselected package gettext.
+Preparing to unpack .../079-gettext_0.19.8.1-10build1_amd64.deb ...
+Unpacking gettext (0.19.8.1-10build1) ...
+Selecting previously unselected package gperf.
+Preparing to unpack .../080-gperf_3.1-1build1_amd64.deb ...
+Unpacking gperf (3.1-1build1) ...
+Selecting previously unselected package icu-devtools.
+Preparing to unpack .../081-icu-devtools_66.1-2ubuntu2.1_amd64.deb ...
+Unpacking icu-devtools (66.1-2ubuntu2.1) ...
+Selecting previously unselected package libisccfg-export163.
+Preparing to unpack .../082-libisccfg-export163_1%3a9.11.16+dfsg-3~ubuntu1_amd64.deb ...
+Unpacking libisccfg-export163 (1:9.11.16+dfsg-3~ubuntu1) ...
+Selecting previously unselected package libirs-export161.
+Preparing to unpack .../083-libirs-export161_1%3a9.11.16+dfsg-3~ubuntu1_amd64.deb ...
+Unpacking libirs-export161 (1:9.11.16+dfsg-3~ubuntu1) ...
+Selecting previously unselected package isc-dhcp-server.
+Preparing to unpack .../084-isc-dhcp-server_4.4.1-2.1ubuntu5.20.04.5_amd64.deb ...
+Unpacking isc-dhcp-server (4.4.1-2.1ubuntu5.20.04.5) ...
+Selecting previously unselected package libalgorithm-diff-perl.
+Preparing to unpack .../085-libalgorithm-diff-perl_1.19.03-2_all.deb ...
+Unpacking libalgorithm-diff-perl (1.19.03-2) ...
+Selecting previously unselected package libalgorithm-diff-xs-perl.
+Preparing to unpack .../086-libalgorithm-diff-xs-perl_0.04-6_amd64.deb ...
+Unpacking libalgorithm-diff-xs-perl (0.04-6) ...
+Selecting previously unselected package libalgorithm-merge-perl.
+Preparing to unpack .../087-libalgorithm-merge-perl_0.08-3_all.deb ...
+Unpacking libalgorithm-merge-perl (0.08-3) ...
+Selecting previously unselected package libtspi1.
+Preparing to unpack .../088-libtspi1_0.3.14+fixed1-1build1_amd64.deb ...
+Unpacking libtspi1 (0.3.14+fixed1-1build1) ...
+Selecting previously unselected package libbotan-2-12.
+Preparing to unpack .../089-libbotan-2-12_2.12.1-2build1_amd64.deb ...
+Unpacking libbotan-2-12 (2.12.1-2build1) ...
+Selecting previously unselected package libbotan-2-dev.
+Preparing to unpack .../090-libbotan-2-dev_2.12.1-2build1_amd64.deb ...
+Unpacking libbotan-2-dev (2.12.1-2build1) ...
+Selecting previously unselected package libcrypto++6.
+Preparing to unpack .../091-libcrypto++6_5.6.4-9build1_amd64.deb ...
+Unpacking libcrypto++6 (5.6.4-9build1) ...
+Selecting previously unselected package libcrypto++-dev.
+Preparing to unpack .../092-libcrypto++-dev_5.6.4-9build1_amd64.deb ...
+Unpacking libcrypto++-dev (5.6.4-9build1) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../093-libexpat1-dev_2.2.9-1ubuntu0.8_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.2.9-1ubuntu0.8) ...
+Selecting previously unselected package libfile-fcntllock-perl.
+Preparing to unpack .../094-libfile-fcntllock-perl_0.22-3build4_amd64.deb ...
+Unpacking libfile-fcntllock-perl (0.22-3build4) ...
+Selecting previously unselected package libfl-dev:amd64.
+Preparing to unpack .../095-libfl-dev_2.6.4-6.2_amd64.deb ...
+Unpacking libfl-dev:amd64 (2.6.4-6.2) ...
+Selecting previously unselected package zlib1g-dev:amd64.
+Preparing to unpack .../096-zlib1g-dev_1%3a1.2.11.dfsg-2ubuntu1.5_amd64.deb ...
+Unpacking zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.5) ...
+Selecting previously unselected package libpng-dev:amd64.
+Preparing to unpack .../097-libpng-dev_1.6.37-2_amd64.deb ...
+Unpacking libpng-dev:amd64 (1.6.37-2) ...
+Selecting previously unselected package libfreetype-dev:amd64.
+Preparing to unpack .../098-libfreetype-dev_2.10.1-2ubuntu0.4_amd64.deb ...
+Unpacking libfreetype-dev:amd64 (2.10.1-2ubuntu0.4) ...
+Selecting previously unselected package libfreetype6-dev:amd64.
+Preparing to unpack .../099-libfreetype6-dev_2.10.1-2ubuntu0.4_amd64.deb ...
+Unpacking libfreetype6-dev:amd64 (2.10.1-2ubuntu0.4) ...
+Selecting previously unselected package uuid-dev:amd64.
+Preparing to unpack .../100-uuid-dev_2.34-0.1ubuntu9.6_amd64.deb ...
+Unpacking uuid-dev:amd64 (2.34-0.1ubuntu9.6) ...
+Selecting previously unselected package pkg-config.
+Preparing to unpack .../101-pkg-config_0.29.1-0ubuntu4_amd64.deb ...
+Unpacking pkg-config (0.29.1-0ubuntu4) ...
+Selecting previously unselected package libfontconfig1-dev:amd64.
+Preparing to unpack .../102-libfontconfig1-dev_2.13.1-2ubuntu3_amd64.deb ...
+Unpacking libfontconfig1-dev:amd64 (2.13.1-2ubuntu3) ...
+Selecting previously unselected package libgpg-error-dev.
+Preparing to unpack .../103-libgpg-error-dev_1.37-1_amd64.deb ...
+Unpacking libgpg-error-dev (1.37-1) ...
+Selecting previously unselected package libgcrypt20-dev.
+Preparing to unpack .../104-libgcrypt20-dev_1.8.5-5ubuntu1.1_amd64.deb ...
+Unpacking libgcrypt20-dev (1.8.5-5ubuntu1.1) ...
+Selecting previously unselected package libjbig0:amd64.
+Preparing to unpack .../105-libjbig0_2.1-3.1ubuntu0.20.04.1_amd64.deb ...
+Unpacking libjbig0:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+Selecting previously unselected package libwebp6:amd64.
+Preparing to unpack .../106-libwebp6_0.6.1-2ubuntu0.20.04.3_amd64.deb ...
+Unpacking libwebp6:amd64 (0.6.1-2ubuntu0.20.04.3) ...
+Selecting previously unselected package libtiff5:amd64.
+Preparing to unpack .../107-libtiff5_4.1.0+git191117-2ubuntu0.20.04.14_amd64.deb ...
+Unpacking libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+Selecting previously unselected package libxpm4:amd64.
+Preparing to unpack .../108-libxpm4_1%3a3.5.12-1ubuntu0.20.04.2_amd64.deb ...
+Unpacking libxpm4:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+Selecting previously unselected package libgd3:amd64.
+Preparing to unpack .../109-libgd3_2.2.5-5.2ubuntu2.4_amd64.deb ...
+Unpacking libgd3:amd64 (2.2.5-5.2ubuntu2.4) ...
+Selecting previously unselected package libjpeg-turbo8-dev:amd64.
+Preparing to unpack .../110-libjpeg-turbo8-dev_2.0.3-0ubuntu1.20.04.3_amd64.deb ...
+Unpacking libjpeg-turbo8-dev:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+Selecting previously unselected package libjpeg8-dev:amd64.
+Preparing to unpack .../111-libjpeg8-dev_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg8-dev:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package libjpeg-dev:amd64.
+Preparing to unpack .../112-libjpeg-dev_8c-2ubuntu8_amd64.deb ...
+Unpacking libjpeg-dev:amd64 (8c-2ubuntu8) ...
+Selecting previously unselected package xorg-sgml-doctools.
+Preparing to unpack .../113-xorg-sgml-doctools_1%3a1.11-1_all.deb ...
+Unpacking xorg-sgml-doctools (1:1.11-1) ...
+Selecting previously unselected package x11proto-dev.
+Preparing to unpack .../114-x11proto-dev_2019.2-1ubuntu1_all.deb ...
+Unpacking x11proto-dev (2019.2-1ubuntu1) ...
+Selecting previously unselected package x11proto-core-dev.
+Preparing to unpack .../115-x11proto-core-dev_2019.2-1ubuntu1_all.deb ...
+Unpacking x11proto-core-dev (2019.2-1ubuntu1) ...
+Selecting previously unselected package libxau-dev:amd64.
+Preparing to unpack .../116-libxau-dev_1%3a1.0.9-0ubuntu1_amd64.deb ...
+Unpacking libxau-dev:amd64 (1:1.0.9-0ubuntu1) ...
+Selecting previously unselected package libxdmcp-dev:amd64.
+Preparing to unpack .../117-libxdmcp-dev_1%3a1.1.3-0ubuntu1_amd64.deb ...
+Unpacking libxdmcp-dev:amd64 (1:1.1.3-0ubuntu1) ...
+Selecting previously unselected package xtrans-dev.
+Preparing to unpack .../118-xtrans-dev_1.4.0-1_all.deb ...
+Unpacking xtrans-dev (1.4.0-1) ...
+Selecting previously unselected package libpthread-stubs0-dev:amd64.
+Preparing to unpack .../119-libpthread-stubs0-dev_0.4-1_amd64.deb ...
+Unpacking libpthread-stubs0-dev:amd64 (0.4-1) ...
+Selecting previously unselected package libxcb1-dev:amd64.
+Preparing to unpack .../120-libxcb1-dev_1.14-2_amd64.deb ...
+Unpacking libxcb1-dev:amd64 (1.14-2) ...
+Selecting previously unselected package libx11-dev:amd64.
+Preparing to unpack .../121-libx11-dev_2%3a1.6.9-2ubuntu1.6_amd64.deb ...
+Unpacking libx11-dev:amd64 (2:1.6.9-2ubuntu1.6) ...
+Selecting previously unselected package libxpm-dev:amd64.
+Preparing to unpack .../122-libxpm-dev_1%3a3.5.12-1ubuntu0.20.04.2_amd64.deb ...
+Unpacking libxpm-dev:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+Selecting previously unselected package x11-common.
+Preparing to unpack .../123-x11-common_1%3a7.7+19ubuntu14_all.deb ...
+dpkg-query: no packages found matching nux-tools
+Unpacking x11-common (1:7.7+19ubuntu14) ...
+Selecting previously unselected package libice6:amd64.
+Preparing to unpack .../124-libice6_2%3a1.0.10-0ubuntu1_amd64.deb ...
+Unpacking libice6:amd64 (2:1.0.10-0ubuntu1) ...
+Selecting previously unselected package libsm6:amd64.
+Preparing to unpack .../125-libsm6_2%3a1.2.3-1_amd64.deb ...
+Unpacking libsm6:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package libxt6:amd64.
+Preparing to unpack .../126-libxt6_1%3a1.1.5-1_amd64.deb ...
+Unpacking libxt6:amd64 (1:1.1.5-1) ...
+Selecting previously unselected package libice-dev:amd64.
+Preparing to unpack .../127-libice-dev_2%3a1.0.10-0ubuntu1_amd64.deb ...
+Unpacking libice-dev:amd64 (2:1.0.10-0ubuntu1) ...
+Selecting previously unselected package libsm-dev:amd64.
+Preparing to unpack .../128-libsm-dev_2%3a1.2.3-1_amd64.deb ...
+Unpacking libsm-dev:amd64 (2:1.2.3-1) ...
+Selecting previously unselected package libxt-dev:amd64.
+Preparing to unpack .../129-libxt-dev_1%3a1.1.5-1_amd64.deb ...
+Unpacking libxt-dev:amd64 (1:1.1.5-1) ...
+Selecting previously unselected package libvpx6:amd64.
+Preparing to unpack .../130-libvpx6_1.8.2-1ubuntu0.4_amd64.deb ...
+Unpacking libvpx6:amd64 (1.8.2-1ubuntu0.4) ...
+Selecting previously unselected package libvpx-dev:amd64.
+Preparing to unpack .../131-libvpx-dev_1.8.2-1ubuntu0.4_amd64.deb ...
+Unpacking libvpx-dev:amd64 (1.8.2-1ubuntu0.4) ...
+Selecting previously unselected package libjbig-dev:amd64.
+Preparing to unpack .../132-libjbig-dev_2.1-3.1ubuntu0.20.04.1_amd64.deb ...
+Unpacking libjbig-dev:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+Selecting previously unselected package liblzma-dev:amd64.
+Preparing to unpack .../133-liblzma-dev_5.2.4-1ubuntu1.1_amd64.deb ...
+Unpacking liblzma-dev:amd64 (5.2.4-1ubuntu1.1) ...
+Selecting previously unselected package libtiffxx5:amd64.
+Preparing to unpack .../134-libtiffxx5_4.1.0+git191117-2ubuntu0.20.04.14_amd64.deb ...
+Unpacking libtiffxx5:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+Selecting previously unselected package libtiff-dev:amd64.
+Preparing to unpack .../135-libtiff-dev_4.1.0+git191117-2ubuntu0.20.04.14_amd64.deb ...
+Unpacking libtiff-dev:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+Selecting previously unselected package libgd-dev:amd64.
+Preparing to unpack .../136-libgd-dev_2.2.5-5.2ubuntu2.4_amd64.deb ...
+Unpacking libgd-dev:amd64 (2.2.5-5.2ubuntu2.4) ...
+Selecting previously unselected package libgmpxx4ldbl:amd64.
+Preparing to unpack .../137-libgmpxx4ldbl_2%3a6.2.0+dfsg-4ubuntu0.1_amd64.deb ...
+Unpacking libgmpxx4ldbl:amd64 (2:6.2.0+dfsg-4ubuntu0.1) ...
+Selecting previously unselected package libgmp-dev:amd64.
+Preparing to unpack .../138-libgmp-dev_2%3a6.2.0+dfsg-4ubuntu0.1_amd64.deb ...
+Unpacking libgmp-dev:amd64 (2:6.2.0+dfsg-4ubuntu0.1) ...
+Selecting previously unselected package libhiredis0.14:amd64.
+Preparing to unpack .../139-libhiredis0.14_0.14.0-6_amd64.deb ...
+Unpacking libhiredis0.14:amd64 (0.14.0-6) ...
+Selecting previously unselected package libhiredis-dev:amd64.
+Preparing to unpack .../140-libhiredis-dev_0.14.0-6_amd64.deb ...
+Unpacking libhiredis-dev:amd64 (0.14.0-6) ...
+Selecting previously unselected package libicu-dev:amd64.
+Preparing to unpack .../141-libicu-dev_66.1-2ubuntu2.1_amd64.deb ...
+Unpacking libicu-dev:amd64 (66.1-2ubuntu2.1) ...
+Selecting previously unselected package libltdl-dev:amd64.
+Preparing to unpack .../142-libltdl-dev_2.4.6-14_amd64.deb ...
+Unpacking libltdl-dev:amd64 (2.4.6-14) ...
+Selecting previously unselected package libnetfilter-queue1.
+Preparing to unpack .../143-libnetfilter-queue1_1.0.3-1_amd64.deb ...
+Unpacking libnetfilter-queue1 (1.0.3-1) ...
+Selecting previously unselected package libnfnetlink-dev.
+Preparing to unpack .../144-libnfnetlink-dev_1.0.1-3build1_amd64.deb ...
+Unpacking libnfnetlink-dev (1.0.1-3build1) ...
+Selecting previously unselected package libnetfilter-queue-dev.
+Preparing to unpack .../145-libnetfilter-queue-dev_1.0.3-1_amd64.deb ...
+Unpacking libnetfilter-queue-dev (1.0.3-1) ...
+Selecting previously unselected package libpwquality-common.
+Preparing to unpack .../146-libpwquality-common_1.4.2-1build1_all.deb ...
+Unpacking libpwquality-common (1.4.2-1build1) ...
+Selecting previously unselected package libpwquality1:amd64.
+Preparing to unpack .../147-libpwquality1_1.4.2-1build1_amd64.deb ...
+Unpacking libpwquality1:amd64 (1.4.2-1build1) ...
+Selecting previously unselected package libpam-pwquality:amd64.
+Preparing to unpack .../148-libpam-pwquality_1.4.2-1build1_amd64.deb ...
+Unpacking libpam-pwquality:amd64 (1.4.2-1build1) ...
+Selecting previously unselected package libpcre16-3:amd64.
+Preparing to unpack .../149-libpcre16-3_2%3a8.39-12ubuntu0.1_amd64.deb ...
+Unpacking libpcre16-3:amd64 (2:8.39-12ubuntu0.1) ...
+Selecting previously unselected package libpcre32-3:amd64.
+Preparing to unpack .../150-libpcre32-3_2%3a8.39-12ubuntu0.1_amd64.deb ...
+Unpacking libpcre32-3:amd64 (2:8.39-12ubuntu0.1) ...
+Selecting previously unselected package libpcrecpp0v5:amd64.
+Preparing to unpack .../151-libpcrecpp0v5_2%3a8.39-12ubuntu0.1_amd64.deb ...
+Unpacking libpcrecpp0v5:amd64 (2:8.39-12ubuntu0.1) ...
+Selecting previously unselected package libpcre3-dev:amd64.
+Preparing to unpack .../152-libpcre3-dev_2%3a8.39-12ubuntu0.1_amd64.deb ...
+Unpacking libpcre3-dev:amd64 (2:8.39-12ubuntu0.1) ...
+Selecting previously unselected package libpng-tools.
+Preparing to unpack .../153-libpng-tools_1.6.37-2_amd64.deb ...
+Unpacking libpng-tools (1.6.37-2) ...
+Selecting previously unselected package libtool.
+Preparing to unpack .../154-libtool_2.4.6-14_all.deb ...
+Unpacking libtool (2.4.6-14) ...
+Selecting previously unselected package libtool-bin.
+Preparing to unpack .../155-libtool-bin_2.4.6-14_amd64.deb ...
+Unpacking libtool-bin (2.4.6-14) ...
+Selecting previously unselected package libtss2-tcti-tabrmd0:amd64.
+Preparing to unpack .../156-libtss2-tcti-tabrmd0_2.3.1-1_amd64.deb ...
+Unpacking libtss2-tcti-tabrmd0:amd64 (2.3.1-1) ...
+Selecting previously unselected package libwolfssl24:amd64.
+Preparing to unpack .../157-libwolfssl24_4.3.0+dfsg-2_amd64.deb ...
+Unpacking libwolfssl24:amd64 (4.3.0+dfsg-2) ...
+Selecting previously unselected package libwolfssl-dev:amd64.
+Preparing to unpack .../158-libwolfssl-dev_4.3.0+dfsg-2_amd64.deb ...
+Unpacking libwolfssl-dev:amd64 (4.3.0+dfsg-2) ...
+Selecting previously unselected package libxml2-dev:amd64.
+Preparing to unpack .../159-libxml2-dev_2.9.10+dfsg-5ubuntu0.20.04.10_amd64.deb ...
+Unpacking libxml2-dev:amd64 (2.9.10+dfsg-5ubuntu0.20.04.10) ...
+Selecting previously unselected package manpages-dev.
+Preparing to unpack .../160-manpages-dev_5.05-1_all.deb ...
+Unpacking manpages-dev (5.05-1) ...
+Selecting previously unselected package python3-pyinotify.
+Preparing to unpack .../161-python3-pyinotify_0.9.6-1.2ubuntu1_all.deb ...
+Unpacking python3-pyinotify (0.9.6-1.2ubuntu1) ...
+Selecting previously unselected package rdate.
+Preparing to unpack .../162-rdate_1%3a1.10-2_amd64.deb ...
+Unpacking rdate (1:1.10-2) ...
+Selecting previously unselected package redis-tools.
+Preparing to unpack .../163-redis-tools_6%3a8.0.3-1rl1~focal1_amd64.deb ...
+Unpacking redis-tools (6:8.0.3-1rl1~focal1) ...
+Selecting previously unselected package redis-server.
+Preparing to unpack .../164-redis-server_6%3a8.0.3-1rl1~focal1_amd64.deb ...
+Unpacking redis-server (6:8.0.3-1rl1~focal1) ...
+Selecting previously unselected package shc.
+Preparing to unpack .../165-shc_4.0.3-0.1_amd64.deb ...
+Unpacking shc (4.0.3-0.1) ...
+Selecting previously unselected package snmp.
+Preparing to unpack .../166-snmp_5.8+dfsg-2ubuntu2.9_amd64.deb ...
+Unpacking snmp (5.8+dfsg-2ubuntu2.9) ...
+Selecting previously unselected package wamerican.
+Preparing to unpack .../167-wamerican_2018.04.16-1_all.deb ...
+Unpacking wamerican (2018.04.16-1) ...
+Selecting previously unselected package whois.
+Preparing to unpack .../168-whois_5.5.6_amd64.deb ...
+Unpacking whois (5.5.6) ...
+Selecting previously unselected package ipvsadm.
+Preparing to unpack .../169-ipvsadm_1%3a1.31-1_amd64.deb ...
+Unpacking ipvsadm (1:1.31-1) ...
+Selecting previously unselected package libjsoncpp-dev:amd64.
+Preparing to unpack .../170-libjsoncpp-dev_1.7.4-3.1ubuntu2_amd64.deb ...
+Unpacking libjsoncpp-dev:amd64 (1.7.4-3.1ubuntu2) ...
+Setting up libpwquality-common (1.4.2-1build1) ...
+Setting up python3-libapparmor (2.13.3-7ubuntu5.4) ...
+Setting up libpcrecpp0v5:amd64 (2:8.39-12ubuntu0.1) ...
+Setting up libgraphite2-3:amd64 (1.3.13-11build1) ...
+Setting up liblcms2-2:amd64 (2.9-4) ...
+Setting up libtspi1 (0.3.14+fixed1-1build1) ...
+Setting up ipvsadm (1:1.31-1) ...
+Setting up manpages-dev (5.05-1) ...
+Setting up mysql-common (5.8+1.0.5ubuntu2) ...
+update-alternatives: using /etc/mysql/my.cnf.fallback to provide /etc/mysql/my.cnf (my.cnf) in auto mode
+Setting up libmysqlclient21:amd64 (8.0.42-0ubuntu0.20.04.1) ...
+Setting up libtss2-tcti-tabrmd0:amd64 (2.3.1-1) ...
+Setting up libxpm4:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+Setting up libpcre16-3:amd64 (2:8.39-12ubuntu0.1) ...
+Setting up whois (5.5.6) ...
+Setting up java-common (0.72) ...
+Setting up libpng-tools (1.6.37-2) ...
+Setting up bwm-ng (0.6.2-1) ...
+Setting up libfile-fcntllock-perl (0.22-3build4) ...
+Setting up libalgorithm-diff-perl (1.19.03-2) ...
+Setting up libsnmp-base (5.8+dfsg-2ubuntu2.9) ...
+Setting up fail2ban (0.11.1-1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/fail2ban.service → /lib/systemd/system/fail2ban.service.
+Setting up python3-pyinotify (0.9.6-1.2ubuntu1) ...
+Setting up binutils-common:amd64 (2.34-6ubuntu1.11) ...
+Setting up x11-common (1:7.7+19ubuntu14) ...
+update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
+Setting up libsensors-config (1:3.6.0-2ubuntu1.1) ...
+Setting up linux-libc-dev:amd64 (5.4.0-216.236) ...
+Setting up libctf-nobfd0:amd64 (2.34-6ubuntu1.11) ...
+Setting up m4 (1.4.18-4) ...
+Setting up libgomp1:amd64 (10.5.0-1ubuntu1~20.04) ...
+Setting up gperf (3.1-1build1) ...
+Setting up libpthread-stubs0-dev:amd64 (0.4-1) ...
+Setting up libbotan-2-12 (2.12.1-2build1) ...
+Setting up libjbig0:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+Setting up libfakeroot:amd64 (1.24-1) ...
+Setting up rdate (1:1.10-2) ...
+Setting up fakeroot (1.24-1) ...
+update-alternatives: using /usr/bin/fakeroot-sysv to provide /usr/bin/fakeroot (fakeroot) in auto mode
+Setting up xtrans-dev (1.4.0-1) ...
+Setting up autotools-dev (20180224.1) ...
+Setting up libgmpxx4ldbl:amd64 (2:6.2.0+dfsg-4ubuntu0.1) ...
+Setting up libwolfssl24:amd64 (4.3.0+dfsg-2) ...
+Setting up make (4.2.1-1.2) ...
+Setting up libgpg-error-dev (1.37-1) ...
+Setting up libisccfg-export163 (1:9.11.16+dfsg-3~ubuntu1) ...
+Setting up redis-tools (6:8.0.3-1rl1~focal1) ...
+Setting up libavahi-common-data:amd64 (0.7-4ubuntu7.3) ...
+Setting up wamerican (2018.04.16-1) ...
+Setting up libquadmath0:amd64 (10.5.0-1ubuntu1~20.04) ...
+Setting up libpcre32-3:amd64 (2:8.39-12ubuntu0.1) ...
+Setting up libmpc3:amd64 (1.1.0-1) ...
+Setting up libatomic1:amd64 (10.5.0-1ubuntu1~20.04) ...
+Setting up libwebp6:amd64 (0.6.1-2ubuntu0.20.04.3) ...
+Setting up libcroco3:amd64 (0.6.13-1ubuntu0.1) ...
+Setting up icu-devtools (66.1-2ubuntu2.1) ...
+Setting up fonts-dejavu-core (2.37-1) ...
+Setting up libnetfilter-queue1 (1.0.3-1) ...
+Setting up libpcsclite1:amd64 (1.8.26-3) ...
+Setting up libsensors5:amd64 (1:3.6.0-2ubuntu1.1) ...
+Setting up libjpeg-turbo8:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+Setting up libdpkg-perl (1.19.7ubuntu3.2) ...
+Setting up autoconf (2.69-11.1) ...
+Setting up libcrack2:amd64 (2.9.6-3.2) ...
+Setting up liblzma-dev:amd64 (5.2.4-1ubuntu1.1) ...
+Setting up libubsan1:amd64 (10.5.0-1ubuntu1~20.04) ...
+Setting up netfilter-persistent (1.0.14ubuntu1) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/netfilter-persistent.service → /lib/systemd/system/netfilter-persistent.service.
+Setting up libvpx6:amd64 (1.8.2-1ubuntu0.4) ...
+Setting up librhash0:amd64 (1.3.9-1) ...
+Setting up shc (4.0.3-0.1) ...
+Setting up libcrypt-dev:amd64 (1:4.4.10-10ubuntu4) ...
+Setting up python3-apparmor (2.13.3-7ubuntu5.4) ...
+Setting up bison (2:3.5.1+dfsg-1) ...
+update-alternatives: using /usr/bin/bison.yacc to provide /usr/bin/yacc (yacc) in auto mode
+Setting up libharfbuzz0b:amd64 (2.6.4-1ubuntu4.3) ...
+Setting up libisl22:amd64 (0.22.1-1) ...
+Setting up xorg-sgml-doctools (1:1.11-1) ...
+Setting up libbotan-2-dev (2.12.1-2build1) ...
+Setting up cmake-data (3.16.3-1ubuntu1.20.04.1) ...
+Setting up libwolfssl-dev:amd64 (4.3.0+dfsg-2) ...
+Setting up libbinutils:amd64 (2.34-6ubuntu1.11) ...
+Setting up libc-dev-bin (2.31-0ubuntu9.18) ...
+Setting up libalgorithm-diff-xs-perl (0.04-6) ...
+Setting up libcc1-0:amd64 (10.5.0-1ubuntu1~20.04) ...
+Setting up liblsan0:amd64 (10.5.0-1ubuntu1~20.04) ...
+Setting up libitm1:amd64 (10.5.0-1ubuntu1~20.04) ...
+Setting up libjsoncpp1:amd64 (1.7.4-3.1ubuntu2) ...
+Setting up libirs-export161 (1:9.11.16+dfsg-3~ubuntu1) ...
+Setting up gcc-9-base:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+Setting up libalgorithm-merge-perl (0.08-3) ...
+Setting up libhiredis0.14:amd64 (0.14.0-6) ...
+Setting up libtsan0:amd64 (10.5.0-1ubuntu1~20.04) ...
+Setting up libcrypto++6 (5.6.4-9build1) ...
+Setting up libctf0:amd64 (2.34-6ubuntu1.11) ...
+Setting up libjpeg8:amd64 (8c-2ubuntu8) ...
+Setting up automake (1:1.16.1-4ubuntu6) ...
+update-alternatives: using /usr/bin/automake-1.16 to provide /usr/bin/automake (automake) in auto mode
+Setting up x11proto-dev (2019.2-1ubuntu1) ...
+Setting up libice6:amd64 (2:1.0.10-0ubuntu1) ...
+Setting up libjsoncpp-dev:amd64 (1.7.4-3.1ubuntu2) ...
+Setting up flex (2.6.4-6.2) ...
+Setting up gettext (0.19.8.1-10build1) ...
+Setting up libgmp-dev:amd64 (2:6.2.0+dfsg-4ubuntu0.1) ...
+Setting up libxau-dev:amd64 (1:1.0.9-0ubuntu1) ...
+Setting up libsnmp35:amd64 (5.8+dfsg-2ubuntu2.9) ...
+Setting up libhiredis-dev:amd64 (0.14.0-6) ...
+Setting up libice-dev:amd64 (2:1.0.10-0ubuntu1) ...
+Setting up keepalived (1:2.0.19-2ubuntu0.2) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/keepalived.service → /lib/systemd/system/keepalived.service.
+Setting up fontconfig-config (2.13.1-2ubuntu3) ...
+Setting up libcrypto++-dev (5.6.4-9build1) ...
+Setting up libavahi-common3:amd64 (0.7-4ubuntu7.3) ...
+Setting up libjbig-dev:amd64 (2.1-3.1ubuntu0.20.04.1) ...
+Setting up isc-dhcp-server (4.4.1-2.1ubuntu5.20.04.5) ...
+Generating /etc/default/isc-dhcp-server...
+Created symlink /etc/systemd/system/multi-user.target.wants/isc-dhcp-server.service → /lib/systemd/system/isc-dhcp-server.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/isc-dhcp-server6.service → /lib/systemd/system/isc-dhcp-server6.service.
+Setting up snmp (5.8+dfsg-2ubuntu2.9) ...
+Setting up snmpd (5.8+dfsg-2ubuntu2.9) ...
+adduser: Warning: The home directory `/var/lib/snmp' does not belong to the user you are currently creating.
+Created symlink /etc/systemd/system/multi-user.target.wants/snmpd.service → /lib/systemd/system/snmpd.service.
+Setting up redis-server (6:8.0.3-1rl1~focal1) ...
+Created symlink /etc/systemd/system/redis.service → /lib/systemd/system/redis-server.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/redis-server.service → /lib/systemd/system/redis-server.service.
+Setting up libfl-dev:amd64 (2.6.4-6.2) ...
+Setting up libltdl-dev:amd64 (2.4.6-14) ...
+Setting up cracklib-runtime (2.9.6-3.2) ...
+Setting up libasan5:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+Setting up libxdmcp-dev:amd64 (1:1.1.3-0ubuntu1) ...
+Setting up libpwquality1:amd64 (1.4.2-1build1) ...
+Setting up libvpx-dev:amd64 (1.8.2-1ubuntu0.4) ...
+Setting up x11proto-core-dev (2019.2-1ubuntu1) ...
+Setting up apparmor-utils (2.13.3-7ubuntu5.4) ...
+Setting up pkg-config (0.29.1-0ubuntu4) ...
+Setting up cmake (3.16.3-1ubuntu1.20.04.1) ...
+Setting up cpp-9 (9.4.0-1ubuntu1~20.04.2) ...
+Setting up libc6-dev:amd64 (2.31-0ubuntu9.18) ...
+Setting up libtiff5:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+Setting up libfontconfig1:amd64 (2.13.1-2ubuntu3) ...
+Setting up libsm6:amd64 (2:1.2.3-1) ...
+Setting up libicu-dev:amd64 (66.1-2ubuntu2.1) ...
+Setting up libavahi-client3:amd64 (0.7-4ubuntu7.3) ...
+Setting up libtiffxx5:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+Setting up binutils-x86-64-linux-gnu (2.34-6ubuntu1.11) ...
+Setting up libnfnetlink-dev (1.0.1-3build1) ...
+Setting up libjpeg-turbo8-dev:amd64 (2.0.3-0ubuntu1.20.04.3) ...
+Setting up libxcb1-dev:amd64 (1.14-2) ...
+Setting up libsm-dev:amd64 (2:1.2.3-1) ...
+Setting up libpcre3-dev:amd64 (2:8.39-12ubuntu0.1) ...
+Setting up libpam-pwquality:amd64 (1.4.2-1build1) ...
+Setting up libx11-dev:amd64 (2:1.6.9-2ubuntu1.6) ...
+Setting up binutils (2.34-6ubuntu1.11) ...
+Setting up dpkg-dev (1.19.7ubuntu3.2) ...
+Setting up libgcc-9-dev:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+Setting up libxml2-dev:amd64 (2.9.10+dfsg-5ubuntu0.20.04.10) ...
+Setting up libexpat1-dev:amd64 (2.2.9-1ubuntu0.8) ...
+Setting up libgcrypt20-dev (1.8.5-5ubuntu1.1) ...
+Setting up uuid-dev:amd64 (2.34-0.1ubuntu9.6) ...
+Setting up libxpm-dev:amd64 (1:3.5.12-1ubuntu0.20.04.2) ...
+Setting up libgd3:amd64 (2.2.5-5.2ubuntu2.4) ...
+Setting up libxt6:amd64 (1:1.1.5-1) ...
+Setting up libnetfilter-queue-dev (1.0.3-1) ...
+Setting up libcups2:amd64 (2.3.1-9ubuntu1.9) ...
+Setting up zlib1g-dev:amd64 (1:1.2.11.dfsg-2ubuntu1.5) ...
+Setting up cpp (4:9.3.0-1ubuntu2) ...
+Setting up libjpeg8-dev:amd64 (8c-2ubuntu8) ...
+Setting up gcc-9 (9.4.0-1ubuntu1~20.04.2) ...
+Setting up libstdc++-9-dev:amd64 (9.4.0-1ubuntu1~20.04.2) ...
+Setting up libtool (2.4.6-14) ...
+Setting up libpng-dev:amd64 (1.6.37-2) ...
+Setting up libjpeg-dev:amd64 (8c-2ubuntu8) ...
+Setting up gcc (4:9.3.0-1ubuntu2) ...
+Setting up libfreetype-dev:amd64 (2.10.1-2ubuntu0.4) ...
+Setting up libtiff-dev:amd64 (4.1.0+git191117-2ubuntu0.20.04.14) ...
+Setting up libxt-dev:amd64 (1:1.1.5-1) ...
+Setting up g++-9 (9.4.0-1ubuntu1~20.04.2) ...
+Setting up g++ (4:9.3.0-1ubuntu2) ...
+update-alternatives: using /usr/bin/g++ to provide /usr/bin/c++ (c++) in auto mode
+Setting up build-essential (12.8ubuntu1.1) ...
+Setting up libtool-bin (2.4.6-14) ...
+Setting up libfreetype6-dev:amd64 (2.10.1-2ubuntu0.4) ...
+Setting up libfontconfig1-dev:amd64 (2.13.1-2ubuntu3) ...
+Setting up libgd-dev:amd64 (2.2.5-5.2ubuntu2.4) ...
+Setting up openjdk-17-jre-headless:amd64 (17.0.15+6~us1-0ubuntu1~20.04) ...
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/java to provide /usr/bin/java (java) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/jpackage to provide /usr/bin/jpackage (jpackage) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/keytool to provide /usr/bin/keytool (keytool) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/bin/rmiregistry to provide /usr/bin/rmiregistry (rmiregistry) in auto mode
+update-alternatives: using /usr/lib/jvm/java-17-openjdk-amd64/lib/jexec to provide /usr/bin/jexec (jexec) in auto mode
+Setting up ca-certificates-java (20190405ubuntu1.1) ...
+head: cannot open '/etc/ssl/certs/java/cacerts' for reading: No such file or directory
+Adding debian:OISTE_WISeKey_Global_Root_GC_CA.pem
+Adding debian:QuoVadis_Root_CA_2_G3.pem
+Adding debian:Security_Communication_ECC_RootCA1.pem
+Adding debian:Buypass_Class_3_Root_CA.pem
+Adding debian:IdenTrust_Commercial_Root_CA_1.pem
+Adding debian:COMODO_Certification_Authority.pem
+Adding debian:COMODO_RSA_Certification_Authority.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_E46.pem
+Adding debian:SZAFIR_ROOT_CA2.pem
+Adding debian:UCA_Extended_Validation_Root.pem
+Adding debian:Security_Communication_RootCA3.pem
+Adding debian:TWCA_Global_Root_CA.pem
+Adding debian:AffirmTrust_Networking.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R5.pem
+Adding debian:GTS_Root_R2.pem
+Adding debian:AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS.pem
+Adding debian:DigiCert_High_Assurance_EV_Root_CA.pem
+Adding debian:GDCA_TrustAUTH_R5_ROOT.pem
+Adding debian:Actalis_Authentication_Root_CA.pem
+Adding debian:Go_Daddy_Root_Certificate_Authority_-_G2.pem
+Adding debian:SecureSign_RootCA11.pem
+Adding debian:Trustwave_Global_Certification_Authority.pem
+Adding debian:DigiCert_Assured_ID_Root_CA.pem
+Adding debian:Certigna_Root_CA.pem
+Adding debian:SwissSign_Gold_CA_-_G2.pem
+Adding debian:emSign_Root_CA_-_C1.pem
+Adding debian:AffirmTrust_Premium.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G2.pem
+Adding debian:e-Szigno_Root_CA_2017.pem
+Adding debian:SSL.com_Root_Certification_Authority_ECC.pem
+Adding debian:UCA_Global_G2_Root.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-01.pem
+Adding debian:Atos_TrustedRoot_2011.pem
+Adding debian:Comodo_AAA_Services_root.pem
+Adding debian:Security_Communication_Root_CA.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015.pem
+Adding debian:DigiCert_TLS_ECC_P384_Root_G5.pem
+Adding debian:Amazon_Root_CA_4.pem
+Adding debian:TWCA_Root_Certification_Authority.pem
+Adding debian:Trustwave_Global_ECC_P384_Certification_Authority.pem
+Adding debian:D-TRUST_BR_Root_CA_1_2020.pem
+Adding debian:DigiCert_TLS_RSA4096_Root_G5.pem
+Adding debian:TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1.pem
+Adding debian:Starfield_Root_Certificate_Authority_-_G2.pem
+Adding debian:GlobalSign_Root_CA.pem
+Adding debian:Certum_EC-384_CA.pem
+Adding debian:Buypass_Class_2_Root_CA.pem
+Adding debian:HARICA_TLS_RSA_Root_CA_2021.pem
+Adding debian:HARICA_TLS_ECC_Root_CA_2021.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_2009.pem
+Adding debian:GlobalSign_Root_E46.pem
+Adding debian:QuoVadis_Root_CA_3.pem
+Adding debian:ACCVRAIZ1.pem
+Adding debian:vTrus_Root_CA.pem
+Adding debian:TrustAsia_Global_Root_CA_G3.pem
+Adding debian:Starfield_Services_Root_Certificate_Authority_-_G2.pem
+Adding debian:Microsec_e-Szigno_Root_CA_2009.pem
+Adding debian:DigiCert_Trusted_Root_G4.pem
+Adding debian:QuoVadis_Root_CA_2.pem
+Adding debian:GTS_Root_R1.pem
+Adding debian:Certum_Trusted_Network_CA.pem
+Adding debian:DigiCert_Global_Root_G2.pem
+Adding debian:AffirmTrust_Commercial.pem
+Adding debian:CFCA_EV_ROOT.pem
+Adding debian:Trustwave_Global_ECC_P256_Certification_Authority.pem
+Adding debian:GlobalSign_Root_R46.pem
+Adding debian:USERTrust_ECC_Certification_Authority.pem
+Adding debian:GLOBALTRUST_2020.pem
+Adding debian:Microsoft_ECC_Root_Certificate_Authority_2017.pem
+Adding debian:emSign_ECC_Root_CA_-_C3.pem
+Adding debian:Certainly_Root_R1.pem
+Adding debian:DigiCert_Global_Root_G3.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-01.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_ECC.pem
+Adding debian:SwissSign_Silver_CA_-_G2.pem
+Adding debian:IdenTrust_Public_Sector_Root_CA_1.pem
+Adding debian:COMODO_ECC_Certification_Authority.pem
+Adding debian:Certum_Trusted_Network_CA_2.pem
+Adding debian:GlobalSign_Root_CA_-_R6.pem
+Adding debian:Izenpe.com.pem
+Adding debian:TrustAsia_Global_Root_CA_G4.pem
+Adding debian:QuoVadis_Root_CA_1_G3.pem
+Adding debian:Atos_TrustedRoot_Root_CA_RSA_TLS_2021.pem
+Adding debian:D-TRUST_Root_Class_3_CA_2_EV_2009.pem
+Adding debian:Entrust_Root_Certification_Authority.pem
+Adding debian:USERTrust_RSA_Certification_Authority.pem
+Adding debian:Hongkong_Post_Root_CA_3.pem
+Adding debian:Starfield_Class_2_CA.pem
+Adding debian:Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068.pem
+Adding debian:Certainly_Root_E1.pem
+Adding debian:GTS_Root_R4.pem
+Adding debian:TunTrust_Root_CA.pem
+Adding debian:QuoVadis_Root_CA_3_G3.pem
+Adding debian:certSIGN_Root_CA_G2.pem
+Adding debian:Amazon_Root_CA_1.pem
+Adding debian:NAVER_Global_Root_Certification_Authority.pem
+Adding debian:GTS_Root_R3.pem
+Adding debian:AffirmTrust_Premium_ECC.pem
+Adding debian:SecureTrust_CA.pem
+Adding debian:ISRG_Root_X2.pem
+Adding debian:OISTE_WISeKey_Global_Root_GB_CA.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_3.pem
+Adding debian:BJCA_Global_Root_CA2.pem
+Adding debian:SSL.com_TLS_RSA_Root_CA_2022.pem
+Adding debian:Security_Communication_RootCA2.pem
+Adding debian:Entrust.net_Premium_2048_Secure_Server_CA.pem
+Adding debian:GlobalSign_Root_CA_-_R3.pem
+Adding debian:D-TRUST_EV_Root_CA_1_2020.pem
+Adding debian:NetLock_Arany_=Class_Gold=_Főtanúsítvány.pem
+Adding debian:DigiCert_Global_Root_CA.pem
+Adding debian:TeliaSonera_Root_CA_v1.pem
+Adding debian:Sectigo_Public_Server_Authentication_Root_R46.pem
+Adding debian:AC_RAIZ_FNMT-RCM.pem
+Adding debian:Telia_Root_CA_v2.pem
+Adding debian:SSL.com_Root_Certification_Authority_RSA.pem
+Adding debian:CommScope_Public_Trust_ECC_Root-02.pem
+Adding debian:emSign_ECC_Root_CA_-_G3.pem
+Adding debian:ePKI_Root_Certification_Authority.pem
+Adding debian:ISRG_Root_X1.pem
+Adding debian:Amazon_Root_CA_3.pem
+Adding debian:XRamp_Global_CA_Root.pem
+Adding debian:Entrust_Root_Certification_Authority_-_EC1.pem
+Adding debian:Hellenic_Academic_and_Research_Institutions_RootCA_2015.pem
+Adding debian:Entrust_Root_Certification_Authority_-_G4.pem
+Adding debian:BJCA_Global_Root_CA1.pem
+Adding debian:GlobalSign_ECC_Root_CA_-_R4.pem
+Adding debian:Amazon_Root_CA_2.pem
+Adding debian:Atos_TrustedRoot_Root_CA_ECC_TLS_2021.pem
+Adding debian:HiPKI_Root_CA_-_G1.pem
+Adding debian:Secure_Global_CA.pem
+Adding debian:SSL.com_TLS_ECC_Root_CA_2022.pem
+Adding debian:Certum_Trusted_Root_CA.pem
+Adding debian:DigiCert_Assured_ID_Root_G2.pem
+Adding debian:CommScope_Public_Trust_RSA_Root-02.pem
+Adding debian:Microsoft_RSA_Root_Certificate_Authority_2017.pem
+Adding debian:Baltimore_CyberTrust_Root.pem
+Adding debian:vTrus_ECC_Root_CA.pem
+Adding debian:CA_Disig_Root_R2.pem
+Adding debian:Go_Daddy_Class_2_CA.pem
+Adding debian:ANF_Secure_Server_Root_CA.pem
+Adding debian:DigiCert_Assured_ID_Root_G3.pem
+Adding debian:SSL.com_EV_Root_Certification_Authority_RSA_R2.pem
+Adding debian:emSign_Root_CA_-_G1.pem
+Adding debian:certSIGN_ROOT_CA.pem
+Adding debian:T-TeleSec_GlobalRoot_Class_2.pem
+Adding debian:Certigna.pem
+done.
+Processing triggers for install-info (6.7.0.dfsg.2-5) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.18) ...
+Processing triggers for systemd (245.4-4ubuntu3.20) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for ca-certificates (20240203~20.04.1) ...
+Updating certificates in /etc/ssl/certs...
+0 added, 0 removed; done.
+Running hooks in /etc/ca-certificates/update.d...
+
+done.
+done.
+Processing triggers for dbus (1.12.16-2ubuntu2.3) ...
+fn_compile_shellscript
+compile 3rd-party source
+Configuring OpenSSL version 3.3.3 for target linux-x86_64
+Using os-specific seed configuration
+Created configdata.pm
+Running configdata.pm
+Created Makefile.in
+Created Makefile
+Created include/openssl/configuration.h
+
+**********************************************************************
+***                                                                ***
+***   OpenSSL has been successfully configured                     ***
+***                                                                ***
+***   If you encounter a problem while building, please open an    ***
+***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+***   and include the output from the following command:           ***
+***                                                                ***
+***       perl configdata.pm --dump                                ***
+***                                                                ***
+***   (If you are new to OpenSSL, you might want to consult the    ***
+***   'Troubleshooting' section in the INSTALL.md file first)      ***
+***                                                                ***
+**********************************************************************
+Cannot find "WWW::Curl::Easy" in podpath: cannot find suitable replacement path, cannot resolve link
+Cannot find "WWW::Curl::Easy" in podpath: cannot find suitable replacement path, cannot resolve link
+checking for OS
+ + Linux 5.4.0-144-generic x86_64
+checking for C compiler ... found
+ + using GNU C compiler
+ + gcc version: 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2) 
+checking for gcc -pipe switch ... found
+checking for -Wl,-E switch ... found
+checking for gcc builtin atomic operations ... found
+checking for C99 variadic macros ... found
+checking for gcc variadic macros ... found
+checking for gcc builtin 64 bit byteswap ... found
+checking for unistd.h ... found
+checking for inttypes.h ... found
+checking for limits.h ... found
+checking for sys/filio.h ... not found
+checking for sys/param.h ... found
+checking for sys/mount.h ... found
+checking for sys/statvfs.h ... found
+checking for crypt.h ... found
+checking for Linux specific features
+checking for epoll ... found
+checking for EPOLLRDHUP ... found
+checking for EPOLLEXCLUSIVE ... found
+checking for eventfd() ... found
+checking for O_PATH ... found
+checking for sendfile() ... found
+checking for sendfile64() ... found
+checking for sys/prctl.h ... found
+checking for prctl(PR_SET_DUMPABLE) ... found
+checking for prctl(PR_SET_KEEPCAPS) ... found
+checking for capabilities ... found
+checking for crypt_r() ... found
+checking for sys/vfs.h ... found
+checking for BPF sockhash ... found
+checking for SO_COOKIE ... found
+checking for UDP_SEGMENT ... found
+checking for nobody group ... not found
+checking for nogroup group ... found
+checking for poll() ... found
+checking for /dev/poll ... not found
+checking for kqueue ... not found
+checking for crypt() ... not found
+checking for crypt() in libcrypt ... found
+checking for F_READAHEAD ... not found
+checking for posix_fadvise() ... found
+checking for O_DIRECT ... found
+checking for F_NOCACHE ... not found
+checking for directio() ... not found
+checking for statfs() ... found
+checking for statvfs() ... found
+checking for dlopen() ... not found
+checking for dlopen() in libdl ... found
+checking for sched_yield() ... found
+checking for sched_setaffinity() ... found
+checking for SO_SETFIB ... not found
+checking for SO_REUSEPORT ... found
+checking for SO_ACCEPTFILTER ... not found
+checking for SO_BINDANY ... not found
+checking for IP_TRANSPARENT ... found
+checking for IP_BINDANY ... not found
+checking for IP_BIND_ADDRESS_NO_PORT ... found
+checking for IP_RECVDSTADDR ... not found
+checking for IP_SENDSRCADDR ... not found
+checking for IP_PKTINFO ... found
+checking for IPV6_RECVPKTINFO ... found
+checking for IP_MTU_DISCOVER ... found
+checking for IPV6_MTU_DISCOVER ... found
+checking for IP_DONTFRAG ... not found
+checking for IPV6_DONTFRAG ... found
+checking for TCP_DEFER_ACCEPT ... found
+checking for TCP_KEEPIDLE ... found
+checking for TCP_FASTOPEN ... found
+checking for TCP_INFO ... found
+checking for accept4() ... found
+checking for int size ... 4 bytes
+checking for long size ... 8 bytes
+checking for long long size ... 8 bytes
+checking for void * size ... 8 bytes
+checking for uint32_t ... found
+checking for uint64_t ... found
+checking for sig_atomic_t ... found
+checking for sig_atomic_t size ... 4 bytes
+checking for socklen_t ... found
+checking for in_addr_t ... found
+checking for in_port_t ... found
+checking for rlim_t ... found
+checking for uintptr_t ... uintptr_t found
+checking for system byte ordering ... little endian
+checking for size_t size ... 8 bytes
+checking for off_t size ... 8 bytes
+checking for time_t size ... 8 bytes
+checking for AF_INET6 ... found
+checking for setproctitle() ... not found
+checking for pread() ... found
+checking for pwrite() ... found
+checking for pwritev() ... found
+checking for strerrordesc_np() ... not found
+checking for sys_nerr ... found
+checking for localtime_r() ... found
+checking for clock_gettime(CLOCK_MONOTONIC) ... found
+checking for posix_memalign() ... found
+checking for memalign() ... found
+checking for mmap(MAP_ANON|MAP_SHARED) ... found
+checking for mmap("/dev/zero", MAP_SHARED) ... found
+checking for System V shared memory ... found
+checking for POSIX semaphores ... not found
+checking for POSIX semaphores in libpthread ... found
+checking for struct msghdr.msg_control ... found
+checking for ioctl(FIONBIO) ... found
+checking for ioctl(FIONREAD) ... found
+checking for struct tm.tm_gmtoff ... found
+checking for struct dirent.d_namlen ... not found
+checking for struct dirent.d_type ... found
+checking for sysconf(_SC_NPROCESSORS_ONLN) ... found
+checking for sysconf(_SC_LEVEL1_DCACHE_LINESIZE) ... found
+checking for openat(), fstatat() ... found
+checking for getaddrinfo() ... found
+configuring additional modules
+adding module in ../headers-more-nginx-module-0.38
+ + ngx_http_headers_more_filter_module was configured
+checking for PCRE2 library ... not found
+checking for PCRE library ... found
+checking for PCRE JIT support ... found
+checking for OpenSSL library ... found
+checking for zlib library ... found
+checking for GD library ... found
+checking for GD WebP support ... found
+creating objs/Makefile
+
+Configuration summary
+  + using system PCRE library
+  + using system OpenSSL library
+  + using system zlib library
+
+  nginx path prefix: "/usr/share/nginx"
+  nginx binary file: "/usr/sbin/nginx"
+  nginx modules path: "/etc/nginx/modules"
+  nginx configuration prefix: "/etc/nginx"
+  nginx configuration file: "/etc/nginx/nginx.conf"
+  nginx pid file: "/run/nginx.pid"
+  nginx error log file: "/var/log/nginx/error.log"
+  nginx http access log file: "/var/log/nginx/access.log"
+  nginx http client request body temporary files: "client_body_temp"
+  nginx http proxy temporary files: "proxy_temp"
+  nginx http fastcgi temporary files: "fastcgi_temp"
+  nginx http uwsgi temporary files: "uwsgi_temp"
+  nginx http scgi temporary files: "scgi_temp"
+
+autoreconf: Entering directory `.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I m4/config
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4/config'.
+libtoolize: copying file 'm4/config/libtool.m4'
+libtoolize: copying file 'm4/config/ltoptions.m4'
+libtoolize: copying file 'm4/config/ltsugar.m4'
+libtoolize: copying file 'm4/config/ltversion.m4'
+libtoolize: copying file 'm4/config/lt~obsolete.m4'
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:377: installing './compile'
+configure.ac:380: installing './config.guess'
+configure.ac:380: installing './config.sub'
+configure.ac:24: installing './install-sh'
+configure.ac:24: installing './missing'
+fuzz/Makefile.am: installing './depcomp'
+configure.ac: installing './ylwrap'
+autoreconf: Leaving directory `.'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking configured UDP ports (500, 4500)... ok
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for egrep... (cached) /usr/bin/grep -E
+checking for gawk... (cached) gawk
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for python... no
+checking for python2... no
+checking for python3... /usr/bin/python3
+checking for python version... 3.8
+checking for python platform... linux
+checking for python script directory... ${prefix}/lib/python3.8/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python3.8/site-packages
+checking for perl... /usr/bin/perl
+checking for gperf... /usr/bin/gperf
+checking gperf len type... size_t
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... no
+checking for library containing dlopen... -ldl
+checking for library containing backtrace... none required
+checking for backtrace... yes
+checking for library containing socket... none required
+checking for library containing pthread_create... -lpthread
+checking for library containing __atomic_and_fetch... none required
+checking for dladdr... yes
+checking for pthread_condattr_setclock(CLOCK_MONOTONIC)... yes
+checking for pthread_condattr_init... yes
+checking for pthread_cond_timedwait_monotonic... no
+checking for pthread_cancel... yes
+checking for pthread_rwlock_init... yes
+checking for pthread_spin_init... yes
+checking for sem_timedwait... yes
+checking for gettid... yes
+checking for qsort_r... yes
+checking for GNU-style qsort_r... yes
+checking for prctl... yes
+checking for mallinfo... yes
+checking for mallinfo2... no
+checking for getpass... yes
+checking for closefrom... no
+checking for getpwnam_r... yes
+checking for getgrnam_r... yes
+checking for getpwuid_r... yes
+checking for chown... yes
+checking for fmemopen... yes
+checking for funopen... no
+checking for mmap... yes
+checking for memrchr... yes
+checking for setlinebuf... yes
+checking for strptime... yes
+checking for dirfd... yes
+checking for sigwaitinfo... yes
+checking for explicit_bzero... yes
+checking for syslog... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking glob.h usability... yes
+checking glob.h presence... yes
+checking for glob.h... yes
+checking net/if_tun.h usability... no
+checking net/if_tun.h presence... no
+checking for net/if_tun.h... no
+checking net/pfkeyv2.h usability... no
+checking net/pfkeyv2.h presence... no
+checking for net/pfkeyv2.h... no
+checking netipsec/ipsec.h usability... no
+checking netipsec/ipsec.h presence... no
+checking for netipsec/ipsec.h... no
+checking netinet6/ipsec.h usability... no
+checking netinet6/ipsec.h presence... no
+checking for netinet6/ipsec.h... no
+checking linux/udp.h usability... yes
+checking linux/udp.h presence... yes
+checking for linux/udp.h... yes
+checking for netinet/ip6.h... yes
+checking for linux/fib_rules.h... yes
+checking for struct sockaddr.sa_len... no
+checking for struct sadb_x_policy.sadb_x_policy_priority... yes
+checking for in6addr_any... yes
+checking for in6_pktinfo... yes
+checking for RTM_IFANNOUNCE... no
+checking for IPSEC_MODE_BEET... yes
+checking for IPSEC_DIR_FWD... yes
+checking for RTA_TABLE... yes
+checking for __int128... yes
+checking for GCC __sync operations... yes
+checking for register_printf_specifier... yes
+checking for Windows target... no
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for working __attribute__((packed))... yes
+checking clang... no
+checking x86/x64 target... yes
+checking for __gmpz_init in -lgmp... yes
+checking mpz_powm_sec... yes
+checking gmp.h version >= 4.1.4... yes
+checking for EVP_CIPHER_CTX_new in -lcrypto... yes
+checking openssl/evp.h usability... yes
+checking openssl/evp.h presence... yes
+checking for openssl/evp.h... yes
+checking for OQS_init in -loqs... yes
+checking oqs/oqs.h usability... yes
+checking oqs/oqs.h presence... yes
+checking for oqs/oqs.h... yes
+checking if plugin constructors should be resolved statically... no (enabled for static, monolithic builds)
+checking version from Git repository... UNKNOWN (could be due to insufficient clone depth)
+checking for use of -Werror and additional warnings... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating conf/Makefile
+config.status: creating fuzz/Makefile
+config.status: creating man/Makefile
+config.status: creating init/Makefile
+config.status: creating init/systemd/Makefile
+config.status: creating init/systemd-starter/Makefile
+config.status: creating src/Makefile
+config.status: creating src/include/Makefile
+config.status: creating src/libstrongswan/Makefile
+config.status: creating src/libstrongswan/math/libnttfft/Makefile
+config.status: creating src/libstrongswan/math/libnttfft/tests/Makefile
+config.status: creating src/libstrongswan/plugins/aes/Makefile
+config.status: creating src/libstrongswan/plugins/cmac/Makefile
+config.status: creating src/libstrongswan/plugins/des/Makefile
+config.status: creating src/libstrongswan/plugins/blowfish/Makefile
+config.status: creating src/libstrongswan/plugins/rc2/Makefile
+config.status: creating src/libstrongswan/plugins/md4/Makefile
+config.status: creating src/libstrongswan/plugins/md5/Makefile
+config.status: creating src/libstrongswan/plugins/sha1/Makefile
+config.status: creating src/libstrongswan/plugins/sha2/Makefile
+config.status: creating src/libstrongswan/plugins/sha3/Makefile
+config.status: creating src/libstrongswan/plugins/mgf1/Makefile
+config.status: creating src/libstrongswan/plugins/fips_prf/Makefile
+config.status: creating src/libstrongswan/plugins/gmp/Makefile
+config.status: creating src/libstrongswan/plugins/curve25519/Makefile
+config.status: creating src/libstrongswan/plugins/rdrand/Makefile
+config.status: creating src/libstrongswan/plugins/aesni/Makefile
+config.status: creating src/libstrongswan/plugins/random/Makefile
+config.status: creating src/libstrongswan/plugins/nonce/Makefile
+config.status: creating src/libstrongswan/plugins/hmac/Makefile
+config.status: creating src/libstrongswan/plugins/kdf/Makefile
+config.status: creating src/libstrongswan/plugins/xcbc/Makefile
+config.status: creating src/libstrongswan/plugins/x509/Makefile
+config.status: creating src/libstrongswan/plugins/revocation/Makefile
+config.status: creating src/libstrongswan/plugins/constraints/Makefile
+config.status: creating src/libstrongswan/plugins/acert/Makefile
+config.status: creating src/libstrongswan/plugins/pubkey/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs1/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs7/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs8/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs12/Makefile
+config.status: creating src/libstrongswan/plugins/openxpki/Makefile
+config.status: creating src/libstrongswan/plugins/pgp/Makefile
+config.status: creating src/libstrongswan/plugins/dnskey/Makefile
+config.status: creating src/libstrongswan/plugins/sshkey/Makefile
+config.status: creating src/libstrongswan/plugins/pem/Makefile
+config.status: creating src/libstrongswan/plugins/curl/Makefile
+config.status: creating src/libstrongswan/plugins/files/Makefile
+config.status: creating src/libstrongswan/plugins/winhttp/Makefile
+config.status: creating src/libstrongswan/plugins/unbound/Makefile
+config.status: creating src/libstrongswan/plugins/soup/Makefile
+config.status: creating src/libstrongswan/plugins/ldap/Makefile
+config.status: creating src/libstrongswan/plugins/mysql/Makefile
+config.status: creating src/libstrongswan/plugins/sqlite/Makefile
+config.status: creating src/libstrongswan/plugins/padlock/Makefile
+config.status: creating src/libstrongswan/plugins/openssl/Makefile
+config.status: creating src/libstrongswan/plugins/wolfssl/Makefile
+config.status: creating src/libstrongswan/plugins/gcrypt/Makefile
+config.status: creating src/libstrongswan/plugins/botan/Makefile
+config.status: creating src/libstrongswan/plugins/agent/Makefile
+config.status: creating src/libstrongswan/plugins/keychain/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs11/Makefile
+config.status: creating src/libstrongswan/plugins/chapoly/Makefile
+config.status: creating src/libstrongswan/plugins/ctr/Makefile
+config.status: creating src/libstrongswan/plugins/ccm/Makefile
+config.status: creating src/libstrongswan/plugins/gcm/Makefile
+config.status: creating src/libstrongswan/plugins/af_alg/Makefile
+config.status: creating src/libstrongswan/plugins/drbg/Makefile
+config.status: creating src/libstrongswan/plugins/ntru/Makefile
+config.status: creating src/libstrongswan/plugins/bliss/Makefile
+config.status: creating src/libstrongswan/plugins/bliss/tests/Makefile
+config.status: creating src/libstrongswan/plugins/newhope/Makefile
+config.status: creating src/libstrongswan/plugins/newhope/tests/Makefile
+config.status: creating src/libstrongswan/plugins/oqs/Makefile
+config.status: creating src/libstrongswan/plugins/oqs/tests/Makefile
+config.status: creating src/libstrongswan/plugins/test_vectors/Makefile
+config.status: creating src/libstrongswan/tests/Makefile
+config.status: creating src/libipsec/Makefile
+config.status: creating src/libipsec/tests/Makefile
+config.status: creating src/libsimaka/Makefile
+config.status: creating src/libtls/Makefile
+config.status: creating src/libtls/tests/Makefile
+config.status: creating src/libradius/Makefile
+config.status: creating src/libtncif/Makefile
+config.status: creating src/libtnccs/Makefile
+config.status: creating src/libtnccs/plugins/tnc_tnccs/Makefile
+config.status: creating src/libtnccs/plugins/tnc_imc/Makefile
+config.status: creating src/libtnccs/plugins/tnc_imv/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_11/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_20/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_dynamic/Makefile
+config.status: creating src/libpttls/Makefile
+config.status: creating src/libimcv/Makefile
+config.status: creating src/libimcv/plugins/imc_test/Makefile
+config.status: creating src/libimcv/plugins/imv_test/Makefile
+config.status: creating src/libimcv/plugins/imc_scanner/Makefile
+config.status: creating src/libimcv/plugins/imv_scanner/Makefile
+config.status: creating src/libimcv/plugins/imc_os/Makefile
+config.status: creating src/libimcv/plugins/imv_os/Makefile
+config.status: creating src/libimcv/plugins/imc_attestation/Makefile
+config.status: creating src/libimcv/plugins/imv_attestation/Makefile
+config.status: creating src/libimcv/plugins/imc_swima/Makefile
+config.status: creating src/libimcv/plugins/imv_swima/Makefile
+config.status: creating src/libimcv/plugins/imc_hcd/Makefile
+config.status: creating src/libimcv/plugins/imv_hcd/Makefile
+config.status: creating src/charon/Makefile
+config.status: creating src/charon-nm/Makefile
+config.status: creating src/charon-tkm/Makefile
+config.status: creating src/charon-cmd/Makefile
+config.status: creating src/charon-svc/Makefile
+config.status: creating src/charon-systemd/Makefile
+config.status: creating src/libcharon/Makefile
+config.status: creating src/libcharon/plugins/eap_aka/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp/tests/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp2/Makefile
+config.status: creating src/libcharon/plugins/eap_dynamic/Makefile
+config.status: creating src/libcharon/plugins/eap_identity/Makefile
+config.status: creating src/libcharon/plugins/eap_md5/Makefile
+config.status: creating src/libcharon/plugins/eap_gtc/Makefile
+config.status: creating src/libcharon/plugins/eap_sim/Makefile
+config.status: creating src/libcharon/plugins/eap_sim_file/Makefile
+config.status: creating src/libcharon/plugins/eap_sim_pcsc/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_sql/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_pseudonym/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_reauth/Makefile
+config.status: creating src/libcharon/plugins/eap_mschapv2/Makefile
+config.status: creating src/libcharon/plugins/eap_tls/Makefile
+config.status: creating src/libcharon/plugins/eap_ttls/Makefile
+config.status: creating src/libcharon/plugins/eap_peap/Makefile
+config.status: creating src/libcharon/plugins/eap_tnc/Makefile
+config.status: creating src/libcharon/plugins/eap_radius/Makefile
+config.status: creating src/libcharon/plugins/xauth_generic/Makefile
+config.status: creating src/libcharon/plugins/xauth_eap/Makefile
+config.status: creating src/libcharon/plugins/xauth_pam/Makefile
+config.status: creating src/libcharon/plugins/xauth_noauth/Makefile
+config.status: creating src/libcharon/plugins/tnc_ifmap/Makefile
+config.status: creating src/libcharon/plugins/tnc_pdp/Makefile
+config.status: creating src/libcharon/plugins/save_keys/Makefile
+config.status: creating src/libcharon/plugins/socket_default/Makefile
+config.status: creating src/libcharon/plugins/socket_dynamic/Makefile
+config.status: creating src/libcharon/plugins/socket_win/Makefile
+config.status: creating src/libcharon/plugins/bypass_lan/Makefile
+config.status: creating src/libcharon/plugins/connmark/Makefile
+config.status: creating src/libcharon/plugins/counters/Makefile
+config.status: creating src/libcharon/plugins/forecast/Makefile
+config.status: creating src/libcharon/plugins/farp/Makefile
+config.status: creating src/libcharon/plugins/smp/Makefile
+config.status: creating src/libcharon/plugins/sql/Makefile
+config.status: creating src/libcharon/plugins/dnscert/Makefile
+config.status: creating src/libcharon/plugins/ipseckey/Makefile
+config.status: creating src/libcharon/plugins/medsrv/Makefile
+config.status: creating src/libcharon/plugins/medcli/Makefile
+config.status: creating src/libcharon/plugins/addrblock/Makefile
+config.status: creating src/libcharon/plugins/unity/Makefile
+config.status: creating src/libcharon/plugins/uci/Makefile
+config.status: creating src/libcharon/plugins/ha/Makefile
+config.status: creating src/libcharon/plugins/kernel_netlink/Makefile
+config.status: creating src/libcharon/plugins/kernel_pfkey/Makefile
+config.status: creating src/libcharon/plugins/kernel_pfroute/Makefile
+config.status: creating src/libcharon/plugins/kernel_libipsec/Makefile
+config.status: creating src/libcharon/plugins/kernel_wfp/Makefile
+config.status: creating src/libcharon/plugins/kernel_iph/Makefile
+config.status: creating src/libcharon/plugins/whitelist/Makefile
+config.status: creating src/libcharon/plugins/ext_auth/Makefile
+config.status: creating src/libcharon/plugins/lookip/Makefile
+config.status: creating src/libcharon/plugins/error_notify/Makefile
+config.status: creating src/libcharon/plugins/certexpire/Makefile
+config.status: creating src/libcharon/plugins/systime_fix/Makefile
+config.status: creating src/libcharon/plugins/led/Makefile
+config.status: creating src/libcharon/plugins/duplicheck/Makefile
+config.status: creating src/libcharon/plugins/coupling/Makefile
+config.status: creating src/libcharon/plugins/radattr/Makefile
+config.status: creating src/libcharon/plugins/osx_attr/Makefile
+config.status: creating src/libcharon/plugins/p_cscf/Makefile
+config.status: creating src/libcharon/plugins/android_dns/Makefile
+config.status: creating src/libcharon/plugins/android_log/Makefile
+config.status: creating src/libcharon/plugins/stroke/Makefile
+config.status: creating src/libcharon/plugins/vici/Makefile
+config.status: creating src/libcharon/plugins/vici/ruby/Makefile
+config.status: creating src/libcharon/plugins/vici/perl/Makefile
+config.status: creating src/libcharon/plugins/vici/python/Makefile
+config.status: creating src/libcharon/plugins/updown/Makefile
+config.status: creating src/libcharon/plugins/dhcp/Makefile
+config.status: creating src/libcharon/plugins/load_tester/Makefile
+config.status: creating src/libcharon/plugins/resolve/Makefile
+config.status: creating src/libcharon/plugins/attr/Makefile
+config.status: creating src/libcharon/plugins/attr_sql/Makefile
+config.status: creating src/libcharon/plugins/selinux/Makefile
+config.status: creating src/libcharon/tests/Makefile
+config.status: creating src/libtpmtss/Makefile
+config.status: creating src/libtpmtss/plugins/tpm/Makefile
+config.status: creating src/stroke/Makefile
+config.status: creating src/ipsec/Makefile
+config.status: creating src/starter/Makefile
+config.status: creating src/starter/tests/Makefile
+config.status: creating src/_updown/Makefile
+config.status: creating src/aikgen/Makefile
+config.status: creating src/tpm_extendpcr/Makefile
+config.status: creating src/pki/Makefile
+config.status: creating src/pki/man/Makefile
+config.status: creating src/pool/Makefile
+config.status: creating src/libfast/Makefile
+config.status: creating src/manager/Makefile
+config.status: creating src/medsrv/Makefile
+config.status: creating src/checksum/Makefile
+config.status: creating src/conftest/Makefile
+config.status: creating src/pt-tls-client/Makefile
+config.status: creating src/sw-collector/Makefile
+config.status: creating src/sec-updater/Makefile
+config.status: creating src/swanctl/Makefile
+config.status: creating src/cert-enroll/Makefile
+config.status: creating src/xfrmi/Makefile
+config.status: creating scripts/Makefile
+config.status: creating testing/Makefile
+config.status: creating conf/strongswan.conf.5.head
+config.status: creating conf/strongswan.conf.5.tail
+config.status: creating man/ipsec.conf.5
+config.status: creating man/ipsec.secrets.5
+config.status: creating src/charon-cmd/charon-cmd.8
+config.status: creating src/pki/man/pki.1
+config.status: creating src/pki/man/pki---acert.1
+config.status: creating src/pki/man/pki---dn.1
+config.status: creating src/pki/man/pki---est.1
+config.status: creating src/pki/man/pki---estca.1
+config.status: creating src/pki/man/pki---gen.1
+config.status: creating src/pki/man/pki---issue.1
+config.status: creating src/pki/man/pki---keyid.1
+config.status: creating src/pki/man/pki---ocsp.1
+config.status: creating src/pki/man/pki---pkcs12.1
+config.status: creating src/pki/man/pki---pkcs7.1
+config.status: creating src/pki/man/pki---print.1
+config.status: creating src/pki/man/pki---pub.1
+config.status: creating src/pki/man/pki---req.1
+config.status: creating src/pki/man/pki---scep.1
+config.status: creating src/pki/man/pki---scepca.1
+config.status: creating src/pki/man/pki---self.1
+config.status: creating src/pki/man/pki---signcrl.1
+config.status: creating src/pki/man/pki---verify.1
+config.status: creating src/swanctl/swanctl.8
+config.status: creating src/swanctl/swanctl.conf.5.head
+config.status: creating src/swanctl/swanctl.conf.5.tail
+config.status: creating src/pt-tls-client/pt-tls-client.1
+config.status: creating src/sw-collector/sw-collector.8
+config.status: creating src/sec-updater/sec-updater.8
+config.status: creating src/cert-enroll/cert-enroll.8
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+ strongSwan will be built with the following plugins
+-----------------------------------------------------
+libstrongswan: aes des rc2 sha2 sha1 md4 md5 mgf1 random nonce x509 revocation constraints pubkey pkcs1 pkcs7 pkcs12 pgp dnskey sshkey pem openssl pkcs8 fips-prf gmp curve25519 xcbc cmac hmac kdf gcm oqs drbg
+libcharon:     attr kernel-netlink resolve socket-default bypass-lan stroke vici updown eap-identity eap-aka eap-mschapv2 xauth-generic xauth-eap dhcp counters
+libtnccs:     
+libtpmtss:    
+
+Created symlink /etc/systemd/system/multi-user.target.wants/strongswan-starter.service → /lib/systemd/system/strongswan-starter.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/syn_gateway.service → /lib/systemd/system/syn_gateway.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/syn_driver.service → /lib/systemd/system/syn_driver.service.
+/usr/local/pribit/wizard/src-compile/ovpn-dco-v0.2.20241216_pribit/gen-compat-autoconf.sh /usr/local/pribit/wizard/src-compile/ovpn-dco-v0.2.20241216_pribit/compat-autoconf.h
+make -C /lib/modules/5.4.0-144-generic/build M=/usr/local/pribit/wizard/src-compile/ovpn-dco-v0.2.20241216_pribit PWD=/usr/local/pribit/wizard/src-compile/ovpn-dco-v0.2.20241216_pribit REVISION= CONFIG_OVPN_DCO_V2=m INSTALL_MOD_DIR=updates/ modules_install
+make[1]: Entering directory '/usr/src/linux-headers-5.4.0-144-generic'
+  INSTALL /usr/local/pribit/wizard/src-compile/ovpn-dco-v0.2.20241216_pribit/drivers/net/ovpn-dco/ovpn-dco-v2.ko
+At main.c:167:
+- SSL error:02001002:system library:fopen:No such file or directory: ../crypto/bio/bss_file.c:69
+- SSL error:2006D080:BIO routines:BIO_new_file:no such file: ../crypto/bio/bss_file.c:76
+sign-file: certs/signing_key.pem: No such file or directory
+  DEPMOD  5.4.0-144-generic
+Warning: modules_install: missing 'System.map' file. Skipping depmod.
+make[1]: Leaving directory '/usr/src/linux-headers-5.4.0-144-generic'
+depmod -a
+make -C apps install
+make[1]: Entering directory '/usr/local/pribit/wizard/src-compile/kernel_mc_aria/apps'
+cp -fpR mc_crypto_app /usr/local/bin
+make[1]: Leaving directory '/usr/local/pribit/wizard/src-compile/kernel_mc_aria/apps'
+make -C /lib/modules/5.4.0-144-generic/build M=/usr/local/pribit/wizard/src-compile/kernel_mc_aria PWD=/usr/local/pribit/wizard/src-compile/kernel_mc_aria CONFIG_MC_ARIA_V1=m INSTALL_MOD_DIR=updates/ modules_install
+make[1]: Entering directory '/usr/src/linux-headers-5.4.0-144-generic'
+  INSTALL /usr/local/pribit/wizard/src-compile/kernel_mc_aria/drivers/crypto/mc-aria/mc-aria-v1.ko
+At main.c:167:
+- SSL error:02001002:system library:fopen:No such file or directory: ../crypto/bio/bss_file.c:69
+- SSL error:2006D080:BIO routines:BIO_new_file:no such file: ../crypto/bio/bss_file.c:76
+sign-file: certs/signing_key.pem: No such file or directory
+  DEPMOD  5.4.0-144-generic
+Warning: modules_install: missing 'System.map' file. Skipping depmod.
+make[1]: Leaving directory '/usr/src/linux-headers-5.4.0-144-generic'
+depmod -a
+default config
+disable kernel update
+Removed /etc/systemd/system/timers.target.wants/apt-daily.timer.
+Removed /etc/systemd/system/timers.target.wants/apt-daily-upgrade.timer.
+fn_history
+fn_fw_mobile_enable
+fn_kernel_param
+--- sysctl.conf backup ---
+net.ipv6.conf.all.forwarding = 1
+kernel.printk = 4 4 1 7
+kernel.panic = 10
+kernel.sysrq = 0
+kernel.shmmax = 4294967296
+kernel.shmall = 4194304
+kernel.core_uses_pid = 1
+kernel.msgmnb = 65536
+kernel.msgmax = 65536
+vm.swappiness = 20
+vm.dirty_ratio = 80
+vm.dirty_background_ratio = 5
+net.core.netdev_budget = 600
+net.core.netdev_max_backlog = 262144
+net.core.rmem_default = 31457280
+net.core.rmem_max = 67108864
+net.core.wmem_default = 31457280
+net.core.wmem_max = 67108864
+net.core.somaxconn = 65535
+net.core.optmem_max = 25165824
+net.ipv4.neigh.default.gc_thresh1 = 4096
+net.ipv4.neigh.default.gc_thresh2 = 8192
+net.ipv4.neigh.default.gc_thresh3 = 16384
+net.ipv4.neigh.default.gc_interval = 5
+net.ipv4.neigh.default.gc_stale_time = 120
+net.ipv4.tcp_slow_start_after_idle = 0
+net.ipv4.ip_local_port_range = 1024 65000
+net.ipv4.ip_no_pmtu_disc = 1
+net.ipv4.route.flush = 1
+net.ipv4.route.max_size = 8048576
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+net.ipv4.tcp_congestion_control = htcp
+net.ipv4.tcp_mem = 65536 131072 262144
+net.ipv4.udp_mem = 65536 131072 262144
+net.ipv4.tcp_rmem = 4096 87380 33554432
+net.ipv4.udp_rmem_min = 16384
+net.ipv4.tcp_wmem = 4096 87380 33554432
+net.ipv4.udp_wmem_min = 16384
+net.ipv4.tcp_max_tw_buckets = 1440000
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_max_orphans = 400000
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_rfc1337 = 1
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_synack_retries = 1
+net.ipv4.tcp_syn_retries = 2
+net.ipv4.tcp_max_syn_backlog = 16384
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_fack = 1
+net.ipv4.tcp_ecn = 2
+net.ipv4.tcp_fin_timeout = 10
+net.ipv4.tcp_keepalive_time = 600
+net.ipv4.tcp_keepalive_intvl = 60
+net.ipv4.tcp_keepalive_probes = 10
+net.ipv4.tcp_no_metrics_save = 1
+net.ipv4.ip_forward = 1
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.all.rp_filter = 1
+fn_kernel_file_param
+fn_sshd_config
+--- sshd config backup ---
+fn_password_complexitys
+--- common-password backup ---
+fn_rsyslog_config
+fn_connect_vpn_config
+Certificate request self-signature ok
+subject=C=KR, O=PRIBIT, CN=PRIBIT Technology
+Certificate request self-signature ok
+subject=C=KR, O=PRIBIT Technology, CN=PRIBIT Connect Gateway
+Created symlink /etc/systemd/system/multi-user.target.wants/connect-vpn.service → /etc/systemd/system/connect-vpn.service.
+fn_nginx_config
+Certificate request self-signature ok
+subject=C=KR, ST=Seoul, L=Seoul, O=PRIBIT Technology, OU=PRIBIT Connect, CN=*.packetgo.com
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /etc/systemd/system/nginx.service.
+Synchronizing state of fail2ban.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable fail2ban
+fn_gateway_config
+Created symlink /etc/systemd/system/multi-user.target.wants/connect-gateway.service → /etc/systemd/system/connect-gateway.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/connect-gateway-check.service → /etc/systemd/system/connect-gateway-check.service.
+[2025-08-12T07:24:35,302] [main] INFO GatewayUtil -- createEncryptFile 
+[2025-08-12T07:24:35,517] [main] INFO GatewayUtil -- createResourceFile path : /var/connect/gateway/system-integrity/encrypt.pgd
+[2025-08-12T07:24:36,391] [main] INFO GatewayUtil -- createResourceFile path : /var/connect/gateway/system-integrity/repository.pgd
+[2025-08-12T07:24:36,405] [main] INFO GatewayUtil -- createResourceFile path : /var/connect/gateway/system-integrity/inmemorydb.pgd
+[2025-08-12T07:24:36,406] [main] INFO GatewayUtil -- ####################################################################################################
+[2025-08-12T07:24:36,406] [main] INFO GatewayUtil -- gateway.serial=52306757-2729-413c-91d6-e55d690998aa
+[2025-08-12T07:24:36,407] [main] INFO GatewayUtil -- ####################################################################################################
+[2025-08-12T07:24:36,407] [main] INFO GatewayUtil -- 
+[2025-08-12T07:24:36,407] [main] INFO GatewayUtil -- 
+fn_ipsec_conf
+Profile for /usr/lib/ipsec/charon not found, skipping
+Profile for /usr/lib/ipsec/stroke not found, skipping
+Profile for /usr/sbin/swanctl not found, skipping
+--- charon-logging config backup ---
+ipsec cert, config create
+Certificate request self-signature ok
+subject=C=KR, O=packetgo.com, CN=ca.packetgo.com
+Certificate request self-signature ok
+subject=C=KR, O=packetgo.com, CN=gateway.packetgo.com
+Certificate request self-signature ok
+subject=C=KR, O=pqc.packetgo.com, CN=ca.pqc.packetgo.com
+Certificate request self-signature ok
+subject=C=KR, O=pqc.packetgo.com, CN=gateway.pqc.packetgo.com
+[2025-08-12T07:24:44,868] [main] INFO GatewayUtil -- createResourceFile path : /var/connect/gateway/system-integrity/inmemorydb.pgd
+=========================================================================================
+fnRedisSetting
+=========================================================================================
+Removed /etc/systemd/system/multi-user.target.wants/redis-server.service.
+Removed /etc/systemd/system/redis.service.
+Created symlink /etc/systemd/system/redis.service → /etc/systemd/system/redis-server.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/redis-server.service → /etc/systemd/system/redis-server.service.
+=========================================================================================
+fnRedisSetting is complete
+=========================================================================================
+========================================================
+        PacketGo Gateway Install was completed.
+OpenSSL has been updated. A system reboot is required.
+========================================================
