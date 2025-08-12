@@ -43,13 +43,19 @@
     drwxrwxr-x  4 pribit pribit  4096 Aug 12 06:27 src-compile
     -rwxrwxr-x  1 pribit pribit 42421 Jun 12 04:44 start-wizard.sh
     ```
-    `deb` 패키지를 설치하면 `/usr./local/pribit/wizard/` 경로에 다음과 같은 파일이 생성됩니다. 
+    `deb` 패키지를 설치하면 `/usr/local/pribit/wizard/` 경로에 다음과 같은 파일이 생성됩니다. 
 
     <br><br>
 
 2. **PCG 설치**
     - PCG 설치는 `start-wizard.sh` 스크립트를 실행하여 설치를 진행합니다.   
-    
+
+    - 설치 방식은 다음 두 가지가 있습니다.  
+    - Offline 설치 방식 : `start-wizard.sh --off_line`
+        -   인터넷 네트워크와 연결이 없는 Offline 으로 설치를 진행합니다. 
+    - Online 설치 방식 : `start-wizard.sh`
+        - 인터넷 네트워크와 연결된 Online 으로 설치를 진행합니다. 
+
     #### 설치 스크립트 start-wizard.sh 실행 
     ``` 
     # ./start-wizard.sh     
@@ -159,16 +165,7 @@
 
 4. **초기 설정**
     - PCG 가 정상적으로 기동되면 관리자 PC 에서 PCC Console 에 접속하여 Gateway를 등록합니다.  
-    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 관련 페이지를 참고하세요. 
+    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 참고 
 
 <br><br>
 
-## Troubleshooting
-
-- [Troubleshooting](./TroubleShooting.md) 페이지를 참고하세요.
-
-<br><br>
-
-## Support
-
-*For further assistance, contact technical support team.*
