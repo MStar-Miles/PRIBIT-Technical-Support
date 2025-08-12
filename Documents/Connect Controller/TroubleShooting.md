@@ -20,4 +20,4 @@ sudo rm /var/lib/dpkg/lock*
 
 
 ---
-*This guide is for initial troubleshooting. For advanced issues, contact PRIBIT support.*
+*This guide is for initial troubleshooting. For advanced issues, contact PRIBIT technical support team.*

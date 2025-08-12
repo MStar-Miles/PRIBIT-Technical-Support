@@ -344,4 +344,4 @@
 
 ## Support
 
-For further assistance, contact technical support.
+*For further assistance, contact technical support team.*

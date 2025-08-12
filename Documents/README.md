@@ -1,16 +1,28 @@
-# PRIBIT Connect Documentation 
+# PRIBIT Connect Technical Support Portal 📚
 
+## 🔍 Overview 
+- [Overview](/Documents/Overview.md)
 
+## ⚙️ Installation 
 
-## Controller 
+### 🎛️ PRIBIT Connect Controller 
+- [Controller Installation Guide](/Documents/Connect%20Controller/Controller_Installation.md)
+- [Controller User Manual](/Documents/Connect%20Controller/UserManual.md)
 
-### [Controller Installation](/Documents/Connect%20Controller/Controller_Installation.md)
+### 🌐 PRIBIT Connect Gateway 
+- [Gateway Installation Guide](/Documents/Connect%20Gateway/Gateway_Installation.md)
+- [Gateway Configuration Guide](/Documents/Connect%20Gateway/Gateway_Configuration.md)
 
-### [Controller Configuration](/Documents/Connect%20Controller/Controller_Configuration.md)
+### 💻 PRIBIT Connect Agent 
+- [Agent Installation Guide](/Documents/Connect%20Agent/Agent_Installation.md) 
+- [Agent User Manual](/Documents/Connect%20Agent/UserManual.md)
 
+## 📊 Performance 
+- [Performance Test](/Documents/Performance/Performance_Test.md)
 
-## Gateway 
+## 📚 References
+- [Datasheet](/Documents/References/Datasheet.md) 
+- [Technial References](/Documents/References/TechDoc.md)
 
-### [Gateway Installation](/Documents/Connect%20Gateway/Gateway_Installation.md)
-
-### [Gateway Configuration](/Documents/Connect%20Gateway/Gateway_Configuration.md)
+---
+*Copy right by PRIBIT Technology Inc.*
