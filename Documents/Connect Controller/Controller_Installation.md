@@ -4,11 +4,14 @@
 
 설치 버전 : `2.6.4.3`
 
+<br><br>
 
 ## Prerequisites
 
 - 설치 환경([Prerequisites](./Prerequisites.md)) 준비
 - 시스템 구성([System Architecture](/Documents/Architecture/architecture.md)) 확인 
+
+<br><br>
 
 ## Installation Steps
 
@@ -120,7 +123,96 @@
     <br><br>
 
     ```
-    Build-Essential
+    =========================================================================================
+    2025-08-12 02:25:23 | apt-get update
+    2025-08-12 02:25:23 | OFF-LINE mode do not need apt-get update
+    =========================================================================================
+    2025-08-12 02:25:23 | net-tools install
+    2025-08-12 02:25:23 | net-tools already installed.
+    =========================================================================================
+    2025-08-12 02:25:23 | rdate install
+    2025-08-12 02:25:29 | rdate installation                                     
+    2025-08-12 02:25:29 | rdate install SUCCESS
+    =========================================================================================
+    2025-08-12 11:25:30 | timezone is 'Asia/Seoul'
+    2025-08-12 11:25:30 | time server is 'time.bora.net'
+    =========================================================================================
+    2025-08-12 11:25:30 | rsyslog setting
+    2025-08-12 11:25:31 | rsyslog setting SUCCESS
+    =========================================================================================
+    2025-08-12 11:25:31 | check service
+    2025-08-12 11:25:31 | check service SUCCESS
+    =========================================================================================
+    2025-08-12 11:25:32 | openjdk-17-jre install
+    2025-08-12 11:26:22 | openjdk-17-jre installation                                     
+    2025-08-12 11:26:22 | openjdk-17-jre install SUCCESS
+    =========================================================================================
+    2025-08-12 11:26:22 | build-essential install
+    2025-08-12 11:27:16 | build-essential installation                                     
+    2025-08-12 11:27:16 | build-essential install SUCCESS
+    =========================================================================================
+    2025-08-12 11:27:16 | libpcre3-dev install
+    2025-08-12 11:27:26 | libpcre3-dev installation                                     
+    2025-08-12 11:27:26 | libpcre3-dev install SUCCESS
+    =========================================================================================
+    2025-08-12 11:27:26 | zlib1g-dev install
+    2025-08-12 11:27:32 | zlib1g-dev installation                                     
+    2025-08-12 11:27:32 | zlib1g-dev install SUCCESS
+    =========================================================================================
+    2025-08-12 11:27:32 | libssl-dev install
+    2025-08-12 11:27:33 | libssl-dev installation                                     
+    2025-08-12 11:27:33 | libssl-dev already installed
+    =========================================================================================
+    2025-08-12 11:27:34 | libgd-dev install
+    2025-08-12 11:28:01 | libgd-dev installation                                     
+    2025-08-12 11:28:01 | libgd-dev install SUCCESS
+    =========================================================================================
+    2025-08-12 11:28:01 | libxml2-dev install
+    2025-08-12 11:28:14 | libxml2-dev installation                                     
+    2025-08-12 11:28:14 | libxml2-dev install SUCCESS
+    =========================================================================================
+    2025-08-12 11:28:14 | apt-transport-https install
+    2025-08-12 11:28:19 | apt-transport-https installation                                     
+    2025-08-12 11:28:19 | apt-transport-https install SUCCESS
+    =========================================================================================
+    2025-08-12 11:28:19 | expect install
+    2025-08-12 11:28:30 | expect installation                                     
+    2025-08-12 11:28:30 | expect install SUCCESS
+    =========================================================================================
+    2025-08-12 11:28:30 | mariadb add apt repository Setting
+    2025-08-12 11:28:30 | OFF-LINE mode do not need add mariadb apt repository Setting
+    =========================================================================================
+    2025-08-12 11:28:30 | mariadb-server install
+    2025-08-12 11:28:58 | mariadb-server installation                                     
+    2025-08-12 11:28:58 | mariadb-server install SUCCESS
+    =========================================================================================
+    2025-08-12 11:28:58 | mariadb-backup install
+    2025-08-12 11:29:07 | mariadb-backup installation                                     
+    2025-08-12 11:29:07 | mariadb-backup install SUCCESS
+    =========================================================================================
+    2025-08-12 11:29:08 | mysql_secure_installation
+    2025-08-12 11:29:10 | mysql_secure_installation SUCCESS
+    =========================================================================================
+    2025-08-12 11:29:11 | PRIBIT Connect Controller DataBase Setting
+    2025-08-12 11:29:13 | PRIBIT Connect Controller DataBase Setting SUCCESS
+    =========================================================================================
+    2025-08-12 11:29:14 | shc install
+    2025-08-12 11:29:22 | shc installation                                     
+    2025-08-12 11:29:22 | shc install SUCCESS
+    =========================================================================================
+    2025-08-12 11:29:22 | thirdparty-conf-set.sh to BINARY
+    2025-08-12 11:29:22 | thirdparty-conf-set.sh to BINARY SUCCESS
+    =========================================================================================
+    2025-08-12 11:29:22 | mariadb systemd reset
+    2025-08-12 11:29:29 | mariadb systemd reset SUCCESS
+    =========================================================================================
+    2025-08-12 11:29:29 | hostname change
+    2025-08-12 11:29:29 | hostname change to connect-controller SUCCESS
+    =========================================================================================
+    2025-08-12 11:29:29 | systemd add connect controller service
+    2025-08-12 11:29:32 | systemd add connect controller service SUCCESS
+    =========================================================================================
+
     ```
     PCC 실행에 필요한 라이브러리들을 설치합니다.
 
@@ -159,6 +251,8 @@
     ```
     설치가 완료되면 _'The installation was completed normally.'_ 라는 메시지가 나타나며 설치 과정이 완료됩니다.
 
+    <br><br>
+
 4. **Connect Controller Process 확인**
     - 설치가 정상적으로 완료되면 PCC 가 자동으로 실행되도록 되어 있습니다.
     - 모든 모듈이 정상적으로 기동되었는지 확인합니다. 
@@ -183,11 +277,10 @@
         - TCP PORT 5997: 
         - TCP PORT 5999: 
     ```
-    # netstat -an | grep 5996
-    root@connect-controller:/opt/connect/logs# netstat -an | grep -E '443'\|'5996'\|'5997'\|'5999'
-    tcp        0      0 0.0.0.0:5997            0.0.0.0:*               LISTEN     
+    # # netstat -an | grep -E '443'\|'5996'\|'5997'\|'5999'       
     tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN     
     tcp        0      0 0.0.0.0:5996            0.0.0.0:*               LISTEN     
+    tcp        0      0 0.0.0.0:5997            0.0.0.0:*               LISTEN  
     tcp6       0      0 127.0.0.1:5999          :::*                    LISTEN
     ```
 
@@ -195,13 +288,12 @@
 
 5. **초기 설정 및 라이선스 적용**
     - PCC 가 정상적으로 기동되면 관리자 PC 에서 PCC Console 에 접속하여 라이선스를 적용합니다. 
-    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 및 라이선스 적용([라이선스 적용](/Documents/Connect%20Controller/License.md))은 관련 문서를 참고하세요. 
+    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 및 라이선스 적용([라이선스 적용](/Documents/Connect%20Controller/License.md))은 관련 페이지를 참고하세요. 
 
 
 ## Troubleshooting
 
-- If the controller does not power on, check the power connections. 
-- For network issues, verify cable connections and network settings. 
+- [Troubleshooting](./TroubleShooting.md) 페이지를 참고하세요.
 
 ## Support
 
