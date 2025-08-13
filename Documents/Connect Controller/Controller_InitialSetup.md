@@ -55,7 +55,7 @@ Controller의 기본적인 운영을 위해 필요한 초기 설정 과정입니
     - Connect Agent 가 Controller 에 로그인 할 때 사용하는 아이디 입니다.
 
 - 컨트롤러명 : Console 에서 관리하는 Controller 를 구분하기 위한 Controller 별칭입니다. 
-    - 예) 클라우드 접속용
+    - ex) 클라우드 접속용
 
 - 접속 서비스명 : 서비스를 구분하기 위한 별칭입니다. 
 
@@ -65,7 +65,7 @@ Controller의 기본적인 운영을 위해 필요한 초기 설정 과정입니
 
 <br><br>
 
-3. **사용 메뉴 설정**  
+## 3. **사용 메뉴 설정**  
 
 컨트롤러 관리 화면에서 [2. 컨트롤러 등록](#2-컨트롤러-등록) 과정 후 생성된 Controller 를 클릭하고 메뉴 권한을 클릭하여 아래 설정과 같이 메뉴를 등록합니다. 
 
@@ -127,10 +127,139 @@ Controller의 기본적인 운영을 위해 필요한 초기 설정 과정입니
 
 <br><br>
 
-1. **설정 저장 및 완료**  
-    모든 설정을 확인한 후 저장하여 초기 설정을 완료합니다.
+## 4. **최초 사용자 생성**  
 
----
+>[!NOTE] 
+> VPN 정책을 등록하기 위해서는 최초 사용자를 반드시 등록해야 한다. 
+> 
 
-초기 설정이 완료되면 Controller를 정상적으로 사용할 수 있습니다.  
-설정 과정에서 문제가 발생할 경우, 기술 지원팀에 문의해 주세요.
+![최초 사용자 등록](init_user_add.png)
+
+- 계정명 : 
+  - ex) *Inital Test Account*
+- 로그인 아이디 : 
+  - ex) *inituser*
+- 이메일 주소 : 
+  - ex) *user@pribit.com*
+- 휴대전화 번호 : 
+  - ex) *010\*\*\*\*\*\*\*8*
+
+정보 입력 후 "확인"을 눌러 사용자를 생성합니다. 
+
+<br><br>
+
+
+## 5. **FLOW 설정**
+
+FLOW 메뉴에서 네트워크 경계, 플로우 제어, 어플리케이션 플로우를 설정하여 Agent 접속에 대한 기본적인 정책을 설정합니다. 
+
+#### 네트워크 경계 설정 
+
+![네트워크 경계 기본정보](network_perimeter_01.png)
+- 네트워크 경계명 : 네트워크 경계명을 설정합니다. 
+  - ex) *network_perimeter#1*
+
+<br>
+
+![네트워크 경계 게이트웨이 유형 선택](network_perimeter_gw_type.png)
+구축된 형태에 따라 게이트웨이 유형을 선택합니다. (다중 선택 가능)
+
+기본적인 구축 형태는 "**PCG Hardware Appliance**" 유형을 선택합니다.
+
+- [x] PCG Hardware Appliance 
+- [ ] PGC Static Appliance 
+
+<br>
+
+![네트워크 경계 게이트웨이 API Server IP](network_perimeter_gatewayip.png)
+- 게이트웨이 API Server IP : Gateway IP Address 를 입력합니다. 
+  - ex) *10.20.0.1*
+
+<br>
+
+![네트워크 경계 에이전트-게이트웨이 간 연결방식 선택](network_perimeter_agent_connet_type.png) 
+에이전트와 게이트웨이간의 연결 방식에 대해 설정합니다. 
+
+기본 설정인 터널 연결로 체크 합니다.  
+
+- [x] 터널 연결  
+- [ ] TCP 세션 인증 연결 
+
+<br>
+
+![네트워크 경계 VPN 유형 선택](network_perimeter_vpn_type.png)
+VPN 연결 유형을 선택합니다. (다중 선택 가능)
+
+기본 설정인 SSL Tunnel VPN 으로 체크합니다. 
+
+- [x] SSL Tunnel VPN 
+- [ ] IPsec Tunnel VPN 
+
+<br>
+
+![네트워크 경계 SSL VPN 네트워크 정보](network_perimeter_sslvpn_network.png)
+- 전송 계층 프로토콜 
+  - [x] TCP 
+  - [ ] UDP 
+- 터널 연결 IP : 에이전트에서 게이트웨이에 접속하는 IP 정보 
+  - Agent가 외부에서 접근 시 게이트웨이로 접근 가능하도록 설정된 외부 IP 주소가 필요합니다. ([네트워크 경계에서 게이트웨에 IP 주소 설정](/Documents/SystemArchitecture.md#네트워크-경계-설정에서-게이트웨이-ip-주소-지정))
+  - ex) *10.0.30.157*
+- 터널 연결 PORT : 에이전트에서 게이트웨이에 접속하는 PORT 정보
+  - ex) *443* 
+- VIP 대역 : 게이트웨이의 [server.conf](/Documents/Connect%20Gateway/Gateway_Configuration.md)의 설정에서 `server` 의 설정값
+  - ex) *10.21.0.0/24*
+- 에이전트에 할당할 IP 대역 : 사용자가 접근 할 목적지의 IP 주소 또는 IP 주소 범위 
+  - ex) *172.10.0.0/24* 
+- 기본 게이트웨이 : 게이트웨이의 tun0 I/F 의 IP 주소 
+  - ex) *10.21.0.1* 
+- 암호화 알고리즘 
+  - [ ] ARIA-256(한국형 암호화 검증 제도) 
+  - [x] AES-256 
+
+필요한 설정을 입력 또는 선택 후 "확인"을 눌러 설정을 마무리 합니다. 
+
+<br>
+
+#### 네트워크 경계 장치 등록(게이트웨이 등록) 
+
+[네트워크 경계 설정](#네트워크-경계-설정)에서 등록한 네트워크 경계에 장치(게이트웨이)를 등록합니다. 
+
+![네트워크 경계 장치 등록](network_perimeter_device_gatewayip.png)
+- 게이트웨이 장치 IP : 게이트웨이 장치의 IP 주소 
+  - Controller가 내부가 아닌 외부에서 접근 시 게이트웨이로 접근 가능하도록 설정된 외부 IP 주소가 필요합니다. ([네트워크 경계에서 게이트웨에 IP 주소 설정](/Documents/SystemArchitecture.md#네트워크-경계-설정에서-게이트웨이-ip-주소-지정))
+  - ex) *10.0.30.157* 
+
+![네트워크 경계 장치 등록 오류](network_perimeter_device_gatewayip_error.png)
+장치 등록 시 컨트롤러와 게이트웨이간 통신 오류 시 해당 오류가 발생하고 등록이 불가합니다. 
+
+<br>
+
+#### 플로우 제어 영역 설정
+
+차단하려는 설정을 플로우 제어 영역에서 입력합니다. 
+
+![플로우 제어 영역 기본정보](flow_control_name.png)
+
+- 플로우 제어 영역명 : 플로우 제어 정책명 입력
+  - ex) *flow_control#1*
+
+<br>
+
+![플로우 제어 영역 식별 방법](flow_control_area_identifier.png)
+- 에이전트 IP 대역 기반 식별 : 에이전트의 Real IP의 주소 또는 IP 주소 범위
+  - ex) *0.0.0.0/0*
+
+<br>
+
+![플로우 제어 영역 단말 네트워크 접속 제어 방식](flow_control_access_control_method.png)
+- 단말의 네트워크 접속 제어 방식 : 차단되어야 하는 목적지의 IP 주소 또는 IP 주소 범위
+  - ex) *1.1.1.1* 
+
+<br>
+
+![플로우 제어 영역 구간 보호 방식](flow_control_area_protect_method.png)
+기본 설정으로 네트워크 경계 사용으로 설정합니다. 
+
+- [x] 네트워크 경계 사용 
+- [ ] 네트워크 경계 미사용 
+
