@@ -11,7 +11,7 @@
 
 ## 2. 라이선스 등록 화면 
 
-![라이선스 등록화면](register_license.png)
+![라이선스 등록화면](reg_license.png)
 
 <br><br>
 
@@ -31,7 +31,7 @@
 
 ## 4. 라이선스 등록 완료
 
-![alt text](license_complete.png)
+![라이선스 등록 완료](license_complete.png)
 
 1. **등록** 버튼을 클릭합니다.
 2. 등록이 완료되면, 라이선스 상태가 갱신된 것을 확인할 수 있습니다.

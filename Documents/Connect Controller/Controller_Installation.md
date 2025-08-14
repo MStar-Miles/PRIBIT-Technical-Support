@@ -335,14 +335,14 @@
     <br><br>
 
 4. **초기 설정 및 라이선스 적용**
-    - PCC 가 정상적으로 기동되면 관리자 PC 에서 PCC Console 에 접속하여 라이선스를 적용합니다. 
-    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 및 라이선스 적용([라이선스 적용](/Documents/Connect%20Controller/License.md))은 관련 페이지를 참고하세요. 
+    - PCC 가 정상적으로 기동되면 관리자 PC 에서 PCC Console 에 접속하여 라이선스 및 초기 설정을 진행합니다. 
+    - [라이선스 적용](/Documents/Connect%20Controller/License.md) 및 [사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)은 관련 페이지를 참고하세요. 
 
 <br><br>
 
 ## Troubleshooting
 
-- [Troubleshooting](./TroubleShooting.md) 페이지를 참고하세요.
+- [Troubleshooting](/Documents/TroubleShooting.md) 페이지를 참고하세요.
 
 <br><br>
 
