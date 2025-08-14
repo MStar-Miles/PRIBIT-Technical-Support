@@ -1,6 +1,10 @@
 # PRIBIT Technical Support Portal
 
-### Technical Support Portal ([->](/Documents/README.md)) 
 
+### TOC
 
-### PRIBIT Connect Demo ([->](/Demo/README.md)) 
+#### 1. PRIBIT Connect PoC ([->](/PoC/README.md)) 
+
+#### 2. Documents ([->](/Documents/README.md)) 
+
+---
