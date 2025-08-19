@@ -16,4 +16,4 @@
 
 ### 네트워크 경계 설정에서 게이트웨이 IP 주소 지정 
 
-![네트워크 경계에서의 게이트웨이 IP 주소](network_perimeter_gatewayip_setup.png)
+![네트워크 경계에서의 게이트웨이 IP 주소](/Documents/SystemArchitecture/network_perimeter_gatewayip_setup.png)
