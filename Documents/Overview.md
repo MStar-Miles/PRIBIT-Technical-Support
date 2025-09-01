@@ -2,6 +2,9 @@
 
 PRIBIT Connect is a comprehensive solution designed to streamline and enhance connectivity across various platforms and devices. It offers secure, scalable, and efficient integration for businesses seeking to optimize their digital infrastructure.
 
+![Network Diagram](network_diagram.png)
+
+
 ## Key Features
 
 - **Seamless Integration:** Connects with multiple systems and platforms effortlessly.
