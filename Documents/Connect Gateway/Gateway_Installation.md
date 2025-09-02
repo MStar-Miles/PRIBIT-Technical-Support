@@ -165,7 +165,16 @@
 
 4. **초기 설정**
     - PCG 가 정상적으로 기동되면 관리자 PC 에서 PCC Console 에 접속하여 Gateway를 등록합니다.  
-    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 참고 
+    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 관련 페이지를 참고하세요. 
 
 <br><br>
 
+## Troubleshooting
+
+- [Troubleshooting](./TroubleShooting.md) 페이지를 참고하세요.
+
+<br><br>
+
+## Support
+
+*For further assistance, contact technical support team.*
