@@ -1,38 +1,38 @@
-# Incident Report Template
+# 장애 보고서 양식
 
-## 1. Incident Overview
-- **Date & Time:**  
-- **Reported By:**  
-- **Location/System:**  
-- **Incident Type:**  
+## 1. 장애 개요
+- **발생 일시:**  
+- **신고자:**  
+- **장소/시스템:**  
+- **장애 유형:**  
 
-## 2. Description of Incident
-- **Summary:**  
-- **Detailed Description:**  
+## 2. 장애 내용
+- **요약:**  
+- **상세 설명:**  
 
-## 3. Impact Assessment
-- **Affected Services/Systems:**  
-- **Business Impact:**  
-- **Users Affected:**  
+## 3. 영향 평가
+- **영향받은 서비스/시스템:**  
+- **업무 영향:**  
+- **영향받은 사용자:**  
 
-## 4. Root Cause Analysis
-- **Initial Findings:**  
-- **Root Cause:**  
+## 4. 원인 분석
+- **초기 소견:**  
+- **근본 원인:**  
 
-## 5. Actions Taken
-- **Immediate Response:**  
-- **Mitigation Steps:**  
-- **Resolution:**  
+## 5. 조치 내역
+- **즉각 대응:**  
+- **완화 조치:**  
+- **최종 해결:**  
 
-## 6. Preventive Measures
-- **Lessons Learned:**  
-- **Future Prevention Actions:**  
+## 6. 예방 대책
+- **교훈 및 개선점:**  
+- **향후 예방 조치:**  
 
-## 7. Attachments
-- **Logs/Screenshots:**  
-- **Related Documents:**  
+## 7. 첨부 자료
+- **로그/스크린샷:**  
+- **관련 문서:**  
 
-## 8. Reported By
-- **Name:**  
-- **Contact Information:**  
-- **Date:**  
+## 8. 작성자 정보
+- **이름:**  
+- **연락처:**  
+- **작성일:**
