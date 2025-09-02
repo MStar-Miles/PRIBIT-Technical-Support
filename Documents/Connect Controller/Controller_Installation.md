@@ -2,7 +2,7 @@
 
 💡본 문서는 PRIBIT Connect Controller(이하 'PCC')의 단계별 설치 방법을 안내합니다.
 
-설치 버전 : `2.6.4.13`
+설치 버전 : `2.6.4.3`
 
 <br><br>
 
@@ -299,11 +299,11 @@
 
     - Process 확인
         - Web
-            - systemctl status connect-controller
-            - systemctl status connect-controller-check
-            - systemctl status connect-controller-api 
-            - systemctl status connect-controller-web
-            - systemclt status nginx
+          - systemctl status connect-controller-rpc  
+          - systemctl status connect-controller-check  
+          - systemctl status connect-controller-api  
+          - systemctl status connect-controller-web  
+          - systemclt status nginx  
 
         ```
         # ps -ef | grep controller
@@ -314,8 +314,8 @@
         ```
 
         - Database / Redis 
-        - systemctl status mariadb
-        - systemctl status redis
+          - systemctl status mariadb
+          - systemctl status redis
 
         ```
         # ps -ef | grep -E mariadb\|redis
@@ -340,8 +340,16 @@
 
 4. **초기 설정 및 라이선스 적용**
     - PCC 가 정상적으로 기동되면 관리자 PC 에서 PCC Console 에 접속하여 라이선스를 적용합니다. 
-    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 및 라이선스 적용([라이선스 적용](/Documents/Connect%20Controller/License.md))은 기술지원에 문의 하십시오. 
+    - 초기 설정([사용자 메뉴얼](/Documents/Connect%20Controller/UserManual.md)) 및 라이선스 적용([라이선스 적용](/Documents/Connect%20Controller/License.md))은 관련 페이지를 참고하세요. 
 
 <br><br>
 
+## Troubleshooting
 
+- [Troubleshooting](./TroubleShooting.md) 페이지를 참고하세요.
+
+<br><br>
+
+## Support
+
+*For further assistance, contact technical support team.*
