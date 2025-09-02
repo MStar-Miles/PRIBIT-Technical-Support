@@ -21,6 +21,9 @@
 ## 📊 Performance 
 - [Performance Test](/Documents/Performance/Performance_Test.md)
 
+## 🛠️ TrobleShooting Guide
+- [TrobleShooting Guide](/Documents/TroubleShooting.md)
+
 ## 📚 References
 - [Datasheet](/Documents/References/Datasheet.md) 
 - [Technial References](/Documents/References/TechDoc.md)
