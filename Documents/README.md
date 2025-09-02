@@ -7,6 +7,7 @@
 
 ### 🎛️ PRIBIT Connect Controller 
 - [Controller Installation Guide](/Documents/Connect%20Controller/Controller_Installation.md)
+- [Controller Initial Setup](/Documents/Connect%20Controller/Controller_InitialSetup.md)
 - [Controller User Manual](/Documents/Connect%20Controller/UserManual.md)
 
 ### 🌐 PRIBIT Connect Gateway 
@@ -19,6 +20,9 @@
 
 ## 📊 Performance 
 - [Performance Test](/Documents/Performance/Performance_Test.md)
+
+## 🛠️ TrobleShooting Guide
+- [TrobleShooting Guide](/Documents/TroubleShooting.md)
 
 ## 📚 References
 - [Datasheet](/Documents/References/Datasheet.md) 
