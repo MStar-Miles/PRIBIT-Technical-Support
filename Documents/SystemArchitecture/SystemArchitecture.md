@@ -1,4 +1,4 @@
-# System Architecture Guide
+# System Architecture
 
 이 파일은 시스템 구성도에 대한 모든 내용을 안내합니다.
 
@@ -11,9 +11,13 @@
 6. 확장성 및 유지보수
 
 ---
-각 항목에 대한 상세 내용을 추가해 주세요.
+
+### 네트워크 상세 구성도 
+
+![Network Diagram](/Documents/SystemArchitecture/network_diagram.png)  
 
 
 ### 네트워크 경계 설정에서 게이트웨이 IP 주소 지정 
 
-![네트워크 경계에서의 게이트웨이 IP 주소](/Documents/SystemArchitecture/network_perimeter_gatewayip_setup.png)
+![네트워크 경계에서의 게이트웨이 IP 주소](/Documents/SystemArchitecture/network_perimeter_gatewayip_setup.png)  
+

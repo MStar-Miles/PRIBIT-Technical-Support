@@ -1,32 +1,60 @@
 # PRIBIT Connect Solution Overview
 
-PRIBIT Connect is a comprehensive solution designed to streamline and enhance connectivity across various platforms and devices. It offers secure, scalable, and efficient integration for businesses seeking to optimize their digital infrastructure.
-
-![Network Diagram](network_diagram.png)
+**PRIBIT Connect** 는 신원 기반 인증, 마이크로 세그먼트, 애플리케이션 통제하는 제로트러스트 기반의 접속 제어 솔루션입니다. 
 
 
-## Key Features
+## 주요 특징
 
-- **Seamless Integration:** Connects with multiple systems and platforms effortlessly.
-- **Robust Security:** Implements advanced security protocols to protect data and communications.
-- **Scalability:** Easily adapts to growing business needs and user demands.
-- **User-Friendly Interface:** Intuitive design for easy management and monitoring.
-- **Real-Time Monitoring:** Provides live status updates and analytics.
+- **SDP(Software Define Perimeter) Architecture**  
+  신원을 기반으로 리소스에 대해 Access Control 하는 프레임워크 구조기반의 솔루션입니다.  
+- **강력한 보안**  
+  최신 암호화 기술과 접근 제어 정책을 적용하여 데이터의 안전한 전송 및 저장을 보장합니다.  
+- **다양한 연동 지원**  
+  ERP, CRM, 그룹웨어 등 다양한 업무 시스템과의 연동을 지원하며, API 기반의 확장성을 제공합니다.  
+- **실시간 모니터링 및 로그 관리**  
+  시스템 상태와 연동 현황을 실시간으로 확인하고, 장애 발생 시 신속하게 대응할 수 있습니다.  
+- **유연한 확장성**  
+  클라우드 및 온프레미스 환경 모두 지원하며, 기업의 성장에 맞춰 손쉽게 확장 가능합니다.  
+- **사용자 중심 설계**  
+  직관적인 UI/UX로 누구나 쉽게 사용할 수 있으며, 관리자의 편의성을 고려한 다양한 기능을 제공합니다.  
 
-## Benefits
+## 주요 기능
 
-- Improves operational efficiency
-- Reduces integration complexity
-- Enhances data security and compliance
-- Supports rapid deployment and customization
+- 데이터 동기화 및 변환  
+- 자동화된 연동 프로세스 설정  
+- 사용자 및 권한 관리  
+- 다양한 인증 방식 지원  
+- 실시간 알림 및 이벤트 관리  
+- 상세 로그 및 감사 추적 기능  
 
-## Use Cases
+## 도입 효과
 
-- Enterprise system integration
-- Secure remote access
-- IoT device management
-- Cloud service connectivity
+- 업무 효율성 증대 및 운영 비용 절감
+- 데이터 보안 강화 및 컴플라이언스 준수
+- 시스템 간 데이터 일관성 확보
+- 신속한 연동 구축 및 유지보수 용이
+- 장애 발생 시 신속한 원인 분석 및 대응
+
+## 적용 사례
+
+- 금융, 제조, 공공기관 등 다양한 산업군에서 성공적으로 도입 및 운영 중
+- 대규모 사용자 환경에서도 안정적인 서비스 제공
+- 복잡한 IT 인프라 환경에서의 통합 관리 및 운영
+
+
+## 제품 구성 
+
+- **PRIBIT Connect Agent(PCA)** 
+  사용자 PC/Mobile 기기에 설치하는 Agent로 사용자 인증, 정책 적용 및 제어를 수행합니다. 
+
+- **PRIBIT Connect Controller(PCC)**  
+  사용자 인증 및 권한 / 보안 관리를 수행하는 관리자 Web Console 입니다. 
+
+- **PRIBIT Connect Gateway(PCG)**  
+  인증된 사용자가 내부 자원에 안전하게 접근할 수 있도록 암호화된 터널(secured tunnel)을 생성 및 관리하며, 외부 위협으로부터 네트워크를 보호하는 역할을 수행합니다. 
+
+<br>
 
 ---
 
-For more details, please refer to the official documentation or contact the PRIBIT support team.
+자세한 내용 및 데모 요청은 PRIBIT 공식 홈페이지 또는 영업/기술 지원팀에 문의해 주세요. 
