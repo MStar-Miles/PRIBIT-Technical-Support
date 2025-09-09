@@ -2,12 +2,15 @@
 <!-- TOC start  -->
 - [PCA 배포 관리](#pca-배포-관리)
   - [PAC 관리 버전 등록](#pac-관리-버전-등록)
+    - [SYSTEM \> 에이전트 배포 관리](#system--에이전트-배포-관리)
 
 <!-- TOC end -->
 
 ## PCA 배포 관리 
 ### PAC 관리 버전 등록 
 에이전트를 사용하기 위해서는 PCC에 에이전트 배포 관리에 등록하여야 사용할 수 있습니다. 
+
+#### SYSTEM > 에이전트 배포 관리
 
 ![Agent Registration Management](./img/agent_management.png)  
 
