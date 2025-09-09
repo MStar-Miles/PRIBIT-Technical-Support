@@ -9,7 +9,7 @@
 
 ## 2. **PCC 로그인 정보 입력**  
 PCC 사용자 ID와 비밀번호를 입력하여 로그인합니다. 
-![pca controller access](agent_controller_access.png)  
+![pca controller access](./img/agent_controller_access.png)  
   - 컨트롤러 서버 주소 : PCC Server 주소를 입력합니다.   
   - 입력된 주소로 TLS(TCP 443 Port)통신을 통해 컨트롤러와 인증처리를 수행합니다.  
   - ex) 10.0.30.156  
@@ -18,20 +18,20 @@ PCC 사용자 ID와 비밀번호를 입력하여 로그인합니다.
   - ex) vm demo   
 
 접속할 사용자 아이디와 비밀번호를 입력합니다.  
-![pca user login](agent_controler_user_login.png)  
+![pca user login](./img/agent_controler_user_login.png)  
   - 사용자 아이디 : PCC 에 등록된 사용자 아이디를 입력합니다.  
   - ex) inituser  
   - 사용자 비밀번호 : 로그인 할 사용자의 비밀번호를 입력합니다.  
   - ex) *******  
 
 로그인이 정상적으로 완료되면 다음과 같은 화면으로 이동합니다.  
-![pca login complete](agent_loing_complete.png)  
+![pca login complete](./img/agent_loing_complete.png)  
 
 <br>
 
 ## 3. **PCA 에 할당된 주소 확인**
 - 접속 완료 후 할당 받은 주소를 확인합니다.  
-![pca info](agent_moreinfo.png)  
+![pca info](./img/agent_moreinfo.png)  
   - **"더보기"**에서 단말 IP 를 확인합니다.  
   - Agent는 PCG에 설정된 VIP 대역 중 하나의 IP를 할당 받을 수 있습니다.  
 
@@ -44,7 +44,7 @@ PCC 사용자 ID와 비밀번호를 입력하여 로그인합니다.
 ncpa.cpl 
 (Enter)
 ```
-![Local Network Access Info](agent_network_access_ncpainfo.png)
+![Local Network Access Info](./img/agent_network_access_ncpainfo.png)
 **이더넷 네트워크 3 PRIBIT TAP-Windows Adapter V9**이 정상적으로 연결되어 있는지 확인합니다. 
 
 - 사용자 PC 의 Routing Table 을 확인합니다. 

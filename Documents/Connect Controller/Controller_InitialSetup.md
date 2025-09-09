@@ -5,7 +5,7 @@
 - [**1. 관리자 페이지 접속**](#1-관리자-페이지-접속)
 - [**2. 관리자 계정 생성**](#2-관리자-계정-생성)
 - [**3. 컨트롤러 등록**](#3-컨트롤러-등록)
-- [**4. 사용 메뉴 설정**](#4-사용-메뉴-설정)
+- [**4. 사용 메뉴 설정 및 시스템 환경 설정**](#4-사용-메뉴-설정-및-시스템-환경-설정)
 - [**5. 최초 사용자 생성**](#5-최초-사용자-생성)
     - [사용자 생성](#사용자-생성)
     - [사용자 그룹 생성](#사용자-그룹-생성)
@@ -43,7 +43,7 @@ http://[설치한 Controller IP 주소]:5996
 
 최초 로그인 시 사용할 관리자 계정을 생성합니다.
 
-![CreateAddmin](create_admin.png) 
+![CreateAddmin](./img/create_admin.png) 
 
 로그인 아이디 : 관리자가 접속할 초기 아이디를 입력합니다. 
 
@@ -61,7 +61,7 @@ http://[설치한 Controller IP 주소]:5996
 
 <br>
 
-![create_admin2](create_admin2.png)
+![create_admin2](./img/create_admin2.png)
 
 - 계정명(필수) : 관리자 계정의 이름을 입력합니다. 
 
@@ -77,13 +77,13 @@ http://[설치한 Controller IP 주소]:5996
 
 "확인" 버튼을 누르게 되면 컨트롤러 관리 페이지로 이동합니다. 
 
-![Controller 관리 페이지](controller_mgmt.png)
+![Controller 관리 페이지](./img/controller_mgmt.png)
 
 "등록" 버튼을 클리하여 Controller 를 등록합니다. 
 
 <br>
 
-![Controller 등록](reg_controller.png)
+![Controller 등록](./img/reg_controller.png)
 
 - 컨트롤러 검색 및 식별 아이디 : 등록하는 Controller 를 Agent 에서 식별하기 위한 아이디를 입력합니다. 
     - Connect Agent 가 Controller 에 로그인 할 때 사용하는 아이디 입니다.
@@ -99,7 +99,7 @@ http://[설치한 Controller IP 주소]:5996
 
 <br><br>
 
-## **4. 사용 메뉴 설정**  
+## **4. 사용 메뉴 설정 및 시스템 환경 설정**  
 
 SYSTEM > 컨트롤러 관리 > 메뉴 권한  
 
@@ -161,6 +161,21 @@ SYSTEM > 컨트롤러 관리 > 메뉴 권한
 
 "컨트롤러 메뉴 권한 변경" 을 클릭하여 설정을 저장해줍니다. 
 
+<br>
+
+컨트롤러 관리자 웹콘솔 세션 타임아웃을 설정합니다. (기본 5분) 
+
+>[!NOTE] 
+> 관리자 웹콘솔 세션 타임아웃을 설정하기 위해서는 API 통신 IP를 먼저 설정해야 합니다. (개선필요) 
+> 관리자 웹콘솔 세션 타임아웃은 Web Browser Idle time 으로 세션을 체크하지 않습니다. (테스트 필요합니다)  
+
+
+SYSTEM > 시스템 환경 설정 > 콘솔 정보 > 관리자 웹콘솔 세션 타임 아웃(분) 
+![관리자 웹콘솔 타임 아웃 설정](./img/system_webconsole_timeout.png)
+
+- 관리자 웹콘솔 세션 타임 아웃(분) : 
+  - ex) *60*  
+
 <br><br>
 
 ## **5. 최초 사용자 생성**  
@@ -172,7 +187,7 @@ SYSTEM > 컨트롤러 관리 > 메뉴 권한
 
 OBJECT > 사용자  
 
-![최초 사용자 등록](init_user_add.png)
+![최초 사용자 등록](./img/init_user_add.png)
 
 - 계정명 : 
   - ex) *Inital Test Account*
@@ -193,26 +208,26 @@ OBJECT > 사용자
 
 OBJECT > 사용자 그룹  
 
-![사용자 그룹 생성](init_user_group_add.png) 
+![사용자 그룹 생성](./img/init_user_group_add.png) 
 
 - 사용자 그룹명 : 
   - ex) *InitUserGroup* 
 
-![사용자 그룹 계층 선택](init_user_group_hierarchy.png)
+![사용자 그룹 계층 선택](./img/init_user_group_hierarchy.png)
 
 - 계층 선택 : 생성하려는 그룹의 위치를 지정합니다.  
   - ex) *ROOT 를 선택합니다.*  
 
 사용자 그룹 생성이 완료되었습니다. 
 
-![사용자 그룹 생성 완료](init_user_group_create.png)  
+![사용자 그룹 생성 완료](./img/init_user_group_create.png)  
 
 생성한 사용자 그룹에 *사용자 등록* 버튼으로 생성된 사용자를 등록할 수 있습니다.  
 
-![사용자 그룹에 사용자 등록](init_user_group_user_add.png)
+![사용자 그룹에 사용자 등록](./img/init_user_group_user_add.png)
 - 사용자명(아이디)선택 리스트에서 사용자를 검색(조회)하여 등록된 사용자로 추가합니다. 
 
-![사용자 그룹에 사용자 등록2](init_user_group_user_add2.png)
+![사용자 그룹에 사용자 등록2](./img/init_user_group_user_add2.png)
 
 사용자 추가는 해당 사용자를 더블 클릭합니다. 
 
@@ -226,13 +241,13 @@ FLOW 메뉴에서 **네트워크 경계**, **플로우 제어**, **어플리케�
 
 FLOW > 네트워크 경계  
 
-![네트워크 경계 기본정보](network_perimeter_01.png)
+![네트워크 경계 기본정보](./img/network_perimeter_01.png)
 - 네트워크 경계명 : 네트워크 경계명을 설정합니다. 
   - ex) *network_perimeter#1*
 
 <br>
 
-![네트워크 경계 게이트웨이 유형 선택](network_perimeter_gw_type.png)
+![네트워크 경계 게이트웨이 유형 선택](./img/network_perimeter_gw_type.png)
 구축된 형태에 따라 게이트웨이 유형을 선택합니다. (다중 선택 가능)
 
 기본적인 구축 형태는 "**PCG Hardware Appliance**" 유형을 선택합니다.
@@ -242,13 +257,13 @@ FLOW > 네트워크 경계
 
 <br>
 
-![네트워크 경계 게이트웨이 API Server IP](network_perimeter_gatewayip.png)
+![네트워크 경계 게이트웨이 API Server IP](./img/network_perimeter_gatewayip.png)
 - 게이트웨이 API Server IP : Gateway IP Address 를 입력합니다. 
   - ex) *10.20.0.1*
 
 <br>
 
-![네트워크 경계 에이전트-게이트웨이 간 연결방식 선택](network_perimeter_agent_connet_type.png) 
+![네트워크 경계 에이전트-게이트웨이 간 연결방식 선택](./img/network_perimeter_agent_connet_type.png) 
 에이전트와 게이트웨이간의 연결 방식에 대해 설정합니다. 
 
 기본 설정인 터널 연결로 체크 합니다.  
@@ -258,7 +273,7 @@ FLOW > 네트워크 경계
 
 <br>
 
-![네트워크 경계 VPN 유형 선택](network_perimeter_vpn_type.png)
+![네트워크 경계 VPN 유형 선택](./img/network_perimeter_vpn_type.png)
 VPN 연결 유형을 선택합니다. (다중 선택 가능)
 
 기본 설정인 SSL Tunnel VPN 으로 체크합니다. 
@@ -268,7 +283,7 @@ VPN 연결 유형을 선택합니다. (다중 선택 가능)
 
 <br>
 
-![네트워크 경계 SSL VPN 네트워크 정보](network_perimeter_sslvpn_network.png)
+![네트워크 경계 SSL VPN 네트워크 정보](./img/network_perimeter_sslvpn_network.png)
 - 전송 계층 프로토콜 
   - [x] TCP 
   - [ ] UDP 
@@ -295,12 +310,12 @@ VPN 연결 유형을 선택합니다. (다중 선택 가능)
 
 [네트워크 경계 설정](#네트워크-경계-설정)에서 등록한 네트워크 경계에 장치(게이트웨이)를 등록합니다. 
 
-![네트워크 경계 장치 등록](network_perimeter_device_gatewayip.png)
+![네트워크 경계 장치 등록](./img/network_perimeter_device_gatewayip.png)
 - 게이트웨이 장치 IP : 게이트웨이 장치의 IP 주소 
   - Controller가 내부가 아닌 외부에서 접근 시 게이트웨이로 접근 가능하도록 설정된 외부 IP 주소가 필요합니다. ([네트워크 경계에서 게이트웨에 IP 주소 설정](/Documents/SystemArchitecture.md#네트워크-경계-설정에서-게이트웨이-ip-주소-지정))
   - ex) *10.0.30.157* 
 
-![네트워크 경계 장치 등록 오류](network_perimeter_device_gatewayip_error.png)
+![네트워크 경계 장치 등록 오류](./img/network_perimeter_device_gatewayip_error.png)
 장치 등록 시 컨트롤러와 게이트웨이간 통신 오류 시 해당 오류가 발생하고 등록이 불가합니다. 
 
 <br>
@@ -311,28 +326,28 @@ VPN 연결 유형을 선택합니다. (다중 선택 가능)
 
 FLOW > 플로우 제어 영역  
 
-![플로우 제어 영역 기본정보](flow_control_name.png)
+![플로우 제어 영역 기본정보](./img/flow_control_name.png)
 
 - 플로우 제어 영역명 : 플로우 제어 정책명 입력
   - ex) *flow_control#1*
 
 <br>
 
-![플로우 제어 영역 식별 방법](flow_control_area_identifier.png)  
+![플로우 제어 영역 식별 방법](./img/flow_control_area_identifier.png)  
 
 - 에이전트 IP 대역 기반 식별 : 에이전트의 Real IP의 주소 또는 IP 주소 범위
   - ex) *0.0.0.0/0*
 
 <br>
 
-![플로우 제어 영역 단말 네트워크 접속 제어 방식](flow_control_access_control_method.png)
+![플로우 제어 영역 단말 네트워크 접속 제어 방식](./img/flow_control_access_control_method.png)
 
 - 단말의 네트워크 접속 제어 방식 : 차단되어야 하는 목적지의 IP 주소 또는 IP 주소 범위
   - ex) *0.0.0.0/24* 
 
 <br>
 
-![플로우 제어 영역 구간 보호 방식](flow_control_area_protect_method.png)  
+![플로우 제어 영역 구간 보호 방식](./img/flow_control_area_protect_method.png)  
 
 기본 설정으로 네트워크 경계 사용으로 설정합니다. 
 
@@ -341,7 +356,7 @@ FLOW > 플로우 제어 영역
 
 <br>
 
-![플로우 제어 영역 DNS 사용 여부](flow_control_area_use_dns.png)  
+![플로우 제어 영역 DNS 사용 여부](./img/flow_control_area_use_dns.png)  
 
 DNS 사용 여부를 설정합니다.  
 
@@ -359,14 +374,14 @@ DNS 사용 여부를 설정합니다.
 
 <br>
 
-![플로우 제어 영역 네트워크 접속 제어 방식](flow_control_area_network_access_control_type.png)  
+![플로우 제어 영역 네트워크 접속 제어 방식](./img/flow_control_area_network_access_control_type.png)  
 
 도착지의 네트워크 접속 제어 방식을 선택합니다.   
 
 [네트워크 경계 설정](#네트워크-경계-설정)에서 생성한 네트워크 경계를 선택합니다. 
 - ex) *network_perimeter#1*  
 
-![플로우 제어 영역 생성 완료](flow_control_area_complete.png)
+![플로우 제어 영역 생성 완료](./img/flow_control_area_complete.png)
 다음과 같이 생성이 완료됩니다. 
 
 <br> 
@@ -375,7 +390,7 @@ DNS 사용 여부를 설정합니다.
 
 FLOW > 애플리케이션 플로우  
 
-![애플리케이션 플로우 설정](app_flow_basic_info.png) 
+![애플리케이션 플로우 설정](./img/app_flow_basic_info.png) 
 
 애플리케이션의 플로우를 설정합니다. 
 
@@ -386,7 +401,7 @@ FLOW > 애플리케이션 플로우
 
 <br>
 
-![애플리케이션 플로우 세부 설정](app_flow_detail_setup.png)  
+![애플리케이션 플로우 세부 설정](./img/app_flow_detail_setup.png)  
 
 전송 계층(TCP, UDP), 접속을 허용할 도착지 네트워크 및 포트 정보를 설정합니다. 
 
@@ -416,7 +431,7 @@ FLOW > 애플리케이션 플로우
 
 <br>
 
-![애플리케이션 플로우 접속 우선 허용 및 강화된 인증](app_flow_priority_access_and_enhancement_auth.png) 
+![애플리케이션 플로우 접속 우선 허용 및 강화된 인증](./img/app_flow_priority_access_and_enhancement_auth.png) 
 
 우선 접속 허용 기능과 강화 인증 모드를 설정할 수 있습니다. (중복 선택 가능)
 
@@ -426,7 +441,7 @@ FLOW > 애플리케이션 플로우
 
 <br>
 
-![애플리케이션 플로우 제어 영역](app_flow_controll_cloud.png)
+![애플리케이션 플로우 제어 영역](./img/app_flow_controll_cloud.png)
 
 **플로우 제어 영역**에서 생성된 플로우 제어 설정을 선택할 수 있습니다. (필수 선택)  
 
@@ -435,7 +450,7 @@ FLOW > 애플리케이션 플로우
 
 <br>
 
-![애플리케이션 플로우 접속 애플리케이션](app_flow_access_control.png)
+![애플리케이션 플로우 접속 애플리케이션](./img/app_flow_access_control.png)
 
 접속 가능한 애플리케이션을 설정합니다. 
 
@@ -444,7 +459,7 @@ FLOW > 애플리케이션 플로우
 
 <br>
 
-![애플리케이션 플로우 허용 대상](app_flow_allow_target.png)  
+![애플리케이션 플로우 허용 대상](./img/app_flow_allow_target.png)  
 
 정책 적용 대상(사용자 또는 그룹)을 지정합니다. 
 
@@ -457,5 +472,5 @@ FLOW > 애플리케이션 플로우
 
 ##  **7. 초기 설정에 따른 시스템 구성도(참고)** 
 
-![시스템 구성도](pribit_connect_initial_system_architecture.png)
+![시스템 구성도](./img/pribit_connect_initial_system_architecture.png)
 
