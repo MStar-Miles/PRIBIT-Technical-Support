@@ -17,6 +17,15 @@ PCC 사용자 ID와 비밀번호를 입력하여 로그인합니다.
   - 컨트롤러 아이디를 확인하려면 [Controller_InitalSetup>2. 컨트롤러 등록](/Documents/Connect%20Controller/Controller_InitialSetup.md)을 참고하세요.  
   - ex) vm demo   
 
+<br> 
+
+>[!NOTE] 
+> "등록되지 않은 에이전트 버전입니다." 라는 문구 발생 시 아래와 같이 컨트롤러에서 에이전트를 추가해야 합니다. 
+
+![Not regist the pribit agent](./img/notregistagent.png)
+
+<br>
+
 접속할 사용자 아이디와 비밀번호를 입력합니다.  
 ![pca user login](./img/agent_controler_user_login.png)  
   - 사용자 아이디 : PCC 에 등록된 사용자 아이디를 입력합니다.  

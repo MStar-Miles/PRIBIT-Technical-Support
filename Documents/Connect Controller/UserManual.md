@@ -1,35 +1,54 @@
-# PRIBIT Connect Controller Console User Manual
+**TOC (Table Of Contents)**
+<!-- TOC start  -->
+- [PCA 배포 관리](#pca-배포-관리)
+  - [PAC 관리 버전 등록](#pac-관리-버전-등록)
+    - [SYSTEM \> 에이전트 배포 관리](#system--에이전트-배포-관리)
 
-## 소개
-PRIBIT Connect Controller Console은 다양한 장치와 시스템을 효율적으로 연결하고 관리할 수 있는 도구입니다.
+<!-- TOC end -->
 
-## 설치 방법
-1. 설치 파일을 다운로드합니다.
-2. 설치 마법사의 안내에 따라 설치를 완료합니다.
-3. 설치가 완료되면 바탕화면의 아이콘을 더블 클릭하여 실행합니다.
+## PCA 배포 관리 
+### PAC 관리 버전 등록 
+에이전트를 사용하기 위해서는 PCC에 에이전트 배포 관리에 등록하여야 사용할 수 있습니다. 
 
-## 주요 기능
-- 장치 연결 및 해제
-- 실시간 상태 모니터링
-- 로그 및 이벤트 기록
-- 사용자 권한 관리
+#### SYSTEM > 에이전트 배포 관리
 
-## 사용 방법
+![Agent Registration Management](./img/agent_management.png)  
 
-### 1. 장치 연결
-1. 콘솔을 실행합니다.
-2. '장치 추가' 버튼을 클릭합니다.
-3. 연결할 장치 정보를 입력하고 저장합니다.
+등록버튼을 눌러 에이전트 등록을 진행합니다. 
 
-### 2. 상태 모니터링
-- 대시보드에서 연결된 모든 장치의 상태를 실시간으로 확인할 수 있습니다.
+![Agent Registration](./img/regist_agent.png)  
+- 플랫폼 : Agent 의 플랫폼의 종류를 선택합니다. (단일 선택)
+  - [ ] Microsoft Windows 
+  - [ ] Apple MacOS 
+  - [ ] Google Android 
+  - [ ] Google Android Tablet 
+  - [ ] Apple iOS 
+  - [ ] Apple iPadOS 
+  - ex) *Microsoft windows* 
+- 종류 : 플랫폼에 설치될 형태를 선택합니다. (단일 선택) 
+  - [ ] 애플리케이션 
+  - [ ] 모듈 
+  - ex) *애플리케이션* 
+- 버전 : 등록할 PCA 의 버전을 입력합니다. 
+  - ex) *2.6.4.18* 
+- [ ] 필수 업데이트 : 필수로 업데이트를 진행합니다. 
+- [ ] 업데이트 알림 : 업데이트 시 알림을 받습니다. 
+- 릴리즈 노트 : 배포 할 에이전트 버전에 대한 릴리즈 노트입니다. (필수입력)
+  - ex) *1. Ubuntu 24.04.02 지원<br>2. Gateway 오프라인 설치 지원<br>...<br>17. 그 외 UI/UX 개선 버전* 
+- 배포 URL : 에이전트를 다운받거나 설치 할 수 있는 URL을 입력합니다. (필수입력)
+  - ex) *https://pribit.packetgo.com/agent/distribution* 
 
-### 3. 로그 확인
-- '로그' 메뉴에서 이벤트 및 오류 기록을 확인할 수 있습니다.
+에이전트 등록을 완료하면 "대기" 상태로 생성됩니다. 
 
-## 문제 해결
-- 연결 오류 발생 시 장치의 전원과 네트워크 상태를 확인하세요.
-- 추가 지원이 필요하면 tech@pribit.com으로 문의하세요.
+![Registered Agent](./img/registered_agent.png)  
 
-## 참고
-- 최신 버전 및 업데이트는 공식 웹사이트에서 확인할 수 있습니다.
+"상태 변경"을 눌러 Agent 상태를 "배포"로 변경합니다. 
+
+![Agent Distrubution Management](./img/agent_distribution_management.png) 
+
+- 배포 : 등록했던 Agent 를 배포(사용)로 변경합니다. 
+- 대기 : 등록했던 Agent 를 대기 상태로 변경합니다. 
+- 테스트 : 등록했던 Agent 를 테스트 상태로 변경합니다.
+
+<br><br>
+
