@@ -262,7 +262,7 @@ FLOW > 애플리케이션 플로우
 
 에이전트에서 아래와 같이 접속하여 Windows File Server 에 접속합니다.  
 
-![Access Windows File Server - Windows Auth](access_windows_file_server_winauth.png)
+![Access Windows File Server - Windows Auth](./img/access_windows_file_server_winauth.png)
 
 <br><br> 
 
