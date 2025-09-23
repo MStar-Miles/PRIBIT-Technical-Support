@@ -51,6 +51,7 @@ http://[설치한 Controller IP 주소]:5996
 
 ![CreateAddmin](./img/create_admin.png) 
 
+
 로그인 아이디 : 관리자가 접속할 초기 아이디를 입력합니다. 
 
 비밀번호 / 비밀번호 확인 : 아래 필수 조건에 만족하는 비밀번호를 입력합니다. 
@@ -69,6 +70,7 @@ http://[설치한 Controller IP 주소]:5996
 
 ![create_admin2](./img/create_admin2.png)
 
+
 - 계정명(필수) : 관리자 계정의 이름을 입력합니다. 
 
 - 이메일 주(필수) : 관리자 계정의 이메일 주소를 입력합니다. 
@@ -84,6 +86,7 @@ http://[설치한 Controller IP 주소]:5996
 "확인" 버튼을 누르게 되면 컨트롤러 관리 페이지로 이동합니다. 
 
 ![Controller 관리 페이지](./img/controller_mgmt.png)
+
 
 "등록" 버튼을 클리하여 Controller 를 등록합니다. 
 
@@ -110,6 +113,7 @@ http://[설치한 Controller IP 주소]:5996
 #### SYSTEM > 컨트롤러 관리 > 메뉴 권한  
 
 컨트롤러 관리 화면에서 [2. 컨트롤러 등록](#2-컨트롤러-등록) 과정 후 생성된 Controller 를 클릭하고 **메뉴 권한**을 클릭하여 아래 설정과 같이 메뉴를 등록합니다. 
+
 
 - [x] OBJECT
   - [x] 사용자 
@@ -248,12 +252,14 @@ FLOW 메뉴에서 **네트워크 경계**, **플로우 제어**, **어플리케�
 #### FLOW > 네트워크 경계  
 
 ![네트워크 경계 기본정보](./img/network_perimeter_01.png)
+
 - 네트워크 경계명 : 네트워크 경계명을 설정합니다. 
   - ex) *network_perimeter#1*
 
 <br>
 
 ![네트워크 경계 게이트웨이 유형 선택](./img/network_perimeter_gw_type.png)
+
 구축된 형태에 따라 게이트웨이 유형을 선택합니다. (다중 선택 가능)
 
 기본적인 구축 형태는 "**PCG Hardware Appliance**" 유형을 선택합니다.
@@ -264,12 +270,14 @@ FLOW 메뉴에서 **네트워크 경계**, **플로우 제어**, **어플리케�
 <br>
 
 ![네트워크 경계 게이트웨이 API Server IP](./img/network_perimeter_gatewayip.png)
+
 - 게이트웨이 API Server IP : Gateway IP Address 를 입력합니다. 
   - ex) *10.20.0.1*
 
 <br>
 
 ![네트워크 경계 에이전트-게이트웨이 간 연결방식 선택](./img/network_perimeter_agent_connet_type.png) 
+
 에이전트와 게이트웨이간의 연결 방식에 대해 설정합니다. 
 
 기본 설정인 터널 연결로 체크 합니다.  
@@ -280,6 +288,7 @@ FLOW 메뉴에서 **네트워크 경계**, **플로우 제어**, **어플리케�
 <br>
 
 ![네트워크 경계 VPN 유형 선택](./img/network_perimeter_vpn_type.png)
+
 VPN 연결 유형을 선택합니다. (다중 선택 가능)
 
 기본 설정인 SSL Tunnel VPN 으로 체크합니다. 
@@ -290,6 +299,7 @@ VPN 연결 유형을 선택합니다. (다중 선택 가능)
 <br>
 
 ![네트워크 경계 SSL VPN 네트워크 정보](./img/network_perimeter_sslvpn_network.png)
+
 - 전송 계층 프로토콜 
   - [x] TCP 
   - [ ] UDP 
@@ -302,6 +312,7 @@ VPN 연결 유형을 선택합니다. (다중 선택 가능)
   - ex) *10.21.0.0/24*
 - 에이전트에 할당할 IP 대역 : 사용자가 접근 할 목적지의 IP 주소 또는 IP 주소 범위 
   - ex) (Full Tunnel로 설정 시) *0.0.0.0/0* 
+
 - 기본 게이트웨이 : 게이트웨이의 tun0 I/F 의 IP 주소 
   - ex) *10.21.0.1* 
 - 암호화 알고리즘 
@@ -317,11 +328,13 @@ VPN 연결 유형을 선택합니다. (다중 선택 가능)
 [네트워크 경계 설정](#네트워크-경계-설정)에서 등록한 네트워크 경계에 장치(게이트웨이)를 등록합니다. 
 
 ![네트워크 경계 장치 등록](./img/network_perimeter_device_gatewayip.png)
+
 - 게이트웨이 장치 IP : 게이트웨이 장치의 IP 주소 
   - Controller가 내부가 아닌 외부에서 접근 시 게이트웨이로 접근 가능하도록 설정된 외부 IP 주소가 필요합니다. ([네트워크 경계에서 게이트웨에 IP 주소 설정](/Documents/SystemArchitecture.md#네트워크-경계-설정에서-게이트웨이-ip-주소-지정))
   - ex) *10.0.30.157* 
 
 ![네트워크 경계 장치 등록 오류](./img/network_perimeter_device_gatewayip_error.png)
+
 장치 등록 시 컨트롤러와 게이트웨이간 통신 오류 시 해당 오류가 발생하고 등록이 불가합니다. 
 
 <br>
@@ -334,12 +347,14 @@ VPN 연결 유형을 선택합니다. (다중 선택 가능)
 
 ![플로우 제어 영역 기본정보](./img/flow_control_name.png)
 
+
 - 플로우 제어 영역명 : 플로우 제어 정책명 입력
   - ex) *flow_control#1*
 
 <br>
 
 ![플로우 제어 영역 식별 방법](./img/flow_control_area_identifier.png)  
+
 
 - 에이전트 IP 대역 기반 식별 : 에이전트의 Real IP의 주소 또는 IP 주소 범위
   - ex) *0.0.0.0/0*
@@ -355,10 +370,12 @@ VPN 연결 유형을 선택합니다. (다중 선택 가능)
 
 ![플로우 제어 영역 구간 보호 방식](./img/flow_control_area_protect_method.png)  
 
+
 기본 설정으로 네트워크 경계 사용으로 설정합니다. 
 
 - [x] 네트워크 경계 사용 
 - [ ] 네트워크 경계 미사용 
+
 
 <br>
 
@@ -479,4 +496,5 @@ FLOW > 애플리케이션 플로우
 ##  **7. 초기 설정에 따른 시스템 구성도(참고)** 
 
 ![시스템 구성도](./img/pribit_connect_initial_system_architecture.png)
+
 
