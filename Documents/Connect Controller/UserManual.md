@@ -58,7 +58,7 @@ OBJECT > 사용자 계정 동기화
 
 데이터베이스 설정 
 
-![UserAccountSyncDbmsConf1](useracct_sync_dbms_conf1.png)
+![UserAccountSyncDbmsConf1](./img/useracct_sync_dbms_conf1.png)
 
 - 데이터베이스 종류 
   - 연결 가능한 데이터베이스 종류는 `Orcle`, `MySQL(MariaDB)`, `PostgreSQL`, `SqlServer(Microsoft SQL)` 를 지원합니다. 
@@ -85,7 +85,7 @@ OBJECT > 사용자 계정 동기화
 
 사용자 테이블 설정 
 
-![UserAccountSyncDbmsConf2](useracct_sync_dbms_conf2.png)
+![UserAccountSyncDbmsConf2](./img/useracct_sync_dbms_conf2.png)
 
 사용자 동기화 방법 
 
@@ -138,7 +138,7 @@ OBJECT > 사용자 계정 동기화
 
 (본 가이드에서는 사용자 그룹 동기화는 진행하지 않습니다.)
 
-![UserAccountSyncDbmsConf3](useracct_sync_dbms_conf3.png)
+![UserAccountSyncDbmsConf3](./img/useracct_sync_dbms_conf3.png)
 
 사용자 그룹 동기화 방법  
 
@@ -171,7 +171,7 @@ OBJECT > 사용자 계정 동기화
 
 동기화 실행 
 
-![UserAccountSyncDbmsConf4](useracct_sync_dbms_conf4.png)
+![UserAccountSyncDbmsConf4](./img/useracct_sync_dbms_conf4.png)
 
 동기화 설정을 완료 후 실제 계정 동기화 수행을 진행하려면 `동기화 실행` 버튼을 눌러 진행해야 합니다. 
 
