@@ -1,8 +1,16 @@
 **TOC (Table Of Contents)**
 <!-- TOC start  -->
+- [사용자 관리](#사용자-관리)
+  - [사용자 생성](#사용자-생성)
+  - [비밀번호 강제 변경](#비밀번호-강제-변경)
+  - [사용자 계정 동기화](#사용자-계정-동기화)
+    - [RDBMS Database 동기화](#rdbms-database-동기화)
+    - [Active Directory(LDAP) 동기화](#active-directoryldap-동기화)
+  - [사용자 AD(LDAP) 인증](#사용자-adldap-인증)
+    - [AD(LDAP) 인증 정책 생성](#adldap-인증-정책-생성)
+    - [AD(LDAP) 인증을 위한 서버 정보 입력](#adldap-인증을-위한-서버-정보-입력)
 - [PCA 배포 관리](#pca-배포-관리)
   - [PAC 관리 버전 등록](#pac-관리-버전-등록)
-    - [SYSTEM \> 에이전트 배포 관리](#system--에이전트-배포-관리)
 - [통신 어플리케이션](#통신-어플리케이션)
   - [통신 애플리케이션 등록](#통신-애플리케이션-등록)
     - [업무용 Web Server 에 접속하는 서비스를 msedge.exe 으로 실행하도록 Agent 에 등록](#업무용-web-server-에-접속하는-서비스를-msedgeexe-으로-실행하도록-agent-에-등록)
@@ -12,11 +20,376 @@
 
 <!-- TOC end -->
 
+
+## 사용자 관리  
+
+<br>
+
+### 사용자 생성 
+- 최초 계정 생성 시 초기 비밀번호로 자동 설정됩니다. 
+- 초기 비밀번호는 *`1111`* 입니다. 
+- 사용자를 직접 생성 시에만 초기 비밀번호로 설정합니다. 
+
+<br><br>
+
+### 비밀번호 강제 변경 
+- 계정 생성 후 비밀번호를 강제 변경 시, 기존 비밀번호를 요구하지 않습니다. 
+- 비밀번호 강제 변경
+  - = (비밀번호 초기화 + 비밀번호 변경)  
+
+<br><br>
+
+### 사용자 계정 동기화
+
+OBJECT > 사용자 계정 동기화 
+![UserAccountSyncList](./img/useracct_synclist.png)
+
+<br>
+
+#### RDBMS Database 동기화 
+
+동기화 방법 선택 화면에서 `데이터베이스 연결` 을 선택합니다. 
+
+![UserAccountSyncTypeDbms](./img/useracct_sync_type.png)
+
+- [x] 데이터베이스 연결  
+
+<br>
+
+데이터베이스 설정 
+
+![UserAccountSyncDbmsConf1](./img/useracct_sync_dbms_conf1.png)
+
+- 데이터베이스 종류 
+  - 연결 가능한 데이터베이스 종류는 `Orcle`, `MySQL(MariaDB)`, `PostgreSQL`, `SqlServer(Microsoft SQL)` 를 지원합니다. 
+  - ex) 
+    - [x] *`MySQL(MariaDB)`*  
+- 데이터베이스 IP 
+  - 연결할 데이터베이스의 IP 주소를 입력합니다. 
+  - ex) *`10.0.30.156`*  
+- 데이터베이스 포트 
+  - 연결할 데이터베이스의 포트 정보를 입력합니다. 
+  - *Oracle: 1521, MySQL(MariaDB): 3306, PostreSQL: 5432, SqlServer(Microsoft SQL): 1443*  
+  - ex) *`3306`*  
+- 데이터베이스 사용자 아이디 
+  - 연결할 데이터베이스의 계정 정보를 입력합니다. 
+  - ex) *`pribit`* 
+- 데이터베이스 사용자 비밀번호 
+  - 연결할 데이터베이스의 계정 비밀번호를 입력합니다. 
+  - ex) *`Pa********60!`*
+- 데이터베이스명 or SID
+  - 연결할 데이터베이스명 또는 SID(Oracle) 값을 입력합니다. 
+  - ex) *`DB_PGZT`*  
+
+<br>
+
+사용자 테이블 설정 
+
+![UserAccountSyncDbmsConf2](./img/useracct_sync_dbms_conf2.png)
+
+사용자 동기화 방법 
+
+※ 동기화 시 고객사 데이터베이스의 변경된 정보로 PCC의 사용자 정보를 업데이트 또는 삭제합니다.  
+
+- [x] 사용자 정보 업데이트 처리 
+- [x] 사용자 정보 삭제 처리 
+
+사용자 동기화 테이블 및 필드 정보 
+
+- 사용자 테이블명 or 뷰 
+  - 사용자 계정의 테이블을 입력합니다. 
+  - ex) *`USERS`*  
+- 로그인 아이디 필드명
+  - 사용자 계정 테이블의 Login ID 컬럼 명을 입력합니다. 
+  - ex) *`USER_ID`* 
+- 계정명 필드명
+  - 사용자 계정 테이블의 사용자 이름 컬럼 명을 입력합니다. 
+  - ex) *`USER_NAME`* 
+- 이메일 주소 필드명 
+  - 사용자 계정 테이블의 사용자 이메일 컬럼 명을 입력합니다. 
+  - ex) *`EMAIL_ADDR`* 
+- 사용자 휴대전화 번호 필드명 
+  - 사용자 계정 테이블의 사용자 휴대전화 번호 컬럼 명을 입력합니다. 
+  - ex) *`USER_PHONE`* 
+- 사용자 그룹 아이디 필드명 
+  - ex) (blank) 
+- 사용자 비밀번호 필드명 
+  - ex) (blank) 
+- 사용자 비밀번호 솔트 필드명 
+  - ex) (blank) 
+- 비밀번호 변경 일자 설정 
+  - 동기화 시 비밀번호 변경 일자를 설정하는 방법을 *`사용 안함`*, *`동기화 일시로 자동 업데이트`* 로 설정합니다.  
+  - ex) 
+    - [x] *`사용 안함`*
+- 초기 상태값 
+  - 동기화 시 사용자의 상태를 *`사용 가능`*, *`사용 불가`*, *`사용 대기`* 로 설정합니다.  
+  - ex)
+    - [x] *`사용 가능`* 
+
+<br> 
+
+> [!NOTE] 사용자의 "사용 대기" 상태 
+> 사용자의 `사용 대기` 상태는 동기화 시에만 지정 할 수 있는 사용자의 상태입니다. 
+> 사용자는 `사용 대기` 상태가 되면, ~~~ 해야 합니다. 
+
+<br>
+
+사용자 그룹 테이블 설정  
+
+(본 가이드에서는 사용자 그룹 동기화는 진행하지 않습니다.)
+
+![UserAccountSyncDbmsConf3](./img/useracct_sync_dbms_conf3.png)
+
+사용자 그룹 동기화 방법  
+
+- [ ] 사용자 그룹 정보 등록 처리 
+- [ ] 사용자 그룹 정보 업데이트 처리 
+- [ ] 사용자 그룹 정보 삭제 처리 
+
+사용자 그룹 동기화 테이블 및 필드 정보 
+
+- 사용자 그룹 테이블명 or 뷰 
+  - ex) (blank) 
+- 사용자 그룹 아이디 필드명 
+  - ex) (blank) 
+- 사용자 그룹명 필드명 
+  - ex) (blank) 
+- 사용자 그룹 정렬 필드명 
+  - ex) (blank) 
+- 사용자 그룹 참조 ID 필드명 
+  - ex) (blank) 
+  
+사용자 그룹 동기화 ROOT 정보 
+
+- 고객사 ROOT 그룹 REference ID 
+  - ex) (blank)
+- ROOT 그룹으로 사용할 사용자 그룹 ID (선택) 
+  - 최상위 그룹의 위치를 지정할 수 있습니다. 
+    - ex) (blank)  
+
+<br>
+
+동기화 실행 
+
+![UserAccountSyncDbmsConf4](./img/useracct_sync_dbms_conf4.png)
+
+동기화 설정을 완료 후 실제 계정 동기화 수행을 진행하려면 `동기화 실행` 버튼을 눌러 진행해야 합니다. 
+
+<br>
+
+#### Active Directory(LDAP) 동기화 
+
+동기화 방법 선택 화면에서 `LDAP 서버 연결` 을 선택합니다. 
+AD를 기본으로 설정했다면 아래 안내되는 설정과 크게 다르지 않습니다.  
+기본적으로는 예시에 설정된 값으로 적용을 합니다. (AD 서버 IP, 접속 계정, 비밀번호는 제외)  
+
+![UserAccountSyncTypeLdap](./img/useracct_sync_type.png)
+
+- [x] LDAP 서버 연결  
+
+<br>
+
+LDAP 서버 동기화 설정 
+
+![UserAccountSyncLdapServerConf1](./img/useracct_sync_ldap_conf1.png)  
+
+- LDAP 종류 
+  - [x] Active Directory 
+- LDAP 서버 IP  
+  - ex) *`10.0.30.158`*  
+- LDAP 서버 접속 포트  
+  - ex) *`389`*  
+- over SSL
+  - [x] 사용 안함  
+- LDAP 사용자 아이디  
+  - ex) *`administrator@pribit.com`*  
+  - 사용자 계정은 `@도메인` 으로 입력해주어야 합니다. 
+- LDAP 사용자 비밀번호 
+  - ex) *`Pri***60!`*  
+- 사용자 Distinguished Name(OU)  
+  - ex) *`OU=TechCorp,DC=pribit,DC=com`*  
+- 사용자 그룹 조직구성단위 Distinguished Name(OU)  
+  - ex) (blank)  
+- 인증 메커니즘 
+  - [x] simple  
+- 1회 허용 레코드 수 
+  - ex) *`50`*  
+
+<br>
+
+사용자 동기화 Canonical Name(CN) 정보  
+
+![UserAccountSyncLdapServerConf2](./img/useracct_sync_ldap_conf2.png)  
+
+- 사용자 정보 등록 처리 
+  - [x] 사용자 정보 업데이트 처리  
+  - [x] 사용자 정보 삭제 처리  
+- 사용자 Distinguished Name(DN)  
+  - AD 에서 기본적으로 생성하게되면 *`distinguishedName`* 로 생성됩니다.  
+  - ex) *`distinguishedName`*  
+- 사용자 objectClass  
+  - AD 에서 기본적으로 생성하게되면 *`user`* 으로 설정됩니다.  
+  - ex) *`user`*  
+- 로그인 아이디 속성  
+  - AD 에서 기본적으로 생성하게되면 *`sAMAccountName`* 로 생성됩니다.  
+  - ex) *`sAMAccountName`*  
+- 계정명 속성  
+  - ex) (blank)  
+- 이메일 주소 속성  
+  - AD 에서 기본적으로 생성하게되면 *`userPrincipalName`* 로 생성됩니다.  
+  - ex) *`userPrincipalName`*  
+- 사용자 휴대전화 번호 속성  
+  - ex) (blank)  
+- 사용자 그룹 아이디 속성  
+  - ex) (blank)  
+- 사용자 비밀번호 속성  
+  - ex) (blank)  
+- 비밀번호 변경 일자 설정 
+  - [x] 사용 안함  
+- 초기 상태값
+  - [x] 사용 가능 
+
+<br>
+
+> **비밀번호 변경 일자 설정:** `사용 안함` / `동기화 일시로 자동 업데이트`  
+> PCC DB에 계정 동기화 시 계정의 비밀번호 업데이트 일시를 동기화 일시로 자동 업데이트합니다.   
+
+<br>
+
+> [!NOTE] 초기 상태값: 사용 가능 / 사용 불가 / 사용 대기    
+> PCC DB에 계정 동기화 시 계정의 초기 상태값을 `사용 가능` / `사용 불가` / `사용 대기` 중 하나로 설정합니다.   
+> `사용 가능` : 정상 사용자  
+> `사용 불가` : 잠김 사용자  
+> `사용 대기` : 대기 사용자  
+
+<br>
+
+사용자 그룹 조직구성단위(OU) 정보 
+![UserAccountSyncLdapServerConf3](./img/useracct_sync_ldap_conf3.png)  
+
+사용자 그룹 동기화 방법
+- [x] 사용자 그룹 정보 등록 처리  
+- [x] 사용자 그룹 정보 업데이트 처리  
+- [x] 사용자 그룹 정보 삭제 처리  
+
+사용자 그룹 조직구성단위(OU) 정보  
+- 사용자 그룹 Distinguished Name(DN)  
+  - AD 에서 기본적으로 생성하게되면 *`distinguishedName`* 로 생성됩니다.  
+  - ex) *`distinguishedName`*  
+- 사용자 그룹 objectClass  
+  - AD 에서 기본적으로 생성하게되면 *`organizationalUnit`* 로 생성됩니다.  
+  - ex) *`organizationalUnit`*  
+- 사용자 그룹 아이디 속성  
+  - ex) (blank)  
+- 사용자 그룹명 속성  
+  - ex) (blank)  
+- 사용자 그룹 정렬 속성  
+  - ex) *`ou`*
+- 사용자 그룹 참조 ID 속성  
+  - ex) (blank)  
+
+사용자 그룹 동기화 ROOT 정보
+- 고객사 ROOT 그룹 Reference ID  
+  - ex) (blank)  
+- ROOT 그룹으로 사용할 사용자 그룹 ID  
+  - 최상위 그룹의 위치를 지정합니다. 
+  - ex) *`ROOT`*   
+
+<br>
+
+동기화 실행 
+![UserAccountSyncRun](./img/useracct_sync_run.png)  
+
+동기화 설정을 완료 후 실제 계정 동기화 수행을 진행하려면 `동기화 실행` 버튼을 눌러 진행해야 합니다. 
+
+<br>
+
+사용자 동기화 완료 
+![UserAccountSyncComplete](./img/useracct_sync_run_complete.png)  
+
+<br>
+
+사용자 그룹 동기화 완료  
+![UserGroupAccountSyncRun](./img/usergroupacct_sync_run_complete.png)  
+
+<br>
+
+### 사용자 AD(LDAP) 인증 
+
+> [!NOTE] 사용자 AD 인증 
+> 사용자 로그인 처리를 AD(LDAP) 으로 수행(정책 지정)할 경우, 반드시 동기화가 먼저 진행되어야 한다.  
+> 즉, 사용자 계정이 PCC에 이미 존재해야 인증을 수행 할 수 있다. 
+
+<br>
+
+#### AD(LDAP) 인증 정책 생성  
+POLICY > 단말 상태 확인 및 행위 제어 
+![PolicyList](./img/policy_list.png)  
+
+AD(LDAP) 인증 수행을 위해서는 POLICY 에서 단말 인증 수행에 대한 정책을 생성해주고 적용해야 합니다. 
+![Policy LDAP Authentication](./img/create_policy_ldap_auth.png)
+
+적용한 플랫폼(다중 선택 가능)  
+![Policy LDAP Authentication1](./img/create_policy_ldap_auth1.png)  
+- ex) 
+  - [x] Microsoft Windows 
+
+`LDAP` 으로 검색합니다. 
+![Policy LDAP Authentication2](./img/create_policy_ldap_auth2.png)
+`LDAP 인증 수행` 을 선택합니다. 
+
+> [!Note] LDAP 인증 시 제약 사항  
+> Ldap 인증 수행 정책 사용 시, 아래의 기능 및 정책 사용이 제한됩니다.   
+> - 기능: 사용자 비밀번호 초기화, 사용자 비밀번호 강제 변경, 간편 인증 사용  
+> - 정책: 비밀번호 마지막 변경 기간 초과 시 비밀번호 변경  
+
+적용 대상  
+![Policy LDAP Authentication3](./img/create_policy_ldap_auth3.png)  
+- ex) 
+  - [x] 모든 플로우 제어 영역에 적용  
+  - [x] 모든 사용자에 적용  
+
+상태 
+- ex) 
+  - [x] 사용 가능 
+
+<br>
+
+#### AD(LDAP) 인증을 위한 서버 정보 입력
+
+단말 상태 확인 및 행위 제어 목록에서 상세 조건의 LDAP 인증 수행 설정정보를 추가로 입력해야 합니다. 
+
+![Policy LDAP Authentication3](create_policy_ldap_auth4.png)  
+
+
+🔄 모양의 아이콘을 눌러 인증정보를 추가합니다. 
+![Policy LDAP Authentication3](create_policy_ldap_auth5.png)  
+- LDAP 서버 IP 
+  - ex) *`10.0.30.158`*  
+- LDAP 서버 접속 포트
+  - ex) *`389`*  
+- over SSL 
+  - ex) 
+    - [x] 사용 안함  
+- 인증 메커니즘  
+  - ex)  
+    - [x] sample  
+- kdc  
+  - ex) (blank)  
+- realm  
+  - ex) (blank)  
+
+<br> 
+
+*** 
+
+<br><br>
+
 ## PCA 배포 관리 
 ### PAC 관리 버전 등록 
 에이전트를 사용하기 위해서는 PCC에 에이전트 배포 관리에 등록하여야 사용할 수 있습니다. 
 
-#### SYSTEM > 에이전트 배포 관리
+SYSTEM > 에이전트 배포 관리
 
 ![Agent Registration Management](./img/agent_management.png)  
 
@@ -216,13 +589,13 @@ Object > 통신 애플리케이션에서 애플리케이션 등록 시 아래 �
 
 애플리케이션 유효성 검사 정보 (다중 선택 가능)  
 
-- 코드 사인값 비교(일치) : 
-  - `선택 안함`  
-- 코드 사인값 비교(포함) : 
-  - `선택 안함`  
-- 실행 파일 해쉬값 비교 : 
-  - `선택 안함`  
-- 실행 위치 비교 : 
+- 코드 사인값 비교(일치) :  
+  - `선택 안함`   
+- 코드 사인값 비교(포함) :  
+  - `선택 안함`   
+- 실행 파일 해쉬값 비교 :  
+  - `선택 안함`   
+- 실행 위치 비교 :  
   - `C:\Windows\System32\config\SYSTEM`   
 
 <br> 
