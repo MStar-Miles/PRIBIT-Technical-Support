@@ -1,10 +1,19 @@
-# PRIBIT Connect Controller Installation
+**TOC (Table Of Contents)**
+<!-- TOC start  -->
+- [Prerequisites](#prerequisites)
+- [Installation Steps](#installation-steps)
+- [Troubleshooting](#troubleshooting)
+- [Support](#support)
+
+<!-- TOC end -->
+
+<br>
 
 💡본 문서는 PRIBIT Connect Controller(이하 'PCC')의 단계별 설치 방법을 안내합니다.
 
 설치 버전 : `2.6.4.3`
 
-<br><br>
+<br>
 
 ## Prerequisites
 
@@ -56,7 +65,7 @@
     - PCC 설치 방식에는 `install_offline.sh`와 `install_online.sh` 두 가지 옵션이 있습니다.  
     - `install_offline.sh` 설치 방식
         - 인터넷 네트워크와 연결이 없는 Offline 으로 설치를 진행합니다. 
-    - `install_online.sh' 설치 방식 
+    - `install_online.sh` 설치 방식 
         - 인터넷 네트워크와 연결된 Online 으로 설치를 진행합니다. 
 
     <br><br>
@@ -94,7 +103,7 @@
     ``` 
     Database 의 root 계정 패스워드를 입력합니다. 
     
-    _(root 계정 패스워드 Pribit2560!)_
+    _(root 계정 패스워드 Rapi2560!)_
     
     <br><br>
     
@@ -106,7 +115,7 @@
     ```
     Database User 를 생성하고 계정의 패스워드를 입력합니다. 
 
-    _(계정: pribit / 패스워드: Packetgo2560!)_
+    _(계정: pribit / 패스워드: Rapi2560!)_
 
     <br><br>
     
@@ -119,7 +128,8 @@
     ```
     설치되는 PRIBIT Connect Controller 관리자 페이지에  접속 허용 할 IP Address 정보를 입력합니다. 
     
-    _(모두 허용 (All allow) 시: 0.0.0.0)_
+    _(모두 허용 (All allow) 시: 0.0.0.0)_    
+    _(특정 관리자 허용 시: host 단위 ip 지정)_
 
     <br><br>
 
@@ -298,10 +308,11 @@
 
     - Process 확인
         - Web
-            - controller web
-            - controller api
-            - controller rpc 
-            - controller check 
+          - systemctl status connect-controller-rpc  
+          - systemctl status connect-controller-check  
+          - systemctl status connect-controller-api  
+          - systemctl status connect-controller-web  
+          - systemclt status nginx  
 
         ```
         # ps -ef | grep controller
@@ -312,6 +323,8 @@
         ```
 
         - Database / Redis 
+          - systemctl status mariadb
+          - systemctl status redis
 
         ```
         # ps -ef | grep -E mariadb\|redis

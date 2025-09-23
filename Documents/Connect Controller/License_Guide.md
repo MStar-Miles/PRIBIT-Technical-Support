@@ -1,21 +1,29 @@
-# PCC Console 라이선스 등록 가이드
+<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+**TOC(Table Of Contents)**
+
+- [**1. PCC Console 접속**](#1-pcc-console-접속)
+- [\*\*2. 라이선스 등록 화면 \*\*](#2-라이선스-등록-화면-)
+- [**3. 라이선스 정보 입력**](#3-라이선스-정보-입력)
+- [**4. 라이선스 등록 완료**](#4-라이선스-등록-완료)
+
+<!-- TOC end -->
 
 이 문서는 PCC Console에서 라이선스를 등록하는 방법을 안내합니다.
 
-## 1. PCC Console 접속
+## **1. PCC Console 접속**
 
 - 웹 브라우저를 열고 PCC Console 주소로 접속합니다. 
    _http://192.168.0.10:5996_
 
 <br><br>
 
-## 2. 라이선스 등록 화면 
+## **2. 라이선스 등록 화면 **
 
 ![라이선스 등록화면](reg_license.png)
 
 <br><br>
 
-## 3. 라이선스 정보 입력
+## **3. 라이선스 정보 입력**
 
 - 발급받은 라이선스 정보를 입력란에 정확히 입력합니다.
 
@@ -29,7 +37,7 @@
 
 <br><br>
 
-## 4. 라이선스 등록 완료
+## **4. 라이선스 등록 완료**
 
 ![라이선스 등록 완료](license_complete.png)
 
