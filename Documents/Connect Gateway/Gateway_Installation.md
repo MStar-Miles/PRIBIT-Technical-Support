@@ -137,10 +137,9 @@
 
         ```
         # ps -ef | grep controller
-        root       74231       1  0 Aug11 ?        00:04:20 /usr/bin/java -server -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms512M -Xmx1024M -XX:+UseParallelGC -jar /opt/connect/controller/web/controller-web-1.0.war
-        root       74380       1  0 Aug11 ?        00:03:41 /usr/bin/java -server -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms512M -Xmx1024M -XX:+UseParallelGC -jar /opt/connect/controller/api/controller-api-1.0.jar
-        root       74753       1  6 Aug11 ?        01:00:32 /usr/bin/java -server -Dpgct=connect-controller -Dpgct.home=/opt/connect/controller -Dfile.encoding=UTF-8 -Djdk.lang.Process.launchMechanism=vfork -Xms2048m -Xmx3072m -jar /opt/connect/controller/rpc/controller-rpc-1.0.jar
-        root       74990       1  0 Aug11 ?        00:08:18 /usr/bin/java -Djdk.lang.Process.launchMechanism=vfork -jar /opt/connect/controller/check/controller-check-1.0.jar
+        root     2793526       1  3 14:39 ?        00:00:21 /usr/bin/java -Djdk.lang.Process.launchMechanism=vfork -Duser.timezone=Asia/Seoul -jar /var/connect/gateway/check/gateway-check-1.0.jar
+        root     2793627       1  4 14:39 ?        00:00:23 /usr/bin/java -server -Dconnect=pribit-gateway -Dconnect.home=/var/connect/gateway -Dfile.encoding=utf8 -Djdk.lang.Process.launchMechanism=vfork -Xms1048m -Xmx1048m -Duser.timezone=Asia/Seoul -jar /var/connect/gateway/rpc/gateway-rpc-server-1.0.jar
+        root     2794088       1  0 14:39 ?        00:00:00 /bin/bash /var/syn_gateway/syn_driver_check.sh
         ```
 
         - in-memory Database(Redis) 

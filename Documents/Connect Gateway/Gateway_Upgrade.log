@@ -1,0 +1,885 @@
+# ./start-wizard.sh --update
+remove unused package
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+Package 'ftp' is not installed, so not removed
+Package 'telnet' is not installed, so not removed
+Package 'tftpd-hpa' is not installed, so not removed
+Package 'nis' is not installed, so not removed
+Package 'tftpd' is not installed, so not removed
+Package 'git' is not installed, so not removed
+Package 'libssl-dev' is not installed, so not removed
+Package 'snapd' is not installed, so not removed
+Package 'ufw' is not installed, so not removed
+Package 'atftpd' is not installed, so not removed
+0 upgraded, 0 newly installed, 0 to remove and 64 not upgraded.
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+0 upgraded, 0 newly installed, 0 to remove and 64 not upgraded.
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+install PacketGo Gateway
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:2 https://packages.redis.io/deb focal InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+lsb-release is already the newest version (11.1.0ubuntu2).
+curl is already the newest version (7.68.0-1ubuntu2.25).
+gpg is already the newest version (2.2.19-3ubuntu2.5).
+0 upgraded, 0 newly installed, 0 to remove and 64 not upgraded.
+deb [signed-by=/usr/share/keyrings/redis-archive-keyring.gpg] https://packages.redis.io/deb focal main
+Hit:1 https://packages.redis.io/deb focal InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal-security InRelease
+Reading package lists... Done
+Reading package lists... Done
+Building dependency tree
+Reading state information... Done
+autoconf is already the newest version (2.69-11.1).
+bison is already the newest version (2:3.5.1+dfsg-1).
+cron is already the newest version (3.0pl1-136ubuntu1).
+flex is already the newest version (2.6.4-6.2).
+gettext is already the newest version (0.19.8.1-10build1).
+libjsoncpp-dev is already the newest version (1.7.4-3.1ubuntu2).
+libpam-pwquality is already the newest version (1.4.2-1build1).
+libtool-bin is already the newest version (2.4.6-14).
+logrotate is already the newest version (3.14.0-4ubuntu3).
+python3 is already the newest version (3.8.2-0ubuntu2).
+rdate is already the newest version (1:1.10-2).
+bwm-ng is already the newest version (0.6.2-1).
+fail2ban is already the newest version (0.11.1-1).
+gperf is already the newest version (3.1-1build1).
+libbotan-2-dev is already the newest version (2.12.1-2build1).
+libcrypto++-dev is already the newest version (5.6.4-9build1).
+libhiredis-dev is already the newest version (0.14.0-6).
+libnetfilter-queue-dev is already the newest version (1.0.3-1).
+libtss2-tcti-tabrmd0 is already the newest version (2.3.1-1).
+libwolfssl-dev is already the newest version (4.3.0+dfsg-2).
+shc is already the newest version (4.0.3-0.1).
+apparmor-utils is already the newest version (2.13.3-7ubuntu5.4).
+build-essential is already the newest version (12.8ubuntu1.1).
+cmake is already the newest version (3.16.3-1ubuntu1.20.04.1).
+isc-dhcp-server is already the newest version (4.4.1-2.1ubuntu5.20.04.5).
+keepalived is already the newest version (1:2.0.19-2ubuntu0.2).
+libatomic1 is already the newest version (10.5.0-1ubuntu1~20.04).
+libgcrypt20-dev is already the newest version (1.8.5-5ubuntu1.1).
+libgd-dev is already the newest version (2.2.5-5.2ubuntu2.4).
+libgmp-dev is already the newest version (2:6.2.0+dfsg-4ubuntu0.1).
+libpcre3-dev is already the newest version (2:8.39-12ubuntu0.1).
+libxml2-dev is already the newest version (2.9.10+dfsg-5ubuntu0.20.04.10).
+rsyslog is already the newest version (8.2001.0-1ubuntu1.3).
+snmp is already the newest version (5.8+dfsg-2ubuntu2.9).
+snmpd is already the newest version (5.8+dfsg-2ubuntu2.9).
+uuid-dev is already the newest version (2.34-0.1ubuntu9.6).
+zlib1g-dev is already the newest version (1:1.2.11.dfsg-2ubuntu1.5).
+netfilter-persistent is already the newest version (1.0.14ubuntu1).
+openjdk-17-jre-headless is already the newest version (17.0.15+6~us1-0ubuntu1~20.04).
+redis-server is already the newest version (6:8.0.3-1rl1~focal1).
+0 upgraded, 0 newly installed, 0 to remove and 64 not upgraded.
+fn_compile_shellscript
+compile 3rd-party source
+Configuring OpenSSL version 3.3.4 for target linux-x86_64
+Using os-specific seed configuration
+Created configdata.pm
+Running configdata.pm
+Created Makefile.in
+Created Makefile
+Created include/openssl/configuration.h
+
+**********************************************************************
+***                                                                ***
+***   OpenSSL has been successfully configured                     ***
+***                                                                ***
+***   If you encounter a problem while building, please open an    ***
+***   issue on GitHub <https://github.com/openssl/openssl/issues>  ***
+***   and include the output from the following command:           ***
+***                                                                ***
+***       perl configdata.pm --dump                                ***
+***                                                                ***
+***   (If you are new to OpenSSL, you might want to consult the    ***
+***   'Troubleshooting' section in the INSTALL.md file first)      ***
+***                                                                ***
+**********************************************************************
+Cannot find "WWW::Curl::Easy" in podpath: cannot find suitable replacement path, cannot resolve link
+Cannot find "WWW::Curl::Easy" in podpath: cannot find suitable replacement path, cannot resolve link
+checking for OS
+ + Linux 5.4.0-216-generic x86_64
+checking for C compiler ... found
+ + using GNU C compiler
+ + gcc version: 9.4.0 (Ubuntu 9.4.0-1ubuntu1~20.04.2)
+checking for gcc -pipe switch ... found
+checking for -Wl,-E switch ... found
+checking for gcc builtin atomic operations ... found
+checking for C99 variadic macros ... found
+checking for gcc variadic macros ... found
+checking for gcc builtin 64 bit byteswap ... found
+checking for unistd.h ... found
+checking for inttypes.h ... found
+checking for limits.h ... found
+checking for sys/filio.h ... not found
+checking for sys/param.h ... found
+checking for sys/mount.h ... found
+checking for sys/statvfs.h ... found
+checking for crypt.h ... found
+checking for Linux specific features
+checking for epoll ... found
+checking for EPOLLRDHUP ... found
+checking for EPOLLEXCLUSIVE ... found
+checking for eventfd() ... found
+checking for O_PATH ... found
+checking for sendfile() ... found
+checking for sendfile64() ... found
+checking for sys/prctl.h ... found
+checking for prctl(PR_SET_DUMPABLE) ... found
+checking for prctl(PR_SET_KEEPCAPS) ... found
+checking for capabilities ... found
+checking for crypt_r() ... found
+checking for sys/vfs.h ... found
+checking for BPF sockhash ... found
+checking for SO_COOKIE ... found
+checking for UDP_SEGMENT ... found
+checking for nobody group ... not found
+checking for nogroup group ... found
+checking for poll() ... found
+checking for /dev/poll ... not found
+checking for kqueue ... not found
+checking for crypt() ... not found
+checking for crypt() in libcrypt ... found
+checking for F_READAHEAD ... not found
+checking for posix_fadvise() ... found
+checking for O_DIRECT ... found
+checking for F_NOCACHE ... not found
+checking for directio() ... not found
+checking for statfs() ... found
+checking for statvfs() ... found
+checking for dlopen() ... not found
+checking for dlopen() in libdl ... found
+checking for sched_yield() ... found
+checking for sched_setaffinity() ... found
+checking for SO_SETFIB ... not found
+checking for SO_REUSEPORT ... found
+checking for SO_ACCEPTFILTER ... not found
+checking for SO_BINDANY ... not found
+checking for IP_TRANSPARENT ... found
+checking for IP_BINDANY ... not found
+checking for IP_BIND_ADDRESS_NO_PORT ... found
+checking for IP_RECVDSTADDR ... not found
+checking for IP_SENDSRCADDR ... not found
+checking for IP_PKTINFO ... found
+checking for IPV6_RECVPKTINFO ... found
+checking for IP_MTU_DISCOVER ... found
+checking for IPV6_MTU_DISCOVER ... found
+checking for IP_DONTFRAG ... not found
+checking for IPV6_DONTFRAG ... found
+checking for TCP_DEFER_ACCEPT ... found
+checking for TCP_KEEPIDLE ... found
+checking for TCP_FASTOPEN ... found
+checking for TCP_INFO ... found
+checking for accept4() ... found
+checking for int size ... 4 bytes
+checking for long size ... 8 bytes
+checking for long long size ... 8 bytes
+checking for void * size ... 8 bytes
+checking for uint32_t ... found
+checking for uint64_t ... found
+checking for sig_atomic_t ... found
+checking for sig_atomic_t size ... 4 bytes
+checking for socklen_t ... found
+checking for in_addr_t ... found
+checking for in_port_t ... found
+checking for rlim_t ... found
+checking for uintptr_t ... uintptr_t found
+checking for system byte ordering ... little endian
+checking for size_t size ... 8 bytes
+checking for off_t size ... 8 bytes
+checking for time_t size ... 8 bytes
+checking for AF_INET6 ... found
+checking for setproctitle() ... not found
+checking for pread() ... found
+checking for pwrite() ... found
+checking for pwritev() ... found
+checking for strerrordesc_np() ... not found
+checking for sys_nerr ... found
+checking for localtime_r() ... found
+checking for clock_gettime(CLOCK_MONOTONIC) ... found
+checking for posix_memalign() ... found
+checking for memalign() ... found
+checking for mmap(MAP_ANON|MAP_SHARED) ... found
+checking for mmap("/dev/zero", MAP_SHARED) ... found
+checking for System V shared memory ... found
+checking for POSIX semaphores ... not found
+checking for POSIX semaphores in libpthread ... found
+checking for struct msghdr.msg_control ... found
+checking for ioctl(FIONBIO) ... found
+checking for ioctl(FIONREAD) ... found
+checking for struct tm.tm_gmtoff ... found
+checking for struct dirent.d_namlen ... not found
+checking for struct dirent.d_type ... found
+checking for sysconf(_SC_NPROCESSORS_ONLN) ... found
+checking for sysconf(_SC_LEVEL1_DCACHE_LINESIZE) ... found
+checking for openat(), fstatat() ... found
+checking for getaddrinfo() ... found
+configuring additional modules
+adding module in ../headers-more-nginx-module-0.38
+ + ngx_http_headers_more_filter_module was configured
+checking for PCRE2 library ... not found
+checking for PCRE library ... found
+checking for PCRE JIT support ... found
+checking for OpenSSL library ... found
+checking for zlib library ... found
+checking for GD library ... found
+checking for GD WebP support ... found
+creating objs/Makefile
+
+Configuration summary
+  + using system PCRE library
+  + using system OpenSSL library
+  + using system zlib library
+
+  nginx path prefix: "/usr/share/nginx"
+  nginx binary file: "/usr/sbin/nginx"
+  nginx modules path: "/etc/nginx/modules"
+  nginx configuration prefix: "/etc/nginx"
+  nginx configuration file: "/etc/nginx/nginx.conf"
+  nginx pid file: "/run/nginx.pid"
+  nginx error log file: "/var/log/nginx/error.log"
+  nginx http access log file: "/var/log/nginx/access.log"
+  nginx http client request body temporary files: "client_body_temp"
+  nginx http proxy temporary files: "proxy_temp"
+  nginx http fastcgi temporary files: "fastcgi_temp"
+  nginx http uwsgi temporary files: "uwsgi_temp"
+  nginx http scgi temporary files: "scgi_temp"
+
+autoreconf: Entering directory `.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I m4/config
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4/config'.
+libtoolize: copying file 'm4/config/libtool.m4'
+libtoolize: copying file 'm4/config/ltoptions.m4'
+libtoolize: copying file 'm4/config/ltsugar.m4'
+libtoolize: copying file 'm4/config/ltversion.m4'
+libtoolize: copying file 'm4/config/lt~obsolete.m4'
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:377: installing './compile'
+configure.ac:380: installing './config.guess'
+configure.ac:380: installing './config.sub'
+configure.ac:24: installing './install-sh'
+configure.ac:24: installing './missing'
+fuzz/Makefile.am: installing './depcomp'
+configure.ac: installing './ylwrap'
+autoreconf: Leaving directory `.'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /usr/bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether UID '0' is supported by ustar format... yes
+checking whether GID '0' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether make supports nested variables... (cached) yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for a sed that does not truncate output... /usr/bin/sed
+checking configured UDP ports (500, 4500)... ok
+checking for gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables...
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /usr/bin/sed
+checking for fgrep... /usr/bin/grep -F
+checking for ld used by gcc... /usr/bin/ld
+checking if the linker (/usr/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for /usr/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /usr/bin/dd
+checking how to truncate binary pipes... /usr/bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for egrep... (cached) /usr/bin/grep -E
+checking for gawk... (cached) gawk
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... -lfl
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for python... no
+checking for python2... no
+checking for python3... /usr/bin/python3
+checking for python version... 3.8
+checking for python platform... linux
+checking for python script directory... ${prefix}/lib/python3.8/site-packages
+checking for python extension module directory... ${exec_prefix}/lib/python3.8/site-packages
+checking for perl... /usr/bin/perl
+checking for gperf... /usr/bin/gperf
+checking gperf len type... size_t
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for size_t... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether strerror_r is declared... yes
+checking for strerror_r... yes
+checking whether strerror_r returns char *... no
+checking for library containing dlopen... -ldl
+checking for library containing backtrace... none required
+checking for backtrace... yes
+checking for library containing socket... none required
+checking for library containing pthread_create... -lpthread
+checking for library containing __atomic_and_fetch... none required
+checking for dladdr... yes
+checking for pthread_condattr_setclock(CLOCK_MONOTONIC)... yes
+checking for pthread_condattr_init... yes
+checking for pthread_cond_timedwait_monotonic... no
+checking for pthread_cancel... yes
+checking for pthread_rwlock_init... yes
+checking for pthread_spin_init... yes
+checking for sem_timedwait... yes
+checking for gettid... yes
+checking for qsort_r... yes
+checking for GNU-style qsort_r... yes
+checking for prctl... yes
+checking for mallinfo... yes
+checking for mallinfo2... no
+checking for getpass... yes
+checking for closefrom... no
+checking for getpwnam_r... yes
+checking for getgrnam_r... yes
+checking for getpwuid_r... yes
+checking for chown... yes
+checking for fmemopen... yes
+checking for funopen... no
+checking for mmap... yes
+checking for memrchr... yes
+checking for setlinebuf... yes
+checking for strptime... yes
+checking for dirfd... yes
+checking for sigwaitinfo... yes
+checking for explicit_bzero... yes
+checking for syslog... yes
+checking sys/sockio.h usability... no
+checking sys/sockio.h presence... no
+checking for sys/sockio.h... no
+checking sys/syscall.h usability... yes
+checking sys/syscall.h presence... yes
+checking for sys/syscall.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking glob.h usability... yes
+checking glob.h presence... yes
+checking for glob.h... yes
+checking net/if_tun.h usability... no
+checking net/if_tun.h presence... no
+checking for net/if_tun.h... no
+checking net/pfkeyv2.h usability... no
+checking net/pfkeyv2.h presence... no
+checking for net/pfkeyv2.h... no
+checking netipsec/ipsec.h usability... no
+checking netipsec/ipsec.h presence... no
+checking for netipsec/ipsec.h... no
+checking netinet6/ipsec.h usability... no
+checking netinet6/ipsec.h presence... no
+checking for netinet6/ipsec.h... no
+checking linux/udp.h usability... yes
+checking linux/udp.h presence... yes
+checking for linux/udp.h... yes
+checking for netinet/ip6.h... yes
+checking for linux/fib_rules.h... yes
+checking for struct sockaddr.sa_len... no
+checking for struct sadb_x_policy.sadb_x_policy_priority... yes
+checking for in6addr_any... yes
+checking for in6_pktinfo... yes
+checking for RTM_IFANNOUNCE... no
+checking for IPSEC_MODE_BEET... yes
+checking for IPSEC_DIR_FWD... yes
+checking for RTA_TABLE... yes
+checking for __int128... yes
+checking for GCC __sync operations... yes
+checking for register_printf_specifier... yes
+checking for Windows target... no
+checking for library containing clock_gettime... none required
+checking for clock_gettime... yes
+checking for working __attribute__((packed))... yes
+checking clang... no
+checking x86/x64 target... yes
+checking for __gmpz_init in -lgmp... yes
+checking mpz_powm_sec... yes
+checking gmp.h version >= 4.1.4... yes
+checking for EVP_CIPHER_CTX_new in -lcrypto... yes
+checking openssl/evp.h usability... yes
+checking openssl/evp.h presence... yes
+checking for openssl/evp.h... yes
+checking for OQS_init in -loqs... yes
+checking oqs/oqs.h usability... yes
+checking oqs/oqs.h presence... yes
+checking for oqs/oqs.h... yes
+checking if plugin constructors should be resolved statically... no (enabled for static, monolithic builds)
+checking version from Git repository... UNKNOWN (could be due to insufficient clone depth)
+checking for use of -Werror and additional warnings... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating conf/Makefile
+config.status: creating fuzz/Makefile
+config.status: creating man/Makefile
+config.status: creating init/Makefile
+config.status: creating init/systemd/Makefile
+config.status: creating init/systemd-starter/Makefile
+config.status: creating src/Makefile
+config.status: creating src/include/Makefile
+config.status: creating src/libstrongswan/Makefile
+config.status: creating src/libstrongswan/math/libnttfft/Makefile
+config.status: creating src/libstrongswan/math/libnttfft/tests/Makefile
+config.status: creating src/libstrongswan/plugins/aes/Makefile
+config.status: creating src/libstrongswan/plugins/cmac/Makefile
+config.status: creating src/libstrongswan/plugins/des/Makefile
+config.status: creating src/libstrongswan/plugins/blowfish/Makefile
+config.status: creating src/libstrongswan/plugins/rc2/Makefile
+config.status: creating src/libstrongswan/plugins/md4/Makefile
+config.status: creating src/libstrongswan/plugins/md5/Makefile
+config.status: creating src/libstrongswan/plugins/sha1/Makefile
+config.status: creating src/libstrongswan/plugins/sha2/Makefile
+config.status: creating src/libstrongswan/plugins/sha3/Makefile
+config.status: creating src/libstrongswan/plugins/mgf1/Makefile
+config.status: creating src/libstrongswan/plugins/fips_prf/Makefile
+config.status: creating src/libstrongswan/plugins/gmp/Makefile
+config.status: creating src/libstrongswan/plugins/curve25519/Makefile
+config.status: creating src/libstrongswan/plugins/rdrand/Makefile
+config.status: creating src/libstrongswan/plugins/aesni/Makefile
+config.status: creating src/libstrongswan/plugins/random/Makefile
+config.status: creating src/libstrongswan/plugins/nonce/Makefile
+config.status: creating src/libstrongswan/plugins/hmac/Makefile
+config.status: creating src/libstrongswan/plugins/kdf/Makefile
+config.status: creating src/libstrongswan/plugins/xcbc/Makefile
+config.status: creating src/libstrongswan/plugins/x509/Makefile
+config.status: creating src/libstrongswan/plugins/revocation/Makefile
+config.status: creating src/libstrongswan/plugins/constraints/Makefile
+config.status: creating src/libstrongswan/plugins/acert/Makefile
+config.status: creating src/libstrongswan/plugins/pubkey/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs1/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs7/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs8/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs12/Makefile
+config.status: creating src/libstrongswan/plugins/openxpki/Makefile
+config.status: creating src/libstrongswan/plugins/pgp/Makefile
+config.status: creating src/libstrongswan/plugins/dnskey/Makefile
+config.status: creating src/libstrongswan/plugins/sshkey/Makefile
+config.status: creating src/libstrongswan/plugins/pem/Makefile
+config.status: creating src/libstrongswan/plugins/curl/Makefile
+config.status: creating src/libstrongswan/plugins/files/Makefile
+config.status: creating src/libstrongswan/plugins/winhttp/Makefile
+config.status: creating src/libstrongswan/plugins/unbound/Makefile
+config.status: creating src/libstrongswan/plugins/soup/Makefile
+config.status: creating src/libstrongswan/plugins/ldap/Makefile
+config.status: creating src/libstrongswan/plugins/mysql/Makefile
+config.status: creating src/libstrongswan/plugins/sqlite/Makefile
+config.status: creating src/libstrongswan/plugins/padlock/Makefile
+config.status: creating src/libstrongswan/plugins/openssl/Makefile
+config.status: creating src/libstrongswan/plugins/wolfssl/Makefile
+config.status: creating src/libstrongswan/plugins/gcrypt/Makefile
+config.status: creating src/libstrongswan/plugins/botan/Makefile
+config.status: creating src/libstrongswan/plugins/agent/Makefile
+config.status: creating src/libstrongswan/plugins/keychain/Makefile
+config.status: creating src/libstrongswan/plugins/pkcs11/Makefile
+config.status: creating src/libstrongswan/plugins/chapoly/Makefile
+config.status: creating src/libstrongswan/plugins/ctr/Makefile
+config.status: creating src/libstrongswan/plugins/ccm/Makefile
+config.status: creating src/libstrongswan/plugins/gcm/Makefile
+config.status: creating src/libstrongswan/plugins/af_alg/Makefile
+config.status: creating src/libstrongswan/plugins/drbg/Makefile
+config.status: creating src/libstrongswan/plugins/ntru/Makefile
+config.status: creating src/libstrongswan/plugins/bliss/Makefile
+config.status: creating src/libstrongswan/plugins/bliss/tests/Makefile
+config.status: creating src/libstrongswan/plugins/newhope/Makefile
+config.status: creating src/libstrongswan/plugins/newhope/tests/Makefile
+config.status: creating src/libstrongswan/plugins/oqs/Makefile
+config.status: creating src/libstrongswan/plugins/oqs/tests/Makefile
+config.status: creating src/libstrongswan/plugins/test_vectors/Makefile
+config.status: creating src/libstrongswan/tests/Makefile
+config.status: creating src/libipsec/Makefile
+config.status: creating src/libipsec/tests/Makefile
+config.status: creating src/libsimaka/Makefile
+config.status: creating src/libtls/Makefile
+config.status: creating src/libtls/tests/Makefile
+config.status: creating src/libradius/Makefile
+config.status: creating src/libtncif/Makefile
+config.status: creating src/libtnccs/Makefile
+config.status: creating src/libtnccs/plugins/tnc_tnccs/Makefile
+config.status: creating src/libtnccs/plugins/tnc_imc/Makefile
+config.status: creating src/libtnccs/plugins/tnc_imv/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_11/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_20/Makefile
+config.status: creating src/libtnccs/plugins/tnccs_dynamic/Makefile
+config.status: creating src/libpttls/Makefile
+config.status: creating src/libimcv/Makefile
+config.status: creating src/libimcv/plugins/imc_test/Makefile
+config.status: creating src/libimcv/plugins/imv_test/Makefile
+config.status: creating src/libimcv/plugins/imc_scanner/Makefile
+config.status: creating src/libimcv/plugins/imv_scanner/Makefile
+config.status: creating src/libimcv/plugins/imc_os/Makefile
+config.status: creating src/libimcv/plugins/imv_os/Makefile
+config.status: creating src/libimcv/plugins/imc_attestation/Makefile
+config.status: creating src/libimcv/plugins/imv_attestation/Makefile
+config.status: creating src/libimcv/plugins/imc_swima/Makefile
+config.status: creating src/libimcv/plugins/imv_swima/Makefile
+config.status: creating src/libimcv/plugins/imc_hcd/Makefile
+config.status: creating src/libimcv/plugins/imv_hcd/Makefile
+config.status: creating src/charon/Makefile
+config.status: creating src/charon-nm/Makefile
+config.status: creating src/charon-tkm/Makefile
+config.status: creating src/charon-cmd/Makefile
+config.status: creating src/charon-svc/Makefile
+config.status: creating src/charon-systemd/Makefile
+config.status: creating src/libcharon/Makefile
+config.status: creating src/libcharon/plugins/eap_aka/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp/tests/Makefile
+config.status: creating src/libcharon/plugins/eap_aka_3gpp2/Makefile
+config.status: creating src/libcharon/plugins/eap_dynamic/Makefile
+config.status: creating src/libcharon/plugins/eap_identity/Makefile
+config.status: creating src/libcharon/plugins/eap_md5/Makefile
+config.status: creating src/libcharon/plugins/eap_gtc/Makefile
+config.status: creating src/libcharon/plugins/eap_sim/Makefile
+config.status: creating src/libcharon/plugins/eap_sim_file/Makefile
+config.status: creating src/libcharon/plugins/eap_sim_pcsc/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_sql/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_pseudonym/Makefile
+config.status: creating src/libcharon/plugins/eap_simaka_reauth/Makefile
+config.status: creating src/libcharon/plugins/eap_mschapv2/Makefile
+config.status: creating src/libcharon/plugins/eap_tls/Makefile
+config.status: creating src/libcharon/plugins/eap_ttls/Makefile
+config.status: creating src/libcharon/plugins/eap_peap/Makefile
+config.status: creating src/libcharon/plugins/eap_tnc/Makefile
+config.status: creating src/libcharon/plugins/eap_radius/Makefile
+config.status: creating src/libcharon/plugins/xauth_generic/Makefile
+config.status: creating src/libcharon/plugins/xauth_eap/Makefile
+config.status: creating src/libcharon/plugins/xauth_pam/Makefile
+config.status: creating src/libcharon/plugins/xauth_noauth/Makefile
+config.status: creating src/libcharon/plugins/tnc_ifmap/Makefile
+config.status: creating src/libcharon/plugins/tnc_pdp/Makefile
+config.status: creating src/libcharon/plugins/save_keys/Makefile
+config.status: creating src/libcharon/plugins/socket_default/Makefile
+config.status: creating src/libcharon/plugins/socket_dynamic/Makefile
+config.status: creating src/libcharon/plugins/socket_win/Makefile
+config.status: creating src/libcharon/plugins/bypass_lan/Makefile
+config.status: creating src/libcharon/plugins/connmark/Makefile
+config.status: creating src/libcharon/plugins/counters/Makefile
+config.status: creating src/libcharon/plugins/forecast/Makefile
+config.status: creating src/libcharon/plugins/farp/Makefile
+config.status: creating src/libcharon/plugins/smp/Makefile
+config.status: creating src/libcharon/plugins/sql/Makefile
+config.status: creating src/libcharon/plugins/dnscert/Makefile
+config.status: creating src/libcharon/plugins/ipseckey/Makefile
+config.status: creating src/libcharon/plugins/medsrv/Makefile
+config.status: creating src/libcharon/plugins/medcli/Makefile
+config.status: creating src/libcharon/plugins/addrblock/Makefile
+config.status: creating src/libcharon/plugins/unity/Makefile
+config.status: creating src/libcharon/plugins/uci/Makefile
+config.status: creating src/libcharon/plugins/ha/Makefile
+config.status: creating src/libcharon/plugins/kernel_netlink/Makefile
+config.status: creating src/libcharon/plugins/kernel_pfkey/Makefile
+config.status: creating src/libcharon/plugins/kernel_pfroute/Makefile
+config.status: creating src/libcharon/plugins/kernel_libipsec/Makefile
+config.status: creating src/libcharon/plugins/kernel_wfp/Makefile
+config.status: creating src/libcharon/plugins/kernel_iph/Makefile
+config.status: creating src/libcharon/plugins/whitelist/Makefile
+config.status: creating src/libcharon/plugins/ext_auth/Makefile
+config.status: creating src/libcharon/plugins/lookip/Makefile
+config.status: creating src/libcharon/plugins/error_notify/Makefile
+config.status: creating src/libcharon/plugins/certexpire/Makefile
+config.status: creating src/libcharon/plugins/systime_fix/Makefile
+config.status: creating src/libcharon/plugins/led/Makefile
+config.status: creating src/libcharon/plugins/duplicheck/Makefile
+config.status: creating src/libcharon/plugins/coupling/Makefile
+config.status: creating src/libcharon/plugins/radattr/Makefile
+config.status: creating src/libcharon/plugins/osx_attr/Makefile
+config.status: creating src/libcharon/plugins/p_cscf/Makefile
+config.status: creating src/libcharon/plugins/android_dns/Makefile
+config.status: creating src/libcharon/plugins/android_log/Makefile
+config.status: creating src/libcharon/plugins/stroke/Makefile
+config.status: creating src/libcharon/plugins/vici/Makefile
+config.status: creating src/libcharon/plugins/vici/ruby/Makefile
+config.status: creating src/libcharon/plugins/vici/perl/Makefile
+config.status: creating src/libcharon/plugins/vici/python/Makefile
+config.status: creating src/libcharon/plugins/updown/Makefile
+config.status: creating src/libcharon/plugins/dhcp/Makefile
+config.status: creating src/libcharon/plugins/load_tester/Makefile
+config.status: creating src/libcharon/plugins/resolve/Makefile
+config.status: creating src/libcharon/plugins/attr/Makefile
+config.status: creating src/libcharon/plugins/attr_sql/Makefile
+config.status: creating src/libcharon/plugins/selinux/Makefile
+config.status: creating src/libcharon/tests/Makefile
+config.status: creating src/libtpmtss/Makefile
+config.status: creating src/libtpmtss/plugins/tpm/Makefile
+config.status: creating src/stroke/Makefile
+config.status: creating src/ipsec/Makefile
+config.status: creating src/starter/Makefile
+config.status: creating src/starter/tests/Makefile
+config.status: creating src/_updown/Makefile
+config.status: creating src/aikgen/Makefile
+config.status: creating src/tpm_extendpcr/Makefile
+config.status: creating src/pki/Makefile
+config.status: creating src/pki/man/Makefile
+config.status: creating src/pool/Makefile
+config.status: creating src/libfast/Makefile
+config.status: creating src/manager/Makefile
+config.status: creating src/medsrv/Makefile
+config.status: creating src/checksum/Makefile
+config.status: creating src/conftest/Makefile
+config.status: creating src/pt-tls-client/Makefile
+config.status: creating src/sw-collector/Makefile
+config.status: creating src/sec-updater/Makefile
+config.status: creating src/swanctl/Makefile
+config.status: creating src/cert-enroll/Makefile
+config.status: creating src/xfrmi/Makefile
+config.status: creating scripts/Makefile
+config.status: creating testing/Makefile
+config.status: creating conf/strongswan.conf.5.head
+config.status: creating conf/strongswan.conf.5.tail
+config.status: creating man/ipsec.conf.5
+config.status: creating man/ipsec.secrets.5
+config.status: creating src/charon-cmd/charon-cmd.8
+config.status: creating src/pki/man/pki.1
+config.status: creating src/pki/man/pki---acert.1
+config.status: creating src/pki/man/pki---dn.1
+config.status: creating src/pki/man/pki---est.1
+config.status: creating src/pki/man/pki---estca.1
+config.status: creating src/pki/man/pki---gen.1
+config.status: creating src/pki/man/pki---issue.1
+config.status: creating src/pki/man/pki---keyid.1
+config.status: creating src/pki/man/pki---ocsp.1
+config.status: creating src/pki/man/pki---pkcs12.1
+config.status: creating src/pki/man/pki---pkcs7.1
+config.status: creating src/pki/man/pki---print.1
+config.status: creating src/pki/man/pki---pub.1
+config.status: creating src/pki/man/pki---req.1
+config.status: creating src/pki/man/pki---scep.1
+config.status: creating src/pki/man/pki---scepca.1
+config.status: creating src/pki/man/pki---self.1
+config.status: creating src/pki/man/pki---signcrl.1
+config.status: creating src/pki/man/pki---verify.1
+config.status: creating src/swanctl/swanctl.8
+config.status: creating src/swanctl/swanctl.conf.5.head
+config.status: creating src/swanctl/swanctl.conf.5.tail
+config.status: creating src/pt-tls-client/pt-tls-client.1
+config.status: creating src/sw-collector/sw-collector.8
+config.status: creating src/sec-updater/sec-updater.8
+config.status: creating src/cert-enroll/cert-enroll.8
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+ strongSwan will be built with the following plugins
+-----------------------------------------------------
+libstrongswan: aes des rc2 sha2 sha1 md4 md5 mgf1 random nonce x509 revocation constraints pubkey pkcs1 pkcs7 pkcs12 pgp dnskey sshkey pem openssl pkcs8 fips-prf gmp curve25519 xcbc cmac hmac kdf gcm oqs drbg
+libcharon:     attr kernel-netlink resolve socket-default bypass-lan stroke vici updown eap-identity eap-aka eap-mschapv2 xauth-generic xauth-eap dhcp counters
+libtnccs:
+libtpmtss:
+
+
+insmod: ERROR: could not insert module /lib/modules/5.4.0-216-generic/kernel/net/xfrm/xfrm_algo.ko: File exists
+insmod: ERROR: could not insert module /lib/modules/5.4.0-216-generic/kernel/net/xfrm/xfrm_user.ko: File exists
+/usr/local/pribit/wizard/src-compile/ovpn-dco/gen-compat-autoconf.sh /usr/local/pribit/wizard/src-compile/ovpn-dco/compat-autoconf.h
+make -C /lib/modules/5.4.0-216-generic/build M=/usr/local/pribit/wizard/src-compile/ovpn-dco PWD=/usr/local/pribit/wizard/src-compile/ovpn-dco REVISION= CONFIG_OVPN_DCO_V2=m INSTALL_MOD_DIR=updates/ modules_install
+make[1]: Entering directory '/usr/src/linux-headers-5.4.0-216-generic'
+  INSTALL /usr/local/pribit/wizard/src-compile/ovpn-dco/drivers/net/ovpn-dco/ovpn-dco-v2.ko
+At main.c:167:
+- SSL error:02001002:system library:fopen:No such file or directory: ../crypto/bio/bss_file.c:69
+- SSL error:2006D080:BIO routines:BIO_new_file:no such file: ../crypto/bio/bss_file.c:76
+sign-file: certs/signing_key.pem: No such file or directory
+  DEPMOD  5.4.0-216-generic
+Warning: modules_install: missing 'System.map' file. Skipping depmod.
+make[1]: Leaving directory '/usr/src/linux-headers-5.4.0-216-generic'
+depmod -a
+make -C apps
+make[1]: Entering directory '/usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria/apps'
+make[1]: 'mc_crypto_app' is up to date.
+make[1]: Leaving directory '/usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria/apps'
+make -C /lib/modules/5.4.0-216-generic/build M=/usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria PWD=/usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria CONFIG_MC_ARIA_V1=m INSTALL_MOD_DIR=updates/   modules
+make[1]: Entering directory '/usr/src/linux-headers-5.4.0-216-generic'
+  Building modules, stage 2.
+  MODPOST 1 modules
+make[1]: Leaving directory '/usr/src/linux-headers-5.4.0-216-generic'
+make -C apps install
+make[1]: Entering directory '/usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria/apps'
+cp -fpR mc_crypto_app /usr/local/bin
+make[1]: Leaving directory '/usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria/apps'
+make -C /lib/modules/5.4.0-216-generic/build M=/usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria PWD=/usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria CONFIG_MC_ARIA_V1=m INSTALL_MOD_DIR=updates/ modules_install
+make[1]: Entering directory '/usr/src/linux-headers-5.4.0-216-generic'
+  INSTALL /usr/local/pribit/wizard/src-compile/strongswan/pribit_additional/kernel_mc_aria/drivers/crypto/mc-aria/mc-aria-v1.ko
+At main.c:167:
+- SSL error:02001002:system library:fopen:No such file or directory: ../crypto/bio/bss_file.c:69
+- SSL error:2006D080:BIO routines:BIO_new_file:no such file: ../crypto/bio/bss_file.c:76
+sign-file: certs/signing_key.pem: No such file or directory
+  DEPMOD  5.4.0-216-generic
+Warning: modules_install: missing 'System.map' file. Skipping depmod.
+make[1]: Leaving directory '/usr/src/linux-headers-5.4.0-216-generic'
+depmod -a
+default config
+disable kernel update
+fn_history
+fn_fw_mobile_enable
+fn_kernel_param
+--- sysctl.conf backup ---
+net.ipv6.conf.all.forwarding = 1
+kernel.printk = 4 4 1 7
+kernel.panic = 10
+kernel.sysrq = 0
+kernel.shmmax = 4294967296
+kernel.shmall = 4194304
+kernel.core_uses_pid = 1
+kernel.msgmnb = 65536
+kernel.msgmax = 65536
+vm.swappiness = 20
+vm.dirty_ratio = 80
+vm.dirty_background_ratio = 5
+net.core.netdev_budget = 600
+net.core.netdev_max_backlog = 262144
+net.core.rmem_default = 31457280
+net.core.rmem_max = 67108864
+net.core.wmem_default = 31457280
+net.core.wmem_max = 67108864
+net.core.somaxconn = 65535
+net.core.optmem_max = 25165824
+net.ipv4.neigh.default.gc_thresh1 = 4096
+net.ipv4.neigh.default.gc_thresh2 = 8192
+net.ipv4.neigh.default.gc_thresh3 = 16384
+net.ipv4.neigh.default.gc_interval = 5
+net.ipv4.neigh.default.gc_stale_time = 120
+net.ipv4.tcp_slow_start_after_idle = 0
+net.ipv4.ip_local_port_range = 1024 65000
+net.ipv4.ip_no_pmtu_disc = 1
+net.ipv4.route.flush = 1
+net.ipv4.route.max_size = 8048576
+net.ipv4.icmp_echo_ignore_broadcasts = 1
+net.ipv4.icmp_ignore_bogus_error_responses = 1
+net.ipv4.tcp_congestion_control = htcp
+net.ipv4.tcp_mem = 65536 131072 262144
+net.ipv4.udp_mem = 65536 131072 262144
+net.ipv4.tcp_rmem = 4096 87380 33554432
+net.ipv4.udp_rmem_min = 16384
+net.ipv4.tcp_wmem = 4096 87380 33554432
+net.ipv4.udp_wmem_min = 16384
+net.ipv4.tcp_max_tw_buckets = 1440000
+net.ipv4.tcp_tw_reuse = 1
+net.ipv4.tcp_max_orphans = 400000
+net.ipv4.tcp_window_scaling = 1
+net.ipv4.tcp_rfc1337 = 1
+net.ipv4.tcp_syncookies = 1
+net.ipv4.tcp_synack_retries = 1
+net.ipv4.tcp_syn_retries = 2
+net.ipv4.tcp_max_syn_backlog = 16384
+net.ipv4.tcp_timestamps = 1
+net.ipv4.tcp_sack = 1
+net.ipv4.tcp_fack = 1
+net.ipv4.tcp_ecn = 2
+net.ipv4.tcp_fin_timeout = 10
+net.ipv4.tcp_keepalive_time = 600
+net.ipv4.tcp_keepalive_intvl = 60
+net.ipv4.tcp_keepalive_probes = 10
+net.ipv4.tcp_no_metrics_save = 1
+net.ipv4.ip_forward = 1
+net.ipv4.conf.all.accept_redirects = 0
+net.ipv4.conf.all.send_redirects = 0
+net.ipv4.conf.all.accept_source_route = 0
+net.ipv4.conf.all.rp_filter = 1
+fn_password_complexitys
+fn_rsyslog_config
+fn_connect_vpn_config
+fn_nginx_config
+Certificate request self-signature ok
+subject=C=KR, ST=Seoul, L=Seoul, O=PRIBIT Technology, OU=PRIBIT Connect, CN=*.packetgo.com
+Synchronizing state of fail2ban.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable fail2ban
+fn_gateway_config
+[2025-09-24T14:38:58,620] [main] INFO GatewayUtil -- createEncryptFile
+[2025-09-24T14:38:58,660] [main] INFO GatewayUtil -- createResourceFile path : /var/connect/gateway/system-integrity/encrypt.pgd
+[2025-09-24T14:38:59,560] [main] INFO GatewayUtil -- createResourceFile path : /var/connect/gateway/system-integrity/repository.pgd
+[2025-09-24T14:38:59,575] [main] INFO GatewayUtil -- createResourceFile path : /var/connect/gateway/system-integrity/inmemorydb.pgd
+[2025-09-24T14:38:59,576] [main] INFO GatewayUtil -- ####################################################################################################
+[2025-09-24T14:38:59,577] [main] INFO GatewayUtil -- gateway.serial=a9f41476-553a-412a-9f46-ccf9b93c9def
+[2025-09-24T14:38:59,577] [main] INFO GatewayUtil -- ####################################################################################################
+[2025-09-24T14:38:59,578] [main] INFO GatewayUtil --
+[2025-09-24T14:38:59,578] [main] INFO GatewayUtil --
+fn_ipsec_conf
+Profile for /usr/lib/ipsec/charon not found, skipping
+Profile for /usr/lib/ipsec/stroke not found, skipping
+Profile for /usr/sbin/swanctl not found, skipping
+--- charon-logging config backup ---
+ipsec cert, config create
+========================================================
+        PacketGo Gateway Install was completed.
+========================================================

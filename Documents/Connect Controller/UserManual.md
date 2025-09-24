@@ -194,7 +194,7 @@ LDAP 서버 동기화 설정
 ![UserAccountSyncLdapServerConf1](./img/useracct_sync_ldap_conf1.png)  
 
 - LDAP 종류 
-  - [x] Active Directory 
+  - [x] *`Active Directory`* 
 - LDAP 서버 IP  
   - ex) *`10.0.30.158`*  
 - LDAP 서버 접속 포트  
@@ -211,7 +211,7 @@ LDAP 서버 동기화 설정
 - 사용자 그룹 조직구성단위 Distinguished Name(OU)  
   - ex) (blank)  
 - 인증 메커니즘 
-  - [x] simple  
+  - [x] *`simple`*  
 - 1회 허용 레코드 수 
   - ex) *`50`*  
 
