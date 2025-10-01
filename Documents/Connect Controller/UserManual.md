@@ -38,6 +38,8 @@ PCC에서 사용자 생성 방법은 `수동 생성`, `일괄 등록`, `사용�
 - `일괄 등록` : Excel 로 업로드 
 - `사용자 동기화` : 고객사의 인사 DB에서 데이터를 동기화  
 
+PCC에서 사용자 계정은 대소문자를 구별하지 않습니다.  
+
 <br>
 
 ### 사용자 계정 (Internal DB) 생성 및 삭제  
@@ -46,7 +48,7 @@ OBJECT > 사용자
 
 `사용자 등록` 버튼을 눌러 사용자를 생성합니다. 
 
-![Object Create User](object_user_createuser.png)  
+![Object Create User](./img/object_user_createuser.png)  
 - 계정명 : 
   - 사용자의 계정(이름)을 설정합니다.  
   - 필수 입력값입니다.  
@@ -68,12 +70,12 @@ OBJECT > 사용자
 > [!NOTE]  
 > 최초 계정 생성 시 초기 비밀번호로 자동 설정됩니다.  
 > 초기 비밀번호는 *`1111`* 입니다.  
-> PCC 에서 관리하는 계정은 사용자가 초기 비밀번호로 접속 시 반드시 비밀번호를 변경하도록 되어있습니다.  
+> 사용자 계정을 PCC에 최초 생성하거나 사용자의 비밀번호를 초기화하여 초기 비밀번호로 접속 시 반드시 비밀번호를 변경하도록 되어있습니다.  
 > *( `비밀번호 강제 변경` 을 진행한 사용자는 제외 )*  
 > 비밀번호를 변경 할 때, 시스템에 설정되어 있는 `인증 번호 제공 방법` 에 따라 인증을 수행합니다.  
 > *( SYSTEM > 시스템 환경 설정 > 콘솔 정보 > 인증 번호 제공 방법 : `이메일`, `SMS`, `이메일 + SMS` )*  
 
-![InitUserLoginMFA](agent_init_user_login_mfa.png)  
+![InitUserLoginMFA](./img/agent_init_user_login_mfa.png)  
 
 - 초기 비밀번호로 사용자가 로그인 하기 위해서는 사전에 `SMTP(E-Mail)`, `SMS` 기능이 사용 가능하도록 준비되어 있어야 합니다. 
 
@@ -179,9 +181,9 @@ OBJECT > 사용자 계정 동기화
 
 <br> 
 
-> [!NOTE] 사용자의 "사용 대기" 상태 
-> 사용자의 `사용 대기` 상태는 동기화 시에만 지정 할 수 있는 사용자의 상태입니다. 
-> 사용자는 `사용 대기` 상태가 되면, 관리자가 반드시 직접 `사용 가능` 상태로 전환 해주어야 합니다. 
+> [!NOTE] 사용자의 "사용 대기" 상태  
+> 사용자의 `사용 대기` 상태는 동기화 시에만 지정 할 수 있는 사용자의 상태입니다.  
+> 사용자의 `사용 대기` 를 사용하기 위해서는 SYSTEM > 시스템 환경 설정 > 컨트롤러 정보 에서 특정 기업 코드를 설정해야 합니다.  
 
 <br>
 
@@ -410,11 +412,11 @@ AD(LDAP) 인증 수행을 위해서는 POLICY 에서 단말 인증 수행에 대
 
 단말 상태 확인 및 행위 제어 목록에서 상세 조건의 LDAP 인증 수행 설정정보를 추가로 입력해야 합니다. 
 
-![Policy LDAP Authentication3](create_policy_ldap_auth4.png)  
+![Policy LDAP Authentication3](./img/create_policy_ldap_auth4.png)  
 
 
 🔄 모양의 아이콘을 눌러 인증정보를 추가합니다. 
-![Policy LDAP Authentication3](create_policy_ldap_auth5.png)  
+![Policy LDAP Authentication3](./img/create_policy_ldap_auth5.png)  
 - LDAP 서버 IP 
   - ex) *`10.0.30.158`*  
 - LDAP 서버 접속 포트
@@ -466,7 +468,7 @@ User03: 로그인 불가 (오직 그룹 C에만 속해 있고, 그룹 C는 사�
 
 사용자 로그인 
 
-![UserLoginMFA](agent_user_login_mfa.png)  
+![UserLoginMFA](./img/agent_user_login_mfa.png)  
 
 
 *** 

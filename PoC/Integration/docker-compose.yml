@@ -1,0 +1,35 @@
+services:
+  redis:
+    image: redis:7.4.2
+    container_name: pribit-redis
+    command: ["redis-server", "/usr/local/etc/redis/redis.conf"]
+    ports:
+      - "6379:6379"
+    volumes:
+      - /opt/thirdparty/redis/redis.conf:/usr/local/etc/redis/redis.conf:ro
+      - pribit-redis-data:/var/lib/redis
+      - /opt/thirdparty/redis/log:/var/log/redis
+    user: "redis"
+    restart: unless-stopped
+
+  mariadb:
+    image: mariadb:10.6.21
+    container_name: pribit-mariadb
+    environment:
+      MYSQL_ROOT_PASSWORD: "Pribit2560!"
+      MYSQL_DATABASE: "DB_PGZT"
+      MYSQL_USER: "pribit"
+      MYSQL_PASSWORD: "Packetgo2560!"
+    ports:
+      - "3306:3306"
+    volumes:
+      #- /path/to/your/mariadb/conf.d:/etc/mysql/conf.d
+      - /home/pribit/controller_noData.sql:/docker-entrypoint-initdb.d/init.sql
+      - pribit-mariadb-data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  pribit-redis-data:
+    driver: local
+  pribit-mariadb-data:
+    driver: local
