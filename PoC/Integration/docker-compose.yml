@@ -15,21 +15,43 @@ services:
   mariadb:
     image: mariadb:10.6.21
     container_name: pribit-mariadb
+    network_mode: host   # 127.0.0.1 그대로 접근
     environment:
       MYSQL_ROOT_PASSWORD: "Pribit2560!"
       MYSQL_DATABASE: "DB_PGZT"
       MYSQL_USER: "pribit"
       MYSQL_PASSWORD: "Packetgo2560!"
+    # host 네트워크라 ports 생략 가능하지만 기록용으로 남김
     ports:
       - "3306:3306"
     volumes:
-      #- /path/to/your/mariadb/conf.d:/etc/mysql/conf.d
-      - /home/pribit/controller_noData.sql:/docker-entrypoint-initdb.d/init.sql
+      - /home/pribit/controller_noData.sql:/docker-entrypoint-initdb.d/init.sql:ro
       - pribit-mariadb-data:/var/lib/mysql
+    restart: unless-stopped
+
+  controller:
+    build:
+      context: ./controller
+    image: pribit/controller:allinone
+    container_name: pribit-controller
+    network_mode: host   # nginx(443/5996/5997), web(9093), api(9094) 등 그대로 노출
+    environment:
+      DB_HOST: "127.0.0.1"
+      DB_PORT: "3306"
+      DB_SCHEMA: "DB_PGZT"         # 설치 스크립트 기본값과 동일
+      DB_USER: "pribit"
+      DB_PASSWORD: "Packetgo2560!"
+      ALLOWED_IP: "127.0.0.1"
+    volumes:
+      - pribit-controller-logs:/opt/connect/logs
+      - pribit-controller-tls:/etc/nginx/tls
+    depends_on:
+      - mariadb
+      - redis
     restart: unless-stopped
 
 volumes:
   pribit-redis-data:
-    driver: local
   pribit-mariadb-data:
-    driver: local
+  pribit-controller-logs:
+  pribit-controller-tls:

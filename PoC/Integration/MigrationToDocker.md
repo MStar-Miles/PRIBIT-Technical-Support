@@ -270,7 +270,88 @@ docker run -d \
 
 
 
+docker compose 를 설치하여 compose 로 up down 실행
+
+
+ExecStart=/usr/bin/java -server \
+  -Dpgct=connect-controller \
+  -Dpgct.home=/opt/connect/controller \
+  -Dfile.encoding=UTF-8 \
+  -Djdk.lang.Process.launchMechanism=vfork \
+  -Xms2048m -Xmx3072m \
+  -jar /opt/connect/controller/rpc/controller-rpc-1.0.jar
+
+java -jar /opt/connect/controller/util/controller-util-1.0.jar setup pribit Packetgo2560! '127.0.0.1' DB_PGZT
+controller-util jar 파일이 authenticate.properties 만들고, 내용을 암호화해서 저장한다. 
+
+이 authenticate.properties 파일을 controller-rpc jar 가 실행되면서 DB 연결 설정 값들을 읽어 셋팅하는데, 
+
+controller-rpc.jar 로그에는 Access denied for user 'pribit'@'172.18.0.1' (using password: YES) 
+로 출력된다. 
+
+설정대로라면 127.0.0.1 로 요청해야 하는데, 어떤 설정을 읽어서 처리하길래 172.18.0.1 로 요청하는 것일까? 
+해당 시스템의 ip addr 명령어를 통해 인터페이스 ip들을 확인해봤다. 
+
+
+root@connect-controller:/opt/connect/controller# ip addr
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+       valid_lft forever preferred_lft forever
+2: ens160: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    link/ether 00:50:56:be:26:4f brd ff:ff:ff:ff:ff:ff
+    inet 10.0.30.156/24 brd 10.0.30.255 scope global ens160
+       valid_lft forever preferred_lft forever
+    inet6 fe80::250:56ff:febe:264f/64 scope link
+       valid_lft forever preferred_lft forever
+3: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default
+    link/ether a6:91:89:f9:05:b0 brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a491:89ff:fef9:5b0/64 scope link
+       valid_lft forever preferred_lft forever
+53: br-22f30c474533: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default
+    link/ether ce:ae:3c:84:86:f2 brd ff:ff:ff:ff:ff:ff
+    inet 172.18.0.1/16 brd 172.18.255.255 scope global br-22f30c474533
+       valid_lft forever preferred_lft forever
+    inet6 fe80::ccae:3cff:fe84:86f2/64 scope link
+       valid_lft forever preferred_lft forever
+56: vethdb9efb0@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-22f30c474533 state UP group default
+    link/ether e6:30:b7:e3:f4:bf brd ff:ff:ff:ff:ff:ff link-netnsid 0
+    inet6 fe80::e430:b7ff:fee3:f4bf/64 scope link
+       valid_lft forever preferred_lft forever
+57: veth5613ead@if2: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue master br-22f30c474533 state UP group default
+    link/ether 3e:f7:05:7f:df:59 brd ff:ff:ff:ff:ff:ff link-netnsid 1
+    inet6 fe80::3cf7:5ff:fe7f:df59/64 scope link
+       valid_lft forever preferred_lft forever
+
+확인해보니 i/f br-22f30c474533 의 ip 를 가져가고 있다. 
+controller-rpc-1.0.jar 파일에서 어떤 로직이 처리되길래 이런 상황이 발생하는지 jar 파일을 디컴파일하여 분석하고, 해당 내용을 조치하려고 한다. 
 
 
 
+첫 번째 문제 
+java -jar /opt/connect/controller/util/controller-util-1.0.jar setup pribit Packetgo2560! '127.0.0.1' DB_PGZT
+mysql 접속 시 패스워드가 틀렸었고, DB_PGZT 스펠이 DB_PZGT 로 틀렸었다. 
 
+
+
+docker inspect pribit-mariadb | grep -A5 -i "Networks" 
+"NetworkSettings": 
+  { 
+    "Bridge": "", 
+    "SandboxID": "6af977c31a6b54a4f0e0d244434ee0a4bb67ecee1ff76396f329f3407ac9bfce", 
+    "SandboxKey": "/var/run/docker/netns/6af977c31a6b", 
+    "Ports": 
+    { 
+      "3306/tcp": [ --
+       "Networks": 
+       { "pribit_default": 
+       { "IPAMConfig": null, "Links": null, "Aliases": [ "pribit-mariadb",
+
+
+지금 출력으로 보면 DB 컨테이너가 user-defined bridge 네트워크 pribit_default 위에 올라가 있다. 
+이 네트워크의 게이트웨이(호스트 쪽 브리지 IP) 가 바로 172.18.0.1일 가능성이 높고, 
+그래서 컨테이너(MariaDB) 입장에서는 클라이언트 소스 IP가 '172.18.0.1'로 보이는 것.
