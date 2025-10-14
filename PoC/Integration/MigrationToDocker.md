@@ -354,4 +354,15 @@ docker inspect pribit-mariadb | grep -A5 -i "Networks"
 
 지금 출력으로 보면 DB 컨테이너가 user-defined bridge 네트워크 pribit_default 위에 올라가 있다. 
 이 네트워크의 게이트웨이(호스트 쪽 브리지 IP) 가 바로 172.18.0.1일 가능성이 높고, 
-그래서 컨테이너(MariaDB) 입장에서는 클라이언트 소스 IP가 '172.18.0.1'로 보이는 것.
+그래서 컨테이너(MariaDB) 입장에서는 클라이언트 소스 IP가 '172.18.0.1'로 보이는 것. 
+
+
+[systemctl 에 등록된 서비스 목록] 
+
+connect-controller-api.service      loaded    active   running PRIBIT Connect Controller API Application Service                  >
+connect-controller-check.service    loaded    active   running PRIBIT Connect Controller Check Application Service                >
+connect-controller-web.service      loaded    active   running PRIBIT Connect Controller Web Application Service                  >
+connect-controller.service          loaded    active   running PRIBIT Connect Controller RPC Application Service                  >
+
+nginx.service                       loaded    active   running The NGINX HTTP and reverse proxy server                            >
+
