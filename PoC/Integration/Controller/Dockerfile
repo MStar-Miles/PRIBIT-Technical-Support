@@ -6,6 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get install -y --no-install-recommends \
     openjdk-17-jre-headless curl ca-certificates tzdata \
     nginx-extras openssl procps supervisor dumb-init \
+    libmariadb3 \
  && rm -rf /var/lib/apt/lists/*
 
 # 디렉토리
