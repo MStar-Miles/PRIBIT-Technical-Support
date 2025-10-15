@@ -1,0 +1,3 @@
+subjectAltName = @alt_names
+[alt_names]
+DNS.1 = pribit-portal-alb-1090845966.ap-northeast-2.elb.amazonaws.com
