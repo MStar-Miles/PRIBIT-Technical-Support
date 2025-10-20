@@ -4,10 +4,12 @@ This document provides guidelines and steps for configuring your controller.
 
 ## Table of Contents
 
-- [Prerequisites](#prerequisites)
-- [Configuration Steps](#configuration-steps)
-- [Troubleshooting](#troubleshooting)
-- [FAQ](#faq)
+- [Controller Configuration](#controller-configuration)
+  - [Table of Contents](#table-of-contents)
+  - [Prerequisites](#prerequisites)
+  - [Configuration Steps](#configuration-steps)
+  - [Troubleshooting](#troubleshooting)
+  - [FAQ](#faq)
 
 ## Prerequisites
 
