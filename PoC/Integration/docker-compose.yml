@@ -43,8 +43,10 @@ services:
       DB_PASSWORD: "Packetgo2560!"
       ALLOWED_IP: "127.0.0.1"
     volumes:
-      - pribit-controller-logs:/opt/connect/logs
-      - pribit-controller-tls:/etc/nginx/tls
+      - /opt/connect/controller:/opt/connect/controller:ro     # 바이너리/리소스는 읽기 전용 유지
+      - pribit-controller-logs:/opt/connect/logs               # 로그
+      - pribit-controller-tls:/etc/nginx/tls                   # 인증서
+      - pribit-controller-properties:/opt/connect/controller/properties  # ← 여기만 RW
     depends_on:
       - mariadb
       - redis
@@ -55,3 +57,4 @@ volumes:
   pribit-mariadb-data:
   pribit-controller-logs:
   pribit-controller-tls:
+  pribit-controller-properties:
