@@ -179,19 +179,21 @@
 
 설명: 이 설정을 적용하면 여러 개의 네트워크 인터페이스가 동시에 활성화된 경우 접속을 차단하여 데이터 유출 경로를 차단합니다.  
 
+예외) *PRIBIT TAP-Windows Adapter V9 어댑터 제외*
+
 사용자는 윈도우 설정의 네트워크 연결(네트워크 어댑터 설정; ncpa.cpl)에서 필요하지 않은 어댑터들의 상태를 `사용 안 함` 으로 변경해야 합니다. 
-
-PCA 에서 차단 화면  
-
-![Security Policy - Use Multi NIC Adapter](secuiry_policy_use_multi_nic_adapters.png)  
-
-<br>
 
 여러개의 네트워크 어댑터 사용  
 
 ![Security Policy - Use Multi NIC Adapter2](secuiry_policy_use_multi_nic_adapters2.png)  
 
 <br>
+
+PCA 에서 차단 화면  
+
+![Security Policy - Use Multi NIC Adapter](secuiry_policy_use_multi_nic_adapters.png)  
+
+<br> 
 
 ### 단말의 IP 변경 시 접속 차단 (Block Access On Device IP Change)  
 
@@ -245,7 +247,13 @@ PCA 에서 차단 화면
 설명: 이 설정을 적용하면 애플리케이션 파일이 변조되거나 무결성이 훼손된 경우 해당 애플리케이션 접속을 차단합니다.
 
 ### 플로우 제어 영역 외 애플리케이션 접속 차단 (Block Access To Applications Outside Flow Control Zones)
-설명: 이 설정을 적용하면 플로우 제어 영역으로 지정되지 않은 애플리케이션에 대한 접속을 차단합니다.
+
+설명: 이 설정을 적용하면 플로우 제어 영역으로 지정되지 않은 애플리케이션(또는 IP 대역)에 대한 접속을 차단합니다.
+
+플로우 제어 영역 외 애플리케이션 접속 차단 및 알람 화면
+![Security Policy - Block Access To Applications Outside Flow Control Zones](security_policy_outside_flow_control_zone.png)
+
+<br>
 
 ---
 
@@ -335,8 +343,17 @@ PCA 에서 차단 화면
 ### 데이터 플로우 기본 허용 모드 활성화 (Enable Default-Allow Data Flow Mode)
 설명: 이 설정을 적용하면 데이터 플로우에 대해 기본적으로 허용 정책을 적용하고 특정 항목만 차단합니다.
 
-### 데이터 패킷 드롭 로깅 활성화 (Enable Data Packet Drop Logging)
-설명: 이 설정을 적용하면 차단된 데이터 패킷에 대한 로그를 기록하여 보안 이벤트를 추적할 수 있습니다.
+### 데이터 패킷 드롭 로깅 활성화 (Enable Data Packet Drop Logging)  
+
+설명: 이 설정을 적용하면 차단된 패킷에 대한 로그를 기록하여 보안 이벤트를 추적할 수 있습니다.
+
+[플로우 제어 영역 외 애플리케이션 접속 차단](#플로우-제어-영역-외-애플리케이션-접속-차단-block-access-to-applications-outside-flow-control-zones) 정책을 적용하면 차단된 패킷이 발생하고, 차단 내용들을 기록(Logging)하는 설정을 합니다.  
+
+해당 로그는 LOG > 전자증거 > 터널접속로그 > 전자증거 세부 항목 > 에이전트 데이터 패킷 드롭 로그 에서 확인 할 수 있습니다. 
+
+![Security Policy - Network Traffic Logging - Drop Packet](security_policy_network_traffic_drop_packet_logging.png)  
+
+<br>
 
 ### 수신 대기 네트워크 포트 로깅 활성화 (Enable Listening Network Port Logging)
 설명: 이 설정을 적용하면 단말에서 열려있는 수신 대기 포트 정보를 로깅하여 비정상 포트 사용을 탐지합니다.
