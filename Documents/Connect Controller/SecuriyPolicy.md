@@ -144,7 +144,7 @@
 
 지정 OS 버전 사용 시 접속 차단 상세 설정  
 
-![Security Policy - Using Specific OS Version](security_policy_using_specific_os_version.png)  
+![Security Policy - Using Specific OS Version](./img/security_policy_using_specific_os_version.png)  
 
 - 플랫폼 버전:  
   - 현재 지원하는 플랫폼 버전은 `Windows 7`, `Windows 8`, `Windows 8.1`, `Windows 10` 입니다. 
@@ -185,7 +185,7 @@
 
 차단 화면  
 
-![Security Policy - Using Windows Administrator Account](security_policy_using_windows_administrator_account.png)
+![Security Policy - Using Windows Administrator Account](./img/security_policy_using_windows_administrator_account.png)
 
 <br>
 
@@ -227,11 +227,12 @@
 ### 백신 실시간 감지 비활성화 시 접속 차단 (Block Access If Antivirus Real-Time Protection Disabled)
 설명: 이 설정을 적용하면 백신의 실시간 감지 기능이 꺼져 있는 단말의 접속을 차단합니다.
 
-> [!NOTE] 차단 동작 없음 확인 필요 
+> [!NOTE]  
+> 차단 동작 없음 확인 필요 
 
 차단 화면  
 
-![Security Policy - Antivirus Real-Time Protection Disabled](security_policy_antivirus_realtime_protection_disabled.png)
+![Security Policy - Antivirus Real-Time Protection Disabled](./img/security_policy_antivirus_realtime_protection_disabled.png)
 
 <br>
 
@@ -240,7 +241,7 @@
 
 백신 패턴 업데이트 미수행 시 접속 차단 상세 설정
 
-![Security Policy - Antivirus Definitions Outdated](security_policy_antivirus_not_updated.png)
+![Security Policy - Antivirus Definitions Outdated](./img/security_policy_antivirus_not_updated.png)
 
 백신 패턴 업데이트 미수행 시 접속 차단 시간 정보  
 - 범위 : 최소 1 (시)  
@@ -251,14 +252,15 @@
 
 차단 화면  
 
-![Security Policy - Antivirus Definitions Outdated1](security_policy_antivirus_not_updated1.png)
+![Security Policy - Antivirus Definitions Outdated1](./img/security_policy_antivirus_not_updated1.png)
 
 <br>
 
 ### 바이러스 탐지 시 접속 차단 (Block Access On Virus Detection)
 설명: 이 설정을 적용하면 단말에서 바이러스가 탐지된 경우 즉시 접속을 차단합니다.
 
-> [!NOTE] 테스트용 바이러스 프로그램 만들기  
+> [!NOTE]  
+> 테스트용 바이러스 프로그램 만들기  
 > 1. 바탕화면에서 [마우스 오른쪽을 클릭] > [새로 만들기] > [텍스트 문서] 를 순서대로 선택합니다.  
 > 2. 새로 만들어진 텍스트 문서에 임시로 아무 이름을 지어 줍니다. *ex) inspect_virus_test*
 > 3. 새로 만든 텍스트 문서를 열어주고 다음 값을 저장합니다. 
@@ -270,7 +272,7 @@
 
 차단 화면   
 
-![Security Policy - Virus Detection](security_policy_virus_detection.png)
+![Security Policy - Virus Detection](./img/security_policy_virus_detection.png)
 
 <br>
 
@@ -279,11 +281,13 @@
 
 ![Security Policy - Untreated Virus Detected](./img/security_policy_untreated_virus_detected.png)  
 
-> [!NOTE] WMI 서비스 활성화  
+> [!NOTE]  
+> WMI 서비스 활성화  
 > WMI 서비스의 상태가 시작됨으로 되어 있어야 합니다.   
 > 백신 프로그램에서 해당 영역에 MSFT_MpThreatDetection 값을 주지 않으면 확인이 불가합니다.  
 
-> [!NOTE] WMI란?	
+> [!NOTE]  
+> WMI란?	
 > - Windows Management Instrumentation의 약자.  
 > - Windows 운영 체제에서 관리 및 모니터링 데이터를 제공하는 레임워크.  
 > - 시스템 구성, 상태, 성능 및 보안 관련 정보를 쿼리하고 관리할 수 있도록 지원.  
@@ -318,7 +322,8 @@
 
 사유를 입력하고 `승인 요청`을 합니다.  
 
-> [!NOTE] 사유 입력 시 엔터 입력 불가  
+> [!NOTE]  
+> 사유 입력 시 엔터 입력 불가  
 
 관리자가 사유를 확인하고 `사용 승인` 처리 해주면 이 후 사용자가 다시 재 접속 시 정상적으로 접속이 됩니다.  
 
@@ -375,7 +380,8 @@ PCA 에서 차단 화면
 
 사유를 입력하고 `승인 요청`을 합니다.  
 
-> [!NOTE] 사유 입력 시 엔터 입력 불가  
+> [!NOTE]  
+> 사유 입력 시 엔터 입력 불가  
 
 ![Security Policy - Require Approval for Unapproved IPs1](./img/secuirty_policy_require_approval_for_unapproved_ips1.png)  
 
@@ -446,7 +452,7 @@ Windows 주요 취약 포트
 설치 프로그램명 
 - *ex) Wireshark 4.6.0 x64*  
 
-> [!NOTE] 설치 프로그램명 확인 방법  
+> [!NOTE]  설치 프로그램명 확인 방법  
 > Windows 의 설정 > 앱 및 기능 > 설치 목록 확인  
 > 반드시 설치 목록에 보이는 설치된 프로그램 명 전체를 입력해야 합니다.  
 
@@ -469,7 +475,7 @@ Windows 주요 취약 포트
 실행 프로세스명  
 - *ex) msedge.exe*  
 
-> [!NOTE] 실행 프로세스명 확인 방법 (Windows)  
+> [!NOTE]  실행 프로세스명 확인 방법 (Windows)  
 > Windows 의 작업관리자를 실행합니다.  
 > 실행되고 있는 프로세스의 속성을 열어 실행 파일의 이름을 확인합니다.  
 > 예) MS Edge 는 실행파일 이름은 msedge 이고, 파일 형식은 exe 따라서, 실행 프로세스명은 `msedge.exe` 가 됩니다.  
@@ -586,7 +592,8 @@ PCA 에서 차단 화면
 
 상세 설정 내용은 [비인가 애플리케이션 실행 시 접속 차단](#비인가-애플리케이션-실행-시-접속-차단-block-access-when-unauthorized-application-is-running) 설정과 동일합니다.  
 
-> [!NOTE] `비인가 애플리케이션 실행 시 접속 차단` VS `비인가 애플리케이션 실행 방지 및 강제 종료`   
+> [!NOTE]  `비인가 애플리케이션 실행 시 접속 차단` VS `비인가 애플리케이션 실행 방지 및 강제 종료`  
+> 
 > `비인가 애플리케이션 실행 시 접속 차단`  
 > - 사용자 로그인 시 비인가 애플리케이션이 실행중이면 접속을 차단하여 사용자의 로그인 자체를 차단합니다.  
 > - **주기적 검사** 옵션을 사용할 수 있습니다.  
@@ -721,7 +728,8 @@ PCA 에서 접속 차단 화면
 
 사유를 입력하고 `승인 요청`을 합니다.  
 
-> [!NOTE] 사유 입력 시 엔터 입력 불가  
+> [!NOTE]  
+> 사유 입력 시 엔터 입력 불가  
 
 관리자가 사유를 확인하고 `사용 승인` 처리 해주면 이 후 사용자가 다시 재 접속 시 정상적으로 접속이 됩니다.  
 
@@ -828,7 +836,7 @@ PCA 에서 차단 화면
 비밀번호 만료 기간  
 - *ex) 90*  
 
-> [!NOTE] 
+> [!NOTE]  
 > 국내 주요 기관(국정원, 금감원, ISMS-P 등) 의 비밀번호 변경 주기 설정 가이드라인은 최근 국내외 보안 정책 변화에 따라 주기적 변경 의무가 완화되었으나, 아직 일부 법령과 지침, 인증 기준에선 “반기별 1회(6개월)” 또는 “최소 3~6개월”마다 변경을 권고하고 있습니다.  
   
 
@@ -927,7 +935,8 @@ Pribit Connect 제품 이외에 모두 표시 되지 않습니다.
   - [x] 사용자명(사용자 아이디)  *`(default)`*  
   - [ ] 사용자 아이디(사용자명)  
 
-> [!NOTE] 제약 사항
+> [!NOTE]  
+> 제약 사항  
 > 현재 기능 제약 사항으로 위 설정 외 항목들은 사용자가 지정 할 수 없습니다.  
 > *ex) 사내 로고 icon 을 삽입, 폰트 색상 변경 등 불가*   
 
