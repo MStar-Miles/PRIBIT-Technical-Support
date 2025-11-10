@@ -1,5 +1,4 @@
-
-## "네트워크가 불안정합니다." 오류 메시지 발생 
+# "네트워크가 불안정합니다." 오류 메시지 발생 
 
 ```
 2025-10-14 10:56:31,771 [23] INFO [GetMacAddress:69] name = Ethernet0 , ipv4 = 192.168.254.103 , mac = 000C29953F30 , Description = Intel(R) 82574L Gigabit Network Connection
