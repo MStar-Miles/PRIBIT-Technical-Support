@@ -475,7 +475,9 @@ Windows 주요 취약 포트
 실행 프로세스명  
 - *ex) msedge.exe*  
 
-> [!NOTE]  실행 프로세스명 확인 방법 (Windows)  
+> [!NOTE]  
+> 실행 프로세스명 확인 방법 (Windows)  
+> 
 > Windows 의 작업관리자를 실행합니다.  
 > 실행되고 있는 프로세스의 속성을 열어 실행 파일의 이름을 확인합니다.  
 > 예) MS Edge 는 실행파일 이름은 msedge 이고, 파일 형식은 exe 따라서, 실행 프로세스명은 `msedge.exe` 가 됩니다.  
@@ -483,7 +485,9 @@ Windows 주요 취약 포트
 
 ![Security Policy - To Find Running Processes](./img/security_policy_to_find_runing_processes.png)  
 
-> [!INFO] Windows 주요 점검 대상 프로세스   
+> [!INFO] 
+> Windows 주요 점검 대상 프로세스   
+> 
 > 1. 원격 접속 및 제어 도구 (합법적이지만 악용 가능한 원격 제어 프로그램) 
 > TeamViewer.exe - 원격 데스크톱 제어  
 > AnyDesk.exe - 원격 접속 도구  
@@ -869,7 +873,7 @@ PCA 에서 차단 화면
 
 화면 캡처 및 프린트 스크린 기능 사용 시 화면  
 
-![Security Policy - Disable Screen Capture And PrintScreen](security_policy_disable_screen_capture_and_printscreen.png)
+![Security Policy - Disable Screen Capture And PrintScreen](./img/security_policy_disable_screen_capture_and_printscreen.png)
 
 Pribit Connect 제품 이외에 모두 표시 되지 않습니다. 
 
@@ -880,7 +884,7 @@ Pribit Connect 제품 이외에 모두 표시 되지 않습니다.
 
 스크린 워터 마킹 표시 상세 설정  
 
-![Security Policy - Display Screen Watermark](security_policy_display_screen_watermark.png) 
+![Security Policy - Display Screen Watermark](./img/security_policy_display_screen_watermark.png) 
 
 - 폰트 크기 (범위: 16 ~ 80)  
   - ex) 16 px  
@@ -944,7 +948,7 @@ Pribit Connect 제품 이외에 모두 표시 되지 않습니다.
 
 스크린 워터마크 표시 화면  
 
-![Security Policy - Display Screen Watermark1](security_policy_display_screen_watermark1.png)  
+![Security Policy - Display Screen Watermark1](./img/security_policy_display_screen_watermark1.png)  
 
 <br>
 
@@ -953,11 +957,11 @@ Pribit Connect 제품 이외에 모두 표시 되지 않습니다.
 
 정책 적용 전 및 로그인 전 OS 의 프린터 상태  
 
-![Security Policy - Restrict Printer Usage](security_policy_restrict_printer_usage.png)
+![Security Policy - Restrict Printer Usage](./img/security_policy_restrict_printer_usage.png)
 
 정책 적용 된 상태에서 PCA 로그인 후 OS 의 프린터 상태  
 
-![Security Policy - Restrict Printer Usage1](security_policy_restrict_printer_usage1.png)
+![Security Policy - Restrict Printer Usage1](./img/security_policy_restrict_printer_usage1.png)
 
 프린터 장치가 `연결되어 있지 않음` 으로 표시되고, 장치를 이용할 수 없게 됩니다.  
 
@@ -968,11 +972,11 @@ Pribit Connect 제품 이외에 모두 표시 되지 않습니다.
 
 정책 적용 전 및 로그인 전 데스크톱 연결에서의 파일 전송, 클립보드 공유 기능  
 
-![Security Policy - Disable File Transfer And Clipboard For Remote Desktop](security_policy_disable_file_and_clipboard_for_remotedesktop.png)  
+![Security Policy - Disable File Transfer And Clipboard For Remote Desktop](./img/security_policy_disable_file_and_clipboard_for_remotedesktop.png)  
 
 정책 적용 된 상태에서 PCA 로그인 후 데스크톱 연결에서의 파일 전송, 클립보드 공유 차단 화면 
 
-![Security Policy - Disable File Transfer And Clipboard For Remote Desktop1](security_policy_disable_file_and_clipboard_for_remotedesktop1.png)  
+![Security Policy - Disable File Transfer And Clipboard For Remote Desktop1](./img/security_policy_disable_file_and_clipboard_for_remotedesktop1.png)  
 
 RDP를 이용한 파일 전송이나 클립보드에 공유된 내용은 Remote Desktop 접속 장비에 공유되지 않습니다.  
 
