@@ -1,6 +1,6 @@
 이 문서는 사용자 PC, Mobile에 Pribit Connect Agent를 설치하는 방법을 안내합니다.  
 
-<!-- TOC start (generated with https://github.com/derlin/bitdowntoc) -->
+<br>
 
 - [1. 사전 준비 사항](#1-사전-준비-사항)
 - [2. 설치 환경](#2-설치-환경)
@@ -11,36 +11,81 @@
 
 <!-- TOC end -->
 
+<br>
+
 <!-- TOC --><a name="1-"></a>
 ## 1. 사전 준비 사항
-- 관리자 권한이 있는 계정  
-- 인터넷 연결  
+- 관리자 권한이 있는 계정 
+- 인터넷 연결 
+
+<br><br>
 
 <!-- TOC --><a name="2-"></a>
 ## 2. 설치 환경    
 - [설치 환경](/Documents/Connect%20Agent/Agent_Environment.md) 문서를 참고하여 제품이 설치되는 환경을 확인합니다. 
 
+<br><br>
 
 <!-- TOC --><a name="3-"></a>
 ## 3. 설치 파일 다운로드  
 1) 제공된 설치 파일 [다운로드](https://support.packetgo.com/kr/front/home/ztna) 링크에서 설치 파일을 다운로드합니다.  
 2) 다운로드가 완료되면 파일을 실행합니다.  
 
-<!-- TOC --><a name="4-"></a>
-## 4. 설치 과정
-1) 설치 마법사의 안내에 따라 진행합니다.
-2) 설치 경로를 지정하고 **다음**을 클릭합니다.
-3) 설치가 완료되면 **마침**을 클릭합니다.
+<br><br>
+
+<!-- TOC --><a name="4-"></a> 
+## 4. 설치 과정 
+1) 설치 마법사의 안내에 따라 **다음**을 클릭하여 진행합니다. 
+
+<br>
+
+![Agent Installation - installing](./img/agent_installation_installing.png)
+
+<br>
+
+2) 설치가 완료되면 **마침**을 클릭합니다. 
+
+<br>
+
+![Agent Installation - complete install](./img/agent_installation_complete_install.png) 
+
+<br><br>
 
 <!-- TOC --><a name="5-"></a>
 ## 5. 설치 확인
-1) 바탕화면 또는 시작 메뉴에서 Connect Agent 아이콘을 확인합니다.
-2) 프로그램을 실행하여 정상적으로 동작하는지 확인합니다.
+1) 바탕화면 또는 시작 메뉴에서 Connect Agent 아이콘을 확인합니다. 
+
+<br>
+
+![Agent Installation - complete install icon](./img/agent_installation_complete_install_icon.png)  
+
+**PRIBIT Connect**
+
+<br>
+
+2) 프로그램이 실행되고 설정할 언어를 선택합니다. 
+- **English** 
+- **한국어** 
+
+<br>
+
+![Agent Installation Setup](./img/agent_installation_setup.png)  
+
+<br>
+
+1) 프로그램을 실행하여 정상적으로 동작하는지 확인합니다. 
+
+<br>
+
+![Agent Start View](./img/agent_start.png)
+
+<br><br>
 
 <!-- TOC --><a name="6-"></a>
-## 6. 문제 해결
+## 6. 문제 해결 
 - 설치 중 오류 발생 시 관리자 권한으로 다시 시도하세요.
-- 추가 지원이 필요하면 기술 지원팀에 문의하세요.
+- 추가 지원이 필요하면 IT 기술 지원 담당팀에 문의하세요.
 
----
-문의: support@pribit.com
+<br>
+
+--- 

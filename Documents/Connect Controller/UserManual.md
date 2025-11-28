@@ -10,17 +10,21 @@
     - [사용자 계정 동기화](#사용자-계정-동기화)
       - [RDBMS Database 동기화](#rdbms-database-동기화)
       - [Active Directory(LDAP) 동기화](#active-directoryldap-동기화)
+  - [사용자 그룹 관리](#사용자-그룹-관리)
+  - [사용자 인증](#사용자-인증)
+    - [사용자 임시 비밀번호 로그인](#사용자-임시-비밀번호-로그인)
+    - [사용자 MFA 로그인](#사용자-mfa-로그인)
     - [사용자 Internal DB 인증](#사용자-internal-db-인증)
     - [사용자 AD(LDAP) 인증](#사용자-adldap-인증)
       - [AD(LDAP) 인증 정책 생성](#adldap-인증-정책-생성)
       - [AD(LDAP) 인증을 위한 서버 정보 입력](#adldap-인증을-위한-서버-정보-입력)
-  - [사용자 그룹 관리](#사용자-그룹-관리)
 - [PCA 배포 관리](#pca-배포-관리)
-  - [PAC 관리 버전 등록](#pac-관리-버전-등록)
+  - [PCA 관리 버전 등록](#pca-관리-버전-등록)
+  - [PCA 필수 업데이트](#pca-필수-업데이트)
 - [통신 어플리케이션](#통신-어플리케이션)
   - [통신 애플리케이션 등록](#통신-애플리케이션-등록)
     - [업무용 Web Server 에 접속하는 서비스를 msedge.exe 으로 실행하도록 Agent 에 등록](#업무용-web-server-에-접속하는-서비스를-msedgeexe-으로-실행하도록-agent-에-등록)
-  - [Window File Server Explorer 등록](#window-file-server-explorer-등록)
+    - [Window File Server Explorer 등록](#window-file-server-explorer-등록)
       - [윈도우 탐색기 등록](#윈도우-탐색기-등록)
       - [System (윈도우 시스템 인증) 등록](#system-윈도우-시스템-인증-등록)
 - [보안 정책](#보안-정책)
@@ -317,7 +321,9 @@ LDAP 서버 동기화 설정
 
 <br>
 
-> [!NOTE] 초기 상태값: 사용 가능 / 사용 불가 / 사용 대기    
+> [!NOTE] 
+> 초기 상태값: 사용 가능 / 사용 불가 / 사용 대기    
+>   
 > PCC DB에 계정 동기화 시 계정의 초기 상태값을 `사용 가능` / `사용 불가` / `사용 대기` 중 하나로 설정합니다.   
 > `사용 가능` : 정상 사용자  
 > `사용 불가` : 잠김 사용자  
@@ -375,6 +381,140 @@ LDAP 서버 동기화 설정
 
 <br>
 
+## 사용자 그룹 관리 
+
+PCC 에서 사용자 그룹은 일반적인 그룹관리 기능을 갖고 있습니다.   
+그룹 관리에서 `상태 변경` 을 통해 그룹을 `사용 가능`, `사용 불가` 상태로 제어 할 수 있습니다.  
+그룹의 상태가 `사용 불가` 상태로 변경 시, 그룹에 포함되어 있는 사용자의 로그인 처리는 다음과 같은 원리로 동작합니다.  
+
+```
+[동작 원리]
+그룹에 포함되어 있는 사용자가 하나라도 '사용 가능' 상태인 그룹에 속해 있으면 로그인이 가능 
+
+예시) 로그인 가능 여부
+현재 상황:
+그룹 A (사용 가능) → User01 포함
+그룹 B (사용 가능) → User01, User02 포함
+그룹 C (사용 불가) → User01, User02, User03 포함
+
+로그인 결과:
+User01: 로그인 가능 (그룹 A, B가 사용 가능 상태이므로)
+User02: 로그인 가능 (그룹 B가 사용 가능 상태이므로)
+User03: 로그인 불가 (오직 그룹 C에만 속해 있고, 그룹 C는 사용 불가)
+
+특정 사용자 그룹의 로그인을 완전히 막으려면:
+
+해당 사용자를 모든 '사용 가능' 그룹에서 제거하거나
+해당 사용자가 속한 모든 그룹을 '사용 불가' 상태로 변경 
+
+즉, '사용 불가' 그룹에 사용자를 추가하는 것만으로는 접근 제어가 되지 않으며, 다른 사용 가능 그룹 멤버도 함께 제어  
+또는 사용자 그룹에 속해있는 모든 사용자 자체를 사용 불가 상태로 변경  
+``` 
+
+<br>
+
+*** 
+
+## 사용자 인증 
+
+PCA 사용자 로그인 화면  
+
+![User Login for PCA](./img/user_login_for_pca.png)
+
+- 사용자 아이디 : 
+  - ex) *pribit*
+- 비밀번호 : 
+  - ex) \*\*\*\*\*\*\*\*\* 
+  
+<br>
+
+### 사용자 임시 비밀번호 로그인 
+
+임시 비밀번호로 로그인하게 되면 에이전트를 사용할 수 없고, 반드시 임시 비밀번호를 변경해야 에이전트를 사용 가능합니다.  
+
+비밀번호 변경 안내 화면  
+![To log in with a temporary password to a PCA](try_to_login_with_temporary_password.png)
+
+`지금 변경` 버튼을 누르면 시스템에 설정되어 있는 **인증 번호 제공 방법**으로 OTP 가 발송됩니다. 
+
+![System Console Configuration - Select an OTP Delivery Provider](./img/select_an_otp_delivery_provider.png)
+- [ ] 이메일 + SMS  
+- [ ] SMS  
+- [x] 이메일  
+
+> [!NOTE]  
+> `이메일 + SMS` 로 설정 시 사용자가 직접 이메일 또는 SMS를 선택할 수 있고, 단일 선택(`SMS` 나 `이메일` 둘 중 하나)인 경우 해당 설정으로 OTP가 전송됩니다.  
+
+![Send a OTP to configured Provider](./img/send_a_otp_to_configured_provider_email.png)  
+
+이메일로 전송된 OTP 코드 
+![Receive a OTP from Email](./img/receive_a_otp_from_email.png)
+
+OTP 인증이 완료되면 다음과 같이 비밀번호를 변경합니다.  
+
+![Change the Temporary Password in Agent](./img/change_the_themporary_password_in_pca.png)  
+
+> [!NOTE]   
+> 비밀번호 변경을 수행한 후에는 재로그인을 해야 합니다.  
+
+<br>
+
+### 사용자 MFA 로그인  
+
+`단말 상태 확인 행위 제어` 에서 [로그인 시 MFA 인증 요구](./SecuriyPolicy.md#로그인-시-mfa-인증-요구-require-mfa-at-login) 정책을 설정하면, 사용자 인증 시 MFA 로그인을 수행할 수 있습니다.  
+
+사용자 MFA 인증 방식 선택 화면 
+![UserLoginMFA](./img/agent_user_login_mfa.png)  
+
+- QR 인증 
+QR 인증은 카메라가 있는 디바이스(모바일)에 설치되어 있는 PCA 앱에서 로그인 완료 후, 오른쪽 상단에 보이는 스캐너를 통해 QR을 스캔해야 로그인할 수 있습니다.  
+
+![UserLoginMFA - Authenticate QR Method](./img/userloginmfa_authenticate_qr_method.png)
+
+`모바일 선 인증 필요`
+
+모바일 단말에서 해당 사용자 로그인 완료 
+![Mobile Login Complete](./img/mobile_login_complete.jpg)  
+
+오른쪽 상단 스캐너 모양 클릭  
+
+![Mobile QR Scan](./img/mobile_qr_scan.jpg)  
+
+PC에 보여지는 QR 코드를 모바일 앱으로 스캔합니다. 
+
+QR 인증이 완료되었습니다 메시지 확인  
+
+![Mobile QR Scan Complete](./img/mobile_qr_scan_complete.jpg)
+
+> [!NOTE] 
+> 모바일에서 접속한 사용자와 PC에서 접속한 사용자가 다를경우 QR 인증에 실패합니다.  
+
+![Mobile QR Scan Failed](./img/mobile_qr_scan_failed.jpg)
+
+- 이메일 인증 
+이메일 인증은 사용자 정보에 입력된 이메일 정보로 OTP가 발송되고, 이 코드를 입력하는 방식입니다. 
+
+![UserLoginMFA - Authenticate Email Method](./img/send_a_otp_to_configured_provider_email.png)  
+
+- 휴대폰 번호 인증  
+휴대폰 번호 인증은 사용자 정보에 입력된 휴대폰 번호로 OTP 코드가 발송되고, 이 코드를 입력하는 방식입니다.  
+
+![UserLoginMFA - Authenticate SMS Method](./img/userloginmfa_authenticate_sms_method.png)  
+
+- TOTP 인증 
+TOTP 인증은 OTP 인증 앱(`Google Authenticator` 또는 `MS Authenticator` 등)으로 에이전트에서 보여지는 QR 코드를 스캔(또는 키 입력)하여 OTP를 등록하고, 발급되는 OTP를 입력하는 방식입니다.  
+
+![UserLoginMFA - Regist TOTP Method](./img/userloginmfa_regist_totp_method.png)  
+
+`OTP 인증하기` 를 눌러 등록한 OTP 를 검증합니다.  
+
+![UserLoginMFA - Verify TOTP Authentication](./img/userloginmfa_verify_totp_authentication.png)  
+
+> [!NOTE]   
+> TOTP 등록 후에는 사용자 재로그인을 수행해야 합니다.    
+
+<br>
+
 ### 사용자 Internal DB 인증 
 
 사용자 계정 생성 또는 사용자 동기화로 생성된 계정으로 인증처리를 수행합니다. 
@@ -383,10 +523,12 @@ PCC 자체 계정(Internal DB) 로 인증을 수행할 때는 AD(LDAP) 인증과
 
 ### 사용자 AD(LDAP) 인증 
 
-> [!NOTE] 사용자 AD 인증 
+> [!NOTE] 
+> 사용자 AD 인증  
+>   
 > 사용자 로그인 처리를 AD(LDAP) 으로 수행(정책 지정)할 경우, 반드시 동기화가 먼저 진행되어야 합니다.   
 > 즉, 사용자 계정이 PCC에 이미 존재해야 인증을 수행 할 수 있습니다.  
-> 동기화되지 않은 상태(계정이 생성되지 않은 상태)에서는 인증을 수행 할 수 없습니다. 
+> 동기화되지 않은 상태(계정이 생성되지 않은 상태)에서는 인증을 수행 할 수 없습니다.  
 
 <br>
 
@@ -449,44 +591,6 @@ AD(LDAP) 인증 수행을 위해서는 POLICY 에서 단말 인증 수행에 대
 
 <br> 
 
-## 사용자 그룹 관리 
-
-PCC 에서 사용자 그룹은 일반적인 그룹관리 기능을 갖고 있습니다.   
-그룹 관리에서 `상태 변경` 을 통해 그룹을 `사용 가능`, `사용 불가` 상태로 제어 할 수 있습니다.  
-그룹의 상태가 `사용 불가` 상태로 변경 시, 그룹에 포함되어 있는 사용자의 로그인 처리는 다음과 같은 원리로 동작합니다.  
-
-```
-[동작 원리]
-그룹에 포함되어 있는 사용자가 하나라도 '사용 가능' 상태인 그룹에 속해 있으면 로그인이 가능 
-
-예시) 로그인 가능 여부
-현재 상황:
-그룹 A (사용 가능) → User01 포함
-그룹 B (사용 가능) → User01, User02 포함
-그룹 C (사용 불가) → User01, User02, User03 포함
-
-로그인 결과:
-User01: 로그인 가능 (그룹 A, B가 사용 가능 상태이므로)
-User02: 로그인 가능 (그룹 B가 사용 가능 상태이므로)
-User03: 로그인 불가 (오직 그룹 C에만 속해 있고, 그룹 C는 사용 불가)
-
-특정 사용자 그룹의 로그인을 완전히 막으려면:
-
-해당 사용자를 모든 '사용 가능' 그룹에서 제거하거나
-해당 사용자가 속한 모든 그룹을 '사용 불가' 상태로 변경 
-
-즉, '사용 불가' 그룹에 사용자를 추가하는 것만으로는 접근 제어가 되지 않으며, 다른 사용 가능 그룹 멤버도 함께 제어  
-또는 사용자 그룹에 속해있는 모든 사용자 자체를 사용 불가 상태로 변경  
-``` 
-
-<br>
-
-사용자 로그인 
-
-![UserLoginMFA](./img/agent_user_login_mfa.png)  
-
-
-*** 
 
 <br><br>
 
@@ -494,7 +598,7 @@ User03: 로그인 불가 (오직 그룹 C에만 속해 있고, 그룹 C는 사�
 
 <br>
 
-## PAC 관리 버전 등록 
+## PCA 관리 버전 등록 
 에이전트를 사용하기 위해서는 PCC 관리 콘솔의 에이전트 배포 관리에 등록하여야 사용할 수 있습니다. 
 
 Error Message: `배포 되지 않은 에이전트 버전 입니다.`
@@ -540,6 +644,19 @@ SYSTEM > 에이전트 배포 관리
 - 배포 : 등록했던 Agent 를 배포(사용)로 변경합니다. 
 - 대기 : 등록했던 Agent 를 대기 상태로 변경합니다. 
 - 테스트 : 등록했던 Agent 를 테스트 상태로 변경합니다.
+
+<br>
+
+## PCA 필수 업데이트 
+최신 에이전트 버전 사용 여부를 확인하여 모든 단말이 최신 보안 패치를 적용하도록 관리할 수 있습니다. 
+에이전트는 자동 업데이트를 통해 최신 버전으로 전환할 수 있습니다. 이를 통해 구버전의 보안 취약점을 악용한 공격을 방지하고 모든 단말에 일관된 보안 수준을 유지할 수 있습니다. 
+
+![Agent Distribution Management - Mandatory Update Setup](./img/agent_distribution_management_mandatory_update_setup.png)
+
+> [!NOTE]  
+> PCA 필수 업데이트를 사용하려면 `단말 상태 확인 및 행위 제어` 에서 '에이전트 버전 최신 버전 미사용 시 접속 차단' 정책을 추가해야 합니다.  
+> [에이전트 버전 최신 버전 미사용 시 접속 차단](./SecuriyPolicy.md#에이전트-버전-최신-버전-미사용-시-접속-차단-block-access-if-agent-version-is-outdated) 정책을 설정을 확인하세요.  
+> 
 
 <br><br>
 
@@ -659,7 +776,7 @@ FLOW > 애플리케이션 플로우 > 별칭
 
 <br><br>
 
-## Window File Server Explorer 등록 
+### Window File Server Explorer 등록 
 윈도우 탐색기를 이용하여 파일 서버에 접속하는 서비스를 등록할 때, 해당 절차로 등록을 수행해야 합니다.  
 
 Object > 통신 애플리케이션에서 애플리케이션 등록 시 아래 두 가지를 모두 등록해주어야 합니다. 

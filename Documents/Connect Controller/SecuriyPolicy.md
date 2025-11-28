@@ -102,6 +102,17 @@
 ### 로그인 시 MFA 인증 요구 (Require MFA At Login)
 설명: 이 설정을 적용하면 로그인 시 비밀번호 외에 추가 인증 수단(OTP, 생체인증 등)을 요구하여 보안을 강화합니다.
 
+![Security Policy - Require MFA at User Login Setup](./img/security_policy_required_mfa_user_login_setup.png)  
+
+사용할 인증 방식 설정  
+
+![Security Policy - Require MFA at User Login Setup Method](./img/security_policy_required_mfa_user_login_setup_method.png)  
+
+정책 설정 후 PCA 에서 로그인 수행하면 OTP 인증을 수행할 방식을 선택 할 수 있습니다.  
+OTP 인증 방식이 `한 가지`만 설정되어 있을 경우, OTP 코드는 해당 방식으로 바로 전송됩니다.  
+
+<br>
+
 ### 데이터 플로우 접속 시 MFA 인증 요구 (Require MFA For Data Flow Access)
 설명: 이 설정을 적용하면 데이터 플로우에 접속할 때 다중 인증을 거쳐야 접근이 가능합니다.
 
@@ -111,6 +122,9 @@
 
 ### OS 로그인 비밀번호 비활성화 시 접속 차단 (Block Access If OS Login Password Disabled)
 설명: 이 설정을 적용하면 운영체제의 로그인 비밀번호가 설정되어 있지 않은 단말의 접속을 차단합니다.  
+
+![Security Policy - OS Login Password Disabled Setup](./img/security_policy_oslogin_password_disabled_setup.png)  
+
 이 정책에 위배되면 PCA 로그인 시 차단됩니다.  
 
 차단 화면  
@@ -121,6 +135,9 @@
 
 ### OS 방화벽 비활성화 시 접속 차단 (Block Access If OS Firewall Disabled)
 설명: 이 설정을 적용하면 운영체제의 방화벽이 비활성화된 단말의 접속을 차단하여 네트워크 보안을 유지합니다.  
+
+![Security Policy - OS Firewall Disabled](./img/security_policy_osfirewall_disabled_setup.png)
+
 이 정책에 위배되면 PCA 로그인 시 차단됩니다.  
 
 차단 화면  
@@ -130,12 +147,21 @@
 <br>
 
 ### OS 화면 보호기 비활성화 시 접속 차단 (Block Access If OS Screen Saver Disabled)
-설명: 이 설정을 적용하면 화면 보호기가 비활성화된 단말의 접속을 차단하여 무단 접근을 방지합니다.
+설명: 이 설정을 적용하면 화면 보호기가 비활성화된 단말의 접속을 차단하여 무단 접근을 방지합니다.  
+
+![Security Policy - OS Screen Saver Disabled Setup](./img/security_policy_os_screen_saver_disabled_setup.png)  
+
+![Security Policy - OS Screen Saver Disabled Setup Info](./img/security_policy_os_screen_saver_disabled_setup_info.png)  
+
+> [!NOTE]  
+> OS 화면 보호기 비활성화 시 접속 차단 정책을 사용할 경우, 아래의 조건이 충족되지 않으면 사용이 제한됩니다.  
+> 화면 보호기 > 대기 10분 이하 설정 및 '다시 시작할 때 로그온 화면 표시' 체크  
+
 이 정책에 위배되면 PCA 로그인 시 차단됩니다.  
 
 차단 화면  
 
-![Security Policy - OS Screen Saver Disabled](./img/security_policy_os_screen_saver_disabled.png)
+![Security Policy - OS Screen Saver Disabled](./img/security_policy_os_screen_saver_disabled.png)  
 
 <br>
 
@@ -151,10 +177,7 @@
 
 차단 화면 
 
-
-
 <br>
-
 
 ### 지정 OS 외 접속 차단 (Block Access On Non-Approved OS)
 설명: 이 설정을 적용하면 승인된 운영체제 외의 OS를 사용하는 단말의 접속을 차단합니다.
@@ -162,7 +185,7 @@
 
 정책 상세 설정에서 허용할 OS 플랫폼을 선택  
 
-![Security Policy - On Non-Approved OS](./img/security_policy_on_non_approved_os.png)
+![Security Policy - On Non-Approved OS](./img/security_policy_on_non_approved_os.png)  
 
 허용할 플랫폼 선택 목록  
 - Microsoft Windows  
@@ -422,6 +445,8 @@ Windows 주요 취약 포트
 
 ### USB 저장 장치 사용 시 접속 차단 (Block Access When USB Storage Device Used)
 설명: 이 설정을 적용하면 USB 메모리, 외장 하드 등 USB 저장 장치가 연결된 단말의 접속을 차단하여 데이터 유출을 방지합니다.  
+
+![Security Policy - USB Storage Device Used Setup](./img/security_policy_use_usb_storage_device_setup.png)  
 
 차단 화면 
 
@@ -863,6 +888,20 @@ PCA 에서 차단 화면
 ### 에이전트 버전 최신 버전 미사용 시 접속 차단 (Block Access If Agent Version Is Outdated)
 설명: 이 설정을 적용하면 에이전트가 최신 버전으로 업데이트되지 않은 단말의 접속을 차단합니다.
 
+![Security Policy - Agent Distribution Management - Mandatory Update Setup](./img/security_policy_agent_dist_manage_mandatory_update_setup.png)
+
+차단 화면  
+
+![Security Policy - Agent Distribution Management - Mandatory Update](./img/security_policy_agent_dist_manage_mandatory_update.png)  
+
+최신 버전 다운로드  
+
+![Security Policy - Agent Distribution Management - Mandatory Update - Download](./img/security_policy_agent_dist_manage_mandatory_update_download.png)  
+
+<br>
+
+<br>
+
 ---
 
 ## 데이터 보호 정책
@@ -1016,8 +1055,12 @@ RDP를 이용한 파일 전송이나 클립보드에 공유된 내용은 Remote 
 ### 수신 대기 네트워크 포트 로깅 활성화 (Enable Listening Network Port Logging)
 설명: 이 설정을 적용하면 단말에서 열려있는 수신 대기 포트 정보를 로깅하여 비정상 포트 사용을 탐지합니다.
 
+
+
 ### 프로세스 설치 이벤트 로깅 활성화 (Enable Process Install Event Logging)
 설명: 이 설정을 적용하면 프로세스 설치 이벤트를 로깅하여 비인가 소프트웨어 설치를 추적합니다.
+
+
 
 ### 프로세스 실행 이벤트 로깅 활성화 (Enable Process Execution Event Logging)
 설명: 이 설정을 적용하면 프로세스 실행 이벤트를 로깅하여 악성 프로세스 실행을 탐지하고 추적합니다.
