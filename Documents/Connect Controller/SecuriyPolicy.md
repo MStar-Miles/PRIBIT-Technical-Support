@@ -87,13 +87,91 @@
 ### LDAP 인증 수행 (Enforce LDAP Authentication)
 설명: 이 설정을 적용하면 사용자는 LDAP(Lightweight Directory Access Protocol) 서버를 통한 인증을 거쳐야만 시스템에 접속할 수 있습니다.
 
-![LDAP Authentication Failed](./img/ldap_auth_failed.png)
+사용자 동기화로 LDAP 동기화를 수행하여, 사용자 정보 동기화가 모두 완료되었다면 해당 설정을 통해 사용자 인증 시 LDAP 인증을 수행할 수 있습니다. 
+
+LDAP 인증을 수행하려면 아래 설정들이 반드시 필요합니다.   
+
+![Security Policy - Enforce LDAP Authentication](./img/security_policy_enforce_ldap_authentication.png)  
+
+- LDAP 서버 IP: LDAP(또는 AD 서버) IP 정보를 입력합니다.  
+  - ex) 10.0.30.158  
+- LDAP 서버 접속포트: LDPA(또는 AD 서버) PORT 정보를 입력합니다. 
+  - ex) 389 *(default)*  
+- over SSL: over SSL 사용 여부를 체크합니다.  
+  - ex) 
+    - [x] 사용안함  
+- 인증 메커니즘: LDAP 인증 메커니즘을 선택합니다.  
+  - ex) 
+    - [x] simple *(default)*  
+    - [ ] none 
+    - [ ] gssapi   
+- kdc: KDC(Kerberos Key Distribution Center)서버 정보를 입력합니다. 
+  - ex) (blank) *(default)*  
+- realm: LDAP 인증 시 논리적 구분 정보를 입력합니다.  
+  - ex) (blank) *(default)*  
+ 
+> [!NOTE]  
+> **realm 설정의 목적:**  
+> - 사용자가 ID만 입력: pribit  
+> - 시스템(LDAP 또는 AD서버)이 자동 변환: pribit@pribit.com (UPN 형식)  
+> - 이를 위해 realm 값을 'pribit.com'으로 설정  
+>   
+> LDAP(AD) 사용자 ID가 pribit이고 Domain을 pribit.com으로 사용할 때, 사용자가 LDAP 인증 시 ID만 입력(pribit)하면 시스템이 자동으로 'pribit@pribit.com' 형태로 
+변환하여 인증하도록 하려면 realm 값을 'pribit.com'으로 설정하면 됩니다.  
+
+<br>  
+
+인증 서버에 접속 실패하였거나, 인증 정보가 맞지 않을 경우 발생  
+
+![LDAP Authentication Failed](./img/ldap_auth_failed.png)  
+
+<br>
 
 ### RADIUS 서버 인증 수행 (Enforce RADIUS Authentication)
 설명: 이 설정을 적용하면 RADIUS(Remote Authentication Dial-In User Service) 서버를 통한 인증 절차를 거쳐야 접속이 가능합니다.
 
+정책 생성 
+
+![Security Policy - Enforce RADIUS Authentication1](./img/security_policy_enforce_radius_auth_setup1.png)  
+
+> [!INFO]  
+> RADIUS 서버 인증 수행 정책 사용 시, 아래의 기능 및 정책 사용이 제한됩니다.   
+> - 기능: 사용자 비밀번호 초기화, 사용자 비밀번호 강제 변경, 간편 인증 사용   
+> - 정책: 비밀번호 마지막 변경 기간 초과 시 비밀번호 변경    
+
+RADIUS 서버 설정 
+
+![Security Policy - Enforce RADIUS Authentication2](./img/security_policy_enforce_radius_auth_setup2.png)  
+
+- Radius 인증 서버 주소 (IP 또는 DNS)   
+  - ex) 1.1.1.1 or (domain)  
+- 공유 암호  
+  - ex) \*\*\*\*\*\*\*\*\*\*\*\*\*  
+- 인증 방법  
+  - PAP, CHAP, MS-CHAP-v2, EAP-MSCHAP-v2 중 선택  
+  - (현재 지원하는 인증 방식은 위 4가지만 지원)  
+- 인증 기본 포트
+  - Authentication 서버(RADIUS) 포트 정보를 입력  
+  - ex) 1812  
+- 계정 기본 포트  
+  - Accouinting 서버(RADIUS) 포트 정보를 입력  
+  - ex) 1813  
+- 소켓 타임아웃(seconds)  
+  - ex) 3   
+- 재시도 횟수  
+  - ex) 1  
+
+<br>
+
 ### 연계 시스템 인증 수행 (Enforce Integrated System Authentication)
 설명: 이 설정을 적용하면 연계된 외부 시스템의 인증을 통과해야만 접속할 수 있습니다.
+
+연계 시스템 정보 입력 화면  
+
+![Security Policy - Enforce Integrated System Authnetication Setup](./img/security_policy_enforce_integrated_system_auth_setup.png)  
+
+> [!WARN]  
+> 위 기능은 기술지원팀에 문의 하시기 바랍니다.  
 
 ---
 
@@ -180,7 +258,8 @@ OTP 인증 방식이 `한 가지`만 설정되어 있을 경우, OTP 코드는 �
 <br>
 
 ### 지정 OS 외 접속 차단 (Block Access On Non-Approved OS)
-설명: 이 설정을 적용하면 승인된 운영체제 외의 OS를 사용하는 단말의 접속을 차단합니다.
+설명: 이 설정을 적용하면 승인된 운영체제 외의 OS를 사용하는 단말의 접속을 차단합니다.  
+
 이 정책에 위배되면 PCA 로그인 시 차단됩니다.  
 
 정책 상세 설정에서 허용할 OS 플랫폼을 선택  
@@ -289,11 +368,10 @@ OTP 인증 방식이 `한 가지`만 설정되어 있을 경우, OTP 코드는 �
 > 3. 새로 만든 텍스트 문서를 열어주고 다음 값을 저장합니다. 
 >   X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H* 
 > 4. 입력을 마치신 후 [파일] > [다른 이름으로 저장]을 선택합니다. 
-> 5. 파일 형식을 모든 파일로 하신 후 저장합니다. 
-> 6. 백신 프로그램에서 실시간으로 파일을 검사하고 있다면, 해당 파일을 감지하여 알림을 발생시킵니다.  
+> 5. 파일 형식을 `모든 파일`로 하신 후 저장합니다. 
+> 6. 백신 프로그램(또는 Windows Defender)에서 실시간으로 파일을 검사하고 있다면, 해당 파일을 감지하여 알림을 발생시킵니다.  
 
-
-차단 화면   
+PCA 접속 시 차단 화면   
 
 ![Security Policy - Virus Detection](./img/security_policy_virus_detection.png)
 
@@ -855,6 +933,21 @@ PCA 에서 차단 화면
 ### 로그인 실패 횟수 초과 시 일시적 접속 차단 (Temporarily Block Access After Excessive Login Failures)
 설명: 이 설정을 적용하면 지정된 횟수 이상 로그인에 실패한 경우 일정 시간 동안 해당 계정의 접속을 차단합니다.
 
+![Security Policy - Temporarily Block Access After Excessive Login Failures Setup](./img/security_policy_temporarily_block_access_after_login_failures_setup.png)
+
+- 인증 실패 횟수 :  
+  - ex) 5  
+- 접속 거절 시간 : (초)  
+  - ex) 300   
+
+<br>  
+
+접속 차단 화면  
+
+![Security Policy - Temporarily Block Access After Excessive Login Failures](./img/security_policy_temporarily_block_access_after_login_failures.png)
+
+<br>  
+
 ### 비밀번호 주기적 변경 미수행 시 접속 차단 (Block Access If Password Rotation Not Performed)
 설명: 이 설정을 적용하면 정해진 주기 내에 비밀번호를 변경하지 않은 사용자의 접속을 차단합니다.
 
@@ -877,6 +970,19 @@ PCA 에서 차단 화면
 
 ### 사용자 자동 로그인 접속 허용 (Allow User Auto-Login Access)
 설명: 이 설정을 적용하면 사용자가 자동 로그인을 통해 접속할 수 있도록 허용합니다.
+
+PCA 접속 할 때, `로그인 상태 유지` 체크 박스가 표시 됩니다.  
+![Security Policy - Allow User Auto-Login Access](./img/security_policy_allow_user_auto_login.png)  
+
+`로그인 상태 유지` 체크 박스를 선택 후 사용자 로그인을 진행하여 로그인 완료하게 되면, 이후 로그인은 비밀번호 입력 없이 자동 로그인 처리됩니다.  
+
+다만, 앱에서 `로그아웃`을 눌러 사용자 인증이 로그아웃 처리 되었을 경우, 재로그인을 수행해야 합니다. 
+
+> [!WARN]  
+> 자동로그인은 편의성과 보안의 균형입니다. 자동로그인 사용 시 사용자의 명확한 동의를 획득해야 하고, 세션 타임아웃, 모니터링, 실시간 알림 기능을 사용하여 보안 대책을 추가로 설정하는 것을 권고합니다.  
+> 사용자의 데이터를 보호하는 것이 최우선입니다.   
+
+<br>
 
 ---
 

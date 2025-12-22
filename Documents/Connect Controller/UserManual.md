@@ -32,7 +32,9 @@
   - [보안 정책 \> 단말 인증 정책](#보안-정책--단말-인증-정책)
   - [보안 정책 \> 단말 관리 정책](#보안-정책--단말-관리-정책)
 - [로깅](#로깅)
-- [Admin 보안 정책 (SYSTEM)](#admin-보안-정책-system)
+- [알림 설정](#알림-설정)
+- [System 보안 정책 (SYSTEM)](#system-보안-정책-system)
+  - [시스템 임계치 설정](#시스템-임계치-설정)
 
 
 <!-- TOC end -->
@@ -887,5 +889,124 @@ FLOW > 애플리케이션 플로우
 # 로깅 
 
 
+# 알림 설정 
+알림은 시스템 관리자(또는 정책 관리자)에게 조건에 해당되는 이벤트 발생 시 SMS, Email 을 전송하도록 되어 있습니다.  
+일반 사용자에게 알림은 없습니다.  
 
-# Admin 보안 정책 (SYSTEM)
+![Notification - Register Notification 1](./img/noti_register_notification1.png)  
+- 알림명  
+  - ex) 사용자 등록  
+- 알림 방법  
+  - [x] 이메일  
+  - [x] SMS  
+
+> ![NOTE]  
+> 알림으로 이메일, SMS 를 사용하기 위해서는 SMTP, SMS 설정이 필요 합니다.  
+
+관리자 지정  
+
+![Notification - Register Notification 2](./img/noti_register_notification2.png)  
+
+
+알림 항목 선택 (다중 선택 가능)  
+
+![Notification - Register Notification 3](./img/noti_register_notification3.png)
+
+- [ ] 관리 콘솔 로그인 실패 알림  
+- [ ] PCG 로그인 실패 알림  
+- [ ] PCA 로그인 실패 알림  
+- [ ] 감사 기록 용량 경고 알림  
+- [ ] 임계치 알림  
+- [ ] 자체검사 위반 알림  
+- [ ] 무결성 위반 알림  
+- [ ] 사용 승인 요청 알림  
+
+
+**관리 콘솔 로그인 실패 알림**  
+
+컨트롤러 콘솔의 관리자 접속 5회 실패 시 EMAIL, SMS 로 메시지가 전송됩니다.  
+
+<br>
+
+관리자 로그인 접속 실패 
+
+![Notification - Failed Login Controller Console](./img/noti_failed_login_controller_console.png)  
+
+5회 로그인 접속 실패 시 
+
+![Notification - Controller console 5 times login failures](./img/noti_failed_login_5times_controller_console.png)  
+
+E-MAIL 메시지  
+
+![Notification - Controller console 5 times login failures E-MAIL](./img/noti_failed_login_5times_controller_console_email.png)  
+
+<br> 
+
+**PCG 로그인 실패 알림**
+
+일반 사용자가 Gateway 에 로그인 실패 시 알림을 전송합니다.  
+
+
+<br> 
+
+**PCA 로그인 실패 알림**
+
+일반 사용자가 Controller 에 로그인 실패 시 알림을 전송합니다.  
+
+> [!NOTE]  
+> PCA 로그인 실패 알림은 Policy 의 단말 상태 확인 및 행위 제어에서 [비밀번호 주기적 변경 미수행 시 접속 차단](./SecuriyPolicy.md#로그인-실패-횟수-초과-시-일시적-접속-차단-temporarily-block-access-after-excessive-login-failures) 설정을 적용해야만 해당 알림을 받을 수 있습니다.  
+
+사용자 이메일로 로그인 실패 메시지 전달   
+
+![Notification - Send email after Failed Login](./img/noti_send_email_after_failed_login.png)    
+
+<br> 
+
+**감사 기록 용량 경고 알림**  
+
+
+<br> 
+
+**임계치 알림**  
+
+
+
+<br> 
+
+**자체검사 위반 알림**  
+
+
+<br> 
+
+**무결성 위반 알림**  
+
+
+<br> 
+
+**사용 승인 요청 알림**  
+
+
+<br>
+
+# System 보안 정책 (SYSTEM) 
+
+## 시스템 임계치 설정  
+해당 설정은 Controller 시스템의 자원들 CPU, Memory, DISK 대한 알람을 받기 위해 
+
+SYSTEM > 시스템 환경 설정 > 컨트롤러 정보 
+
+시스템 설정 
+
+![Notification - System Threshold Alram Setup](./img/noti_system_threshold_alram_setup.png)  
+
+- 임계치 설정(CPU %): CPU 사용 임계치를 설정합니다. 
+  - Default : `90%`  
+  - 설정 범위 : `50` ~ `99%`  
+
+- 임계치 설정(Memory %): Memory 사용 임계치를 설정합니다. (가상 메모리 제외) 
+  - Default : `90%`  
+  - 설정 범위 : `50` ~ `99%`  
+  
+- 임계치 설정(DISK %): 전체 DISK 사용 임계치를 설정합니다.  
+  - Default : `90%`  
+  - 설정 범위 : `50` ~ `99%`  
