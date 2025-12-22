@@ -44,7 +44,7 @@
 
 ## 제품 구성 
 
-- **PRIBIT Connect Agent(PCA)** 
+- **PRIBIT Connect Agent(PCA)**  
   사용자 PC/Mobile 기기에 설치하는 Agent로 사용자 인증, 정책 적용 및 제어를 수행합니다. 
 
 - **PRIBIT Connect Controller(PCC)**  
