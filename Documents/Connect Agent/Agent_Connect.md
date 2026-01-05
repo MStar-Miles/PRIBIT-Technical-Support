@@ -2,12 +2,12 @@
 
 아래 단계에 따라 PRIBIT Connect Agent로 PCC에 로그인하고 PCG에 접속할 수 있습니다.
 
-## 1. **PRIBIT Connect Agent 실행**
+## 1. PRIBIT Connect Agent 실행  
 - 설치된 PRIBIT Connect Agent 프로그램을 실행합니다.
 
 <br>
 
-## 2. **PCC 로그인 정보 입력**  
+## 2. PCC 로그인 정보 입력  
 PCC 사용자 ID와 비밀번호를 입력하여 로그인합니다. 
 ![pca controller access](./img/agent_controller_access.png)  
   - 컨트롤러 서버 주소 : PCC Server 주소를 입력합니다.   
@@ -19,8 +19,8 @@ PCC 사용자 ID와 비밀번호를 입력하여 로그인합니다.
 
 <br> 
 
->[!NOTE] 
-> "등록되지 않은 에이전트 버전입니다." 라는 문구 발생 시 아래와 같이 컨트롤러에서 에이전트를 추가해야 합니다. 
+>[!NOTE]  
+> "등록되지 않은 에이전트 버전입니다." 라는 문구 발생 시 아래와 같이 컨트롤러에서 에이전트를 추가해야 합니다.  
 
 ![Not regist the pribit agent](./img/notregistagent.png)
 
@@ -38,7 +38,7 @@ PCC 사용자 ID와 비밀번호를 입력하여 로그인합니다.
 
 <br>
 
-## 3. **PCA 에 할당된 주소 확인**
+## 3. PCA 에 할당된 주소 확인  
 - 접속 완료 후 할당 받은 주소를 확인합니다.  
 ![pca info](./img/agent_moreinfo.png)  
   - **"더보기"**에서 단말 IP 를 확인합니다.  
@@ -46,7 +46,7 @@ PCC 사용자 ID와 비밀번호를 입력하여 로그인합니다.
 
 <br>
 
-## 4. **Local Network 확인**  
+## 4. Local Network 확인  
 - 사용자 PC 의 네트워크 연결을 확인합니다. 
 ```
 (Windows + R)
@@ -118,7 +118,7 @@ IPv6 경로 테이블
 
 <br>
 
-## 5. **정책 확인**
+## 5. 정책 확인  
 - PCC에 설정된 단말의 접속 정책이 정상적으로 작동하는지 확인합니다.  
 - 내부망 접속을 우선 확인합니다.  
 
