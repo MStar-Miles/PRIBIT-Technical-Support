@@ -1,10 +1,12 @@
 **TOC (Table Of Contents)**
 <!-- TOC start  -->
-- [./start-wizard.sh --update](#start-wizardsh---update)
-- [./start-wizard.sh --update](#start-wizardsh---update-1)
-- [ipsec cert, config create](#ipsec-cert-config-create)
-      - [PCG Process 확인](#pcg-process-확인)
-  - [troubleshooting](#troubleshooting)
+- [prerequisites](#prerequisites)
+- [upgrade-steps](#upgrade-steps)
+  - [Package Installation](#package-installation)
+  - [업그레이드 스크립트 update.sh 실행](#업그레이드-스크립트-updatesh-실행)
+  - [PCC 버전 업그레이드 진행](#pcc-버전-업그레이드-진행)
+  - [PCC Process 확인](#pcc-process-확인)
+- [troubleshooting](#troubleshooting)
 
 <!-- TOC end -->
 
@@ -27,6 +29,8 @@
 - deb로 압축된 패키지를 지정된 디렉토리에 압축 해제하는 과정입니다. 
 
 <br>
+
+### Package Installation 
 
 `dpkg` 명령어를 실행하여 패키지를 설치합니다. 
 
@@ -61,7 +65,7 @@ PCC 업그레이드는 `update.sh` 스크립트를 실행하여 진행합니다.
 
 <br>
 
-#### 업그레이드 스크립트 update.sh 실행
+### 업그레이드 스크립트 update.sh 실행
 
 ```
 # ./update.sh  
@@ -69,7 +73,7 @@ PCC 업그레이드는 `update.sh` 스크립트를 실행하여 진행합니다.
 
 <br>
 
-#### PCC 버전 업그레이드 진행 
+### PCC 버전 업그레이드 진행 
 
 실행 로그 
 ```
@@ -96,7 +100,7 @@ PRIBIT Connect Controller Update was completed.
 
 <br>
 
-#### PCC Process 확인 
+### PCC Process 확인 
 - 설치가 정상적으로 완료되면 PCC 가 자동으로 실행되도록 되어 있습니다.
 - 모든 모듈이 정상적으로 기동되었는지 확인합니다. 
 - 자세한 확인 방법은 [Controller_Installation의 3. PCC Process 확인](../Connect%20Controller/Controller_Installation.md#3-pcg-process-확인) 항목을 참고하세요.
