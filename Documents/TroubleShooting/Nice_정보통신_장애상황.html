@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPN 라우팅 충돌 다이어그램</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        .diagram-section {
+            margin-bottom: 50px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            padding: 10px;
+            background: #f0f0f0;
+            border-left: 4px solid #4CAF50;
+        }
+        .diagram {
+            position: relative;
+            min-height: 400px;
+            margin: 20px 0;
+        }
+        .device {
+            position: absolute;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            min-width: 120px;
+        }
+        .client {
+            background: #2196F3;
+            color: white;
+            top: 50px;
+            left: 50px;
+        }
+        .vpn-adapter {
+            background: #FF9800;
+            color: white;
+            top: 50px;
+            left: 300px;
+        }
+        .wifi-adapter {
+            background: #4CAF50;
+            color: white;
+            top: 200px;
+            left: 50px;
+        }
+        .gateway {
+            background: #9C27B0;
+            color: white;
+            top: 200px;
+            left: 300px;
+        }
+        .vpn-gateway {
+            background: #FF5722;
+            color: white;
+            top: 50px;
+            right: 50px;
+        }
+        .company-network {
+            background: #607D8B;
+            color: white;
+            top: 200px;
+            right: 50px;
+        }
+        .local-device {
+            background: #8BC34A;
+            color: white;
+            top: 350px;
+            left: 300px;
+        }
+        .info-box {
+            position: absolute;
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            max-width: 200px;
+        }
+        .arrow {
+            position: absolute;
+            height: 3px;
+            transform-origin: left center;
+        }
+        .arrow-good {
+            background: #4CAF50;
+        }
+        .arrow-bad {
+            background: #f44336;
+        }
+        .arrow-conflict {
+            background: #FF9800;
+            border-top: 3px dashed #FF9800;
+            background: none;
+        }
+        .arrow::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: -5px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid;
+            border-top: 6px solid transparent;
+            border-bottom: 6px solid transparent;
+        }
+        .arrow-good::after {
+            border-left-color: #4CAF50;
+        }
+        .arrow-bad::after {
+            border-left-color: #f44336;
+        }
+        .arrow-conflict::after {
+            border-left-color: #FF9800;
+        }
+        .label {
+            position: absolute;
+            font-size: 11px;
+            background: white;
+            padding: 3px 8px;
+            border-radius: 3px;
+            white-space: nowrap;
+            font-weight: 600;
+        }
+        .label-good {
+            color: #4CAF50;
+            border: 1px solid #4CAF50;
+        }
+        .label-bad {
+            color: #f44336;
+            border: 1px solid #f44336;
+        }
+        .label-conflict {
+            color: #FF9800;
+            border: 1px solid #FF9800;
+        }
+        .legend {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+        .legend-line {
+            width: 40px;
+            height: 3px;
+        }
+        .routing-table {
+            margin: 20px 0;
+            border-collapse: collapse;
+            width: 100%;
+            font-size: 12px;
+        }
+        .routing-table th,
+        .routing-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .routing-table th {
+            background: #4CAF50;
+            color: white;
+        }
+        .routing-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        .conflict-row {
+            background: #ffebee !important;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #f44336;
+        }
+        svg {
+            width: 100%;
+            height: 500px;
+        }
+        .note {
+            background: #e3f2fd;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔴 VPN 라우팅 충돌 다이어그램</h1>
+        <p class="subtitle">OpenVPN + NTKernel Packet Filter Driver 환경</p>
+
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-line arrow-good"></div>
+                <span>정상 경로</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-line arrow-bad"></div>
+                <span>차단된 경로</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-line arrow-conflict"></div>
+                <span>충돌 경로</span>
+            </div>
+        </div>
+
+        <!-- 문제 상황 다이어그램 -->
+        <div class="diagram-section">
+            <div class="section-title">❌ 현재 상태 - 라우팅 충돌 발생</div>
+            
+            <svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+                <!-- 클라이언트 PC -->
+                <rect x="50" y="200" width="150" height="100" fill="#2196F3" rx="8"/>
+                <text x="125" y="240" text-anchor="middle" fill="white" font-weight="bold">클라이언트 PC</text>
+                <text x="125" y="260" text-anchor="middle" fill="white" font-size="12">192.168.10.245</text>
+                
+                <!-- Wi-Fi 어댑터 -->
+                <rect x="300" y="50" width="150" height="80" fill="#4CAF50" rx="8"/>
+                <text x="375" y="85" text-anchor="middle" fill="white" font-weight="bold">Wi-Fi 어댑터</text>
+                <text x="375" y="105" text-anchor="middle" fill="white" font-size="11">IF:17 Metric:306</text>
+                
+                <!-- VPN 어댑터 -->
+                <rect x="300" y="300" width="150" height="80" fill="#FF9800" rx="8"/>
+                <text x="375" y="330" text-anchor="middle" fill="white" font-weight="bold">TAP VPN</text>
+                <text x="375" y="350" text-anchor="middle" fill="white" font-size="11">172.28.36.3</text>
+                <text x="375" y="365" text-anchor="middle" fill="white" font-size="11">IF:3 Metric:1</text>
+                
+                <!-- 로컬 게이트웨이 -->
+                <rect x="600" y="50" width="150" height="80" fill="#9C27B0" rx="8"/>
+                <text x="675" y="85" text-anchor="middle" fill="white" font-weight="bold">로컬 GW</text>
+                <text x="675" y="105" text-anchor="middle" fill="white" font-size="11">192.168.10.1</text>
+                
+                <!-- VPN 게이트웨이 -->
+                <rect x="600" y="300" width="150" height="80" fill="#FF5722" rx="8"/>
+                <text x="675" y="330" text-anchor="middle" fill="white" font-weight="bold">VPN GW</text>
+                <text x="675" y="350" text-anchor="middle" fill="white" font-size="11">172.28.36.1</text>
+                
+                <!-- 로컬 장치 -->
+                <rect x="900" y="50" width="150" height="80" fill="#8BC34A" rx="8"/>
+                <text x="975" y="85" text-anchor="middle" fill="white" font-weight="bold">로컬 장치</text>
+                <text x="975" y="105" text-anchor="middle" fill="white" font-size="11">192.168.10.x</text>
+                
+                <!-- 회사 네트워크 -->
+                <rect x="900" y="300" width="150" height="80" fill="#607D8B" rx="8"/>
+                <text x="975" y="330" text-anchor="middle" fill="white" font-weight="bold">회사 네트워크</text>
+                <text x="975" y="350" text-anchor="middle" fill="white" font-size="11">172.28.x.x</text>
+                
+                <!-- 화살표들 -->
+                <!-- PC to Wi-Fi -->
+                <line x1="200" y1="230" x2="300" y2="90" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrowGreen)"/>
+                <text x="240" y="150" fill="#4CAF50" font-size="12" font-weight="bold">정상</text>
+                
+                <!-- PC to VPN -->
+                <line x1="200" y1="270" x2="300" y2="340" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrowGreen)"/>
+                <text x="240" y="320" fill="#4CAF50" font-size="12" font-weight="bold">정상</text>
+                
+                <!-- Wi-Fi to Local GW (차단됨) -->
+                <line x1="450" y1="90" x2="600" y2="90" stroke="#f44336" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowRed)"/>
+                <text x="505" y="80" fill="#f44336" font-size="12" font-weight="bold">❌ 차단됨!</text>
+                <text x="490" y="110" fill="#f44336" font-size="10">192.168.10.0/24</text>
+                <text x="490" y="125" fill="#f44336" font-size="10">→ VPN으로 라우팅</text>
+                
+                <!-- VPN to VPN GW -->
+                <line x1="450" y1="340" x2="600" y2="340" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrowGreen)"/>
+                
+                <!-- Local GW to Local Device (차단됨) -->
+                <line x1="750" y1="90" x2="900" y2="90" stroke="#f44336" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowRed)"/>
+                <text x="800" y="80" fill="#f44336" font-size="12" font-weight="bold">❌ 불가</text>
+                
+                <!-- VPN GW to Company Network -->
+                <line x1="750" y1="340" x2="900" y2="340" stroke="#4CAF50" stroke-width="2" marker-end="url(#arrowGreen)"/>
+                <text x="805" y="330" fill="#4CAF50" font-size="12" font-weight="bold">✓ 정상</text>
+                
+                <!-- 충돌 표시 -->
+                <line x1="375" y1="130" x2="375" y2="300" stroke="#FF9800" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arrowOrange)"/>
+                <rect x="320" y="200" width="110" height="60" fill="#FFF3E0" stroke="#FF9800" stroke-width="2" rx="4"/>
+                <text x="375" y="220" text-anchor="middle" fill="#FF9800" font-size="11" font-weight="bold">⚠️ 라우팅 충돌!</text>
+                <text x="375" y="235" text-anchor="middle" fill="#E65100" font-size="10">192.168.10.0</text>
+                <text x="375" y="248" text-anchor="middle" fill="#E65100" font-size="9">Metric 1 (VPN)</text>
+                <text x="375" y="258" text-anchor="middle" fill="#E65100" font-size="9">vs Metric 306</text>
+                
+                <!-- 화살표 마커 정의 -->
+                <defs>
+                    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#4CAF50" />
+                    </marker>
+                    <marker id="arrowRed" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#f44336" />
+                    </marker>
+                    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#FF9800" />
+                    </marker>
+                </defs>
+            </svg>
+
+            <div class="note">
+                <strong>❌ 문제점:</strong><br>
+                • 192.168.10.0/24 대역이 <strong>두 개의 라우트</strong>에 존재 (Wi-Fi: Metric 306 vs VPN: Metric 1)<br>
+                • VPN의 낮은 Metric(1) 때문에 <strong>로컬 트래픽이 VPN 터널로 강제 라우팅</strong><br>
+                • 결과: 로컬 게이트웨이(192.168.10.1) 및 로컬 장치들과 통신 불가<br>
+                • 로컬 프린터, NAS, 공유기 설정 페이지 등 접근 불가
+            </div>
+
+            <h3>충돌하는 라우팅 테이블</h3>
+            <table class="routing-table">
+                <thead>
+                    <tr>
+                        <th>목적지</th>
+                        <th>네트워크 마스크</th>
+                        <th>게이트웨이</th>
+                        <th>Metric</th>
+                        <th>IF</th>
+                        <th>상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>192.168.10.0</td>
+                        <td>255.255.254.0 (/23)</td>
+                        <td>192.168.10.245</td>
+                        <td class="highlight">306</td>
+                        <td>17</td>
+                        <td>Wi-Fi (원래 경로)</td>
+                    </tr>
+                    <tr class="conflict-row">
+                        <td class="highlight">192.168.10.0</td>
+                        <td class="highlight">255.255.255.0 (/24)</td>
+                        <td class="highlight">172.28.36.1</td>
+                        <td class="highlight">1 ⚡</td>
+                        <td class="highlight">3</td>
+                        <td class="highlight">⚠️ VPN (우선순위 높음 - 충돌!)</td>
+                    </tr>
+                    <tr>
+                        <td>172.28.0.0</td>
+                        <td>255.255.0.0</td>
+                        <td>172.28.36.1</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>VPN (정상)</td>
+                    </tr>
+                    <tr>
+                        <td>172.25.0.0</td>
+                        <td>255.255.0.0</td>
+                        <td>172.28.36.1</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>VPN (정상)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 해결 후 다이어그램 -->
+        <div class="diagram-section">
+            <div class="section-title">✅ 해결 후 - 정상 라우팅</div>
+            
+            <svg viewBox="0 0 1200 500" xmlns="http://www.w3.org/2000/svg">
+                <!-- 클라이언트 PC -->
+                <rect x="50" y="200" width="150" height="100" fill="#2196F3" rx="8"/>
+                <text x="125" y="240" text-anchor="middle" fill="white" font-weight="bold">클라이언트 PC</text>
+                <text x="125" y="260" text-anchor="middle" fill="white" font-size="12">192.168.10.245</text>
+                
+                <!-- Wi-Fi 어댑터 -->
+                <rect x="300" y="50" width="150" height="80" fill="#4CAF50" rx="8"/>
+                <text x="375" y="85" text-anchor="middle" fill="white" font-weight="bold">Wi-Fi 어댑터</text>
+                <text x="375" y="105" text-anchor="middle" fill="white" font-size="11">IF:17 Metric:306</text>
+                
+                <!-- VPN 어댑터 -->
+                <rect x="300" y="300" width="150" height="80" fill="#FF9800" rx="8"/>
+                <text x="375" y="330" text-anchor="middle" fill="white" font-weight="bold">TAP VPN</text>
+                <text x="375" y="350" text-anchor="middle" fill="white" font-size="11">172.28.36.3</text>
+                <text x="375" y="365" text-anchor="middle" fill="white" font-size="11">IF:3 Metric:1</text>
+                
+                <!-- 로컬 게이트웨이 -->
+                <rect x="600" y="50" width="150" height="80" fill="#9C27B0" rx="8"/>
+                <text x="675" y="85" text-anchor="middle" fill="white" font-weight="bold">로컬 GW</text>
+                <text x="675" y="105" text-anchor="middle" fill="white" font-size="11">192.168.10.1</text>
+                
+                <!-- VPN 게이트웨이 -->
+                <rect x="600" y="300" width="150" height="80" fill="#FF5722" rx="8"/>
+                <text x="675" y="330" text-anchor="middle" fill="white" font-weight="bold">VPN GW</text>
+                <text x="675" y="350" text-anchor="middle" fill="white" font-size="11">172.28.36.1</text>
+                
+                <!-- 로컬 장치 -->
+                <rect x="900" y="50" width="150" height="80" fill="#8BC34A" rx="8"/>
+                <text x="975" y="85" text-anchor="middle" fill="white" font-weight="bold">로컬 장치</text>
+                <text x="975" y="105" text-anchor="middle" fill="white" font-size="11">192.168.10.x</text>
+                
+                <!-- 회사 네트워크 -->
+                <rect x="900" y="300" width="150" height="80" fill="#607D8B" rx="8"/>
+                <text x="975" y="330" text-anchor="middle" fill="white" font-weight="bold">회사 네트워크</text>
+                <text x="975" y="350" text-anchor="middle" fill="white" font-size="11">172.28.x.x</text>
+                
+                <!-- 화살표들 -->
+                <!-- PC to Wi-Fi -->
+                <line x1="200" y1="230" x2="300" y2="90" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrowGreen)"/>
+                <text x="230" y="150" fill="#4CAF50" font-size="13" font-weight="bold">✓ 로컬 트래픽</text>
+                
+                <!-- PC to VPN -->
+                <line x1="200" y1="270" x2="300" y2="340" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrowGreen)"/>
+                <text x="230" y="320" fill="#4CAF50" font-size="13" font-weight="bold">✓ VPN 트래픽</text>
+                
+                <!-- Wi-Fi to Local GW -->
+                <line x1="450" y1="90" x2="600" y2="90" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrowGreen)"/>
+                <text x="495" y="80" fill="#4CAF50" font-size="13" font-weight="bold">✓ 정상 접근</text>
+                <text x="485" y="110" fill="#4CAF50" font-size="10">192.168.10.0/23</text>
+                <text x="490" y="125" fill="#4CAF50" font-size="10">→ Wi-Fi 경로</text>
+                
+                <!-- VPN to VPN GW -->
+                <line x1="450" y1="340" x2="600" y2="340" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrowGreen)"/>
+                <text x="495" y="330" fill="#4CAF50" font-size="13" font-weight="bold">✓ 회사망</text>
+                
+                <!-- Local GW to Local Device -->
+                <line x1="750" y1="90" x2="900" y2="90" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrowGreen)"/>
+                <text x="800" y="80" fill="#4CAF50" font-size="13" font-weight="bold">✓ 정상</text>
+                
+                <!-- VPN GW to Company Network -->
+                <line x1="750" y1="340" x2="900" y2="340" stroke="#4CAF50" stroke-width="3" marker-end="url(#arrowGreen)"/>
+                <text x="800" y="330" fill="#4CAF50" font-size="13" font-weight="bold">✓ 정상</text>
+                
+                <!-- 분리 표시 -->
+                <rect x="320" y="180" width="110" height="80" fill="#E8F5E9" stroke="#4CAF50" stroke-width="2" rx="4"/>
+                <text x="375" y="205" text-anchor="middle" fill="#4CAF50" font-size="11" font-weight="bold">✓ 경로 분리</text>
+                <text x="375" y="220" text-anchor="middle" fill="#2E7D32" font-size="9">로컬: Wi-Fi</text>
+                <text x="375" y="235" text-anchor="middle" fill="#2E7D32" font-size="9">회사: VPN</text>
+                <text x="375" y="250" text-anchor="middle" fill="#2E7D32" font-size="9">충돌 해결!</text>
+            </svg>
+
+            <div class="note" style="background: #e8f5e9; border-left-color: #4CAF50;">
+                <strong>✅ 해결 방법:</strong><br>
+                • VPN 라우팅 설정에서 <strong>192.168.10.0/24 제거</strong><br>
+                • 로컬 네트워크는 Wi-Fi를 통해 직접 라우팅<br>
+                • 회사 네트워크(172.x.x.x, 10.x.x.x)만 VPN 터널 사용<br>
+                • 결과: 로컬 장치와 회사 리소스 모두 정상 접근 가능
+            </div>
+
+            <h3>수정된 라우팅 테이블</h3>
+            <table class="routing-table">
+                <thead>
+                    <tr>
+                        <th>목적지</th>
+                        <th>네트워크 마스크</th>
+                        <th>게이트웨이</th>
+                        <th>Metric</th>
+                        <th>IF</th>
+                        <th>상태</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background: #e8f5e9;">
+                        <td><strong>192.168.10.0</strong></td>
+                        <td><strong>255.255.254.0 (/23)</strong></td>
+                        <td><strong>192.168.10.245</strong></td>
+                        <td><strong>306</strong></td>
+                        <td><strong>17</strong></td>
+                        <td><strong>✓ Wi-Fi (충돌 해결!)</strong></td>
+                    </tr>
+                    <tr>
+                        <td>172.28.0.0</td>
+                        <td>255.255.0.0</td>
+                        <td>172.28.36.1</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>VPN (정상)</td>
+                    </tr>
+                    <tr>
+                        <td>172.25.0.0</td>
+                        <td>255.255.0.0</td>
+                        <td>172.28.36.1</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>VPN (정상)</td>
+                    </tr>
+                    <tr>
+                        <td>10.173.0.0</td>
+                        <td>255.255.0.0</td>
+                        <td>172.28.36.1</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>VPN (정상)</td>
+                    </tr>
+                    <tr>
+                        <td>192.168.30.0</td>
+                        <td>255.255.255.0</td>
+                        <td>172.28.36.1</td>
+                        <td>1</td>
+                        <td>3</td>
+                        <td>VPN (원격 사설망)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 패킷 흐름 상세 -->
+        <div class="diagram-section">
+            <div class="section-title">📊 패킷 흐름 비교</div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                <div>
+                    <h3 style="color: #f44336;">❌ 문제 상황</h3>
+                    <div style="background: #ffebee; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 12px; line-height: 1.8;">
+                        <strong>192.168.10.100으로 ping 시도:</strong><br><br>
+                        1. PC (192.168.10.245)<br>
+                        &nbsp;&nbsp;↓ 라우팅 테이블 조회<br>
+                        &nbsp;&nbsp;↓ <span style="color: #f44336;">192.168.10.0/24 → Metric 1 (VPN)</span><br>
+                        2. TAP VPN 어댑터 (IF:3)<br>
+                        &nbsp;&nbsp;↓ VPN 터널 암호화<br>
+                        3. VPN 게이트웨이 (172.28.36.1)<br>
+                        &nbsp;&nbsp;↓ <span style="color: #f44336;">목적지를 찾을 수 없음</span><br>
+                        4. <strong style="color: #f44336;">❌ 타임아웃 / 실패</strong><br><br>
+                        <strong>원인:</strong> 로컬 네트워크 패킷이<br>
+                        VPN 터널로 잘못 전송됨
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 style="color: #4CAF50;">✅ 해결 후</h3>
+                    <div style="background: #e8f5e9; padding: 15px; border-radius: 5px; font-family: monospace; font-size: 12px; line-height: 1.8;">
+                        <strong>192.168.10.100으로 ping 시도:</strong><br><br>
+                        1. PC (192.168.10.245)<br>
+                        &nbsp;&nbsp;↓ 라우팅 테이블 조회<br>
+                        &nbsp;&nbsp;↓ <span style="color: #4CAF50;">192.168.10.0/23 → Metric 306 (Wi-Fi)</span><br>
+                        2. Wi-Fi 어댑터 (IF:17)<br>
+                        &nbsp;&nbsp;↓ 로컬 게이트웨이로 전송<br>
+                        3. 로컬 게이트웨이 (192.168.10.1)<br>
+                        &nbsp;&nbsp;↓ ARP로 MAC 주소 확인<br>
+                        4. 목적지 장치 (192.168.10.100)<br>
+                        &nbsp;&nbsp;↓ 응답<br>
+                        5. <strong style="color: #4CAF50;">✓ 성공!</strong><br><br>
+                        <strong>결과:</strong> 로컬 네트워크는 Wi-Fi로,<br>
+                        회사 네트워크는 VPN으로 분리
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 요약 -->
+        <div class="note" style="background: #fff3e0; border-left-color: #FF9800;">
+            <h3 style="margin-top: 0;">🔑 핵심 요약</h3>
+            <strong>문제:</strong> OpenVPN이 로컬 네트워크(192.168.10.0/24)를 VPN 라우팅 목록에 추가<br>
+            <strong>원인:</strong> VPN의 낮은 Metric(1)으로 인해 로컬 트래픽이 VPN 터널로 강제 라우팅<br>
+            <strong>증상:</strong> 로컬 장치, 공유기, 프린터 등에 접근 불가<br>
+            <strong>해결:</strong> .ovpn 파일에서 <code>route 192.168.10.0 255.255.255.0</code> 제거 또는<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>route-nopull</code> 사용 + 필요한 라우트만 수동 지정
+        </div>
+    </div>
+</body>
+</html>
