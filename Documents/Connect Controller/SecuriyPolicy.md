@@ -439,6 +439,14 @@ PCA 접속 시 차단 화면
 ### 테더링 사용 접속 시 접속 차단 (Block Access When Tethering Is Used)
 설명: 이 설정을 적용하면 테더링을 통한 네트워크 연결 시 접속을 차단합니다.
 
+
+
+
+
+
+
+
+
 ### 다중 네트워크 인터페이스(NIC) 사용 시 접속 차단 (Block Access When Multiple NICs Are Used)  
 
 설명: 이 설정을 적용하면 여러 개의 네트워크 인터페이스가 동시에 활성화된 경우 접속을 차단하여 데이터 유출 경로를 차단합니다.  
@@ -859,6 +867,10 @@ PCA 에서 접속 차단 화면
 - 정책 생성 시 제한할 플랫폼들을 선택할 수 있습니다  
 - **"접속 단말 최대 개수"**는 선택한 플랫폼들 중 동시에 접속 가능한 플랫폼의 개수를 의미합니다  
 - **"접속 단말 최대 개수"**의 최대 설정 값은 정책 생성 시 선택한 플랫폼의 수  
+
+상세 설정 화면 
+![Security Policy - Concurrent Device Limit Exceeded Per Account Config](./img/security_policy_concurrent_device_limit_per_platform_config.png)
+
 
 하나의 플랫폼에서 이중 접속 시  
 
