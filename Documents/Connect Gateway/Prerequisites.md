@@ -4,7 +4,7 @@ PRIBIT Connect Gateway 를 설치하기 위해 사전 요구되는 시스템 환
 
 ## Hardware Requirements
 - Minimum 2 GHz dual-core processor
-- At least 4 GB RAM
+- At least 8 GB RAM
 - Minimum 100 GB available disk space
 
 ## Operating System
