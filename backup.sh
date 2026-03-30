@@ -2,6 +2,7 @@
 
 # 1. 환경 변수 설정
 BACKUP_DIR="/root/outline-backup"
+TARGET_SUBDIR="Documents/Outline-backup"
 DATE=$(date +%Y-%m-%d-%H%M)
 DB_CONTAINER="outline-docker-compose-wk-postgres-1"
 DB_USER="user"   # <--- 여기에 실제 DB 사용자명을 입력하세요.
@@ -15,14 +16,14 @@ git pull origin $MAIN_BRANCH
 
 # 3. 데이터 덤프 실행 (파일명을 고정하여 변경 사항 추적 가능하게 함)
 # 만약 비밀번호를 물어본다면 실행 전 export PGPASSWORD='비번'을 입력하세요.
-docker exec $DB_CONTAINER pg_dump -U $DB_USER outline > outline_db_backup.sql
+docker exec $DB_CONTAINER pg_dump -U $DB_USER outline > $TARGET_SUBDIR/outline_db_backup.sql
 
 # 4. 백업용 임시 브랜치 생성 (매번 새로 갱신)
 git checkout -B auto-backup
 
 # 5. 변경사항 커밋 및 강제 푸시
 git add .
-git commit -m "Outline Backup: $DATE"
+git commit -m "Outline Backup: $DATE (Path: $TARGET_SUBDIR)"
 git push -f origin auto-backup
 
 # 6. GitHub CLI로 PR 생성 (Base를 latest로 지정)

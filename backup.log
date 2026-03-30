@@ -1,0 +1,12 @@
+log
+
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.sh
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	backup.sh
+D	outline_db_backup.sql
