@@ -1,0 +1,404 @@
+log
+
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.sh
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	backup.sh
+D	outline_db_backup.sql
+[auto-backup 18d9da9] Outline Backup: 2026-03-30-0300 (Path: Documents/Outline-backup)
+ 3 files changed, 77 insertions(+), 40 deletions(-)
+ rename outline_db_backup.sql => Documents/Outline-backup/outline_db_backup.sql (97%)
+ create mode 100644 backup.log
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   c9b4373..18d9da9  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup ad7a28b] Outline Backup: 2026-03-31-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 71 insertions(+), 15 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   18d9da9..ad7a28b  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 6eb91a7] Outline Backup: 2026-04-01-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 121 insertions(+), 21 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   ad7a28b..6eb91a7  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 9a7f5b2] Outline Backup: 2026-04-02-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   6eb91a7..9a7f5b2  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 9426c37] Outline Backup: 2026-04-03-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 94 insertions(+), 15 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   9a7f5b2..9426c37  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 23d3afc] Outline Backup: 2026-04-04-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 71 insertions(+), 9 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   9426c37..23d3afc  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 83c6cbb] Outline Backup: 2026-04-05-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 18 insertions(+), 1 deletion(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   23d3afc..83c6cbb  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 72a2554] Outline Backup: 2026-04-06-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 105 insertions(+), 39 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   83c6cbb..72a2554  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup b7e7bed] Outline Backup: 2026-04-07-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 66 insertions(+), 21 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   72a2554..b7e7bed  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 5ddd13d] Outline Backup: 2026-04-08-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 112 insertions(+), 20 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   b7e7bed..5ddd13d  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 42115f2] Outline Backup: 2026-04-09-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 60 insertions(+), 19 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   5ddd13d..42115f2  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup a9a5914] Outline Backup: 2026-04-10-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 223 insertions(+), 68 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   42115f2..a9a5914  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 79665c9] Outline Backup: 2026-04-11-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 109 insertions(+), 32 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   a9a5914..79665c9  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup c119e45] Outline Backup: 2026-04-12-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 19 insertions(+), 2 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   79665c9..c119e45  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 0dea8a7] Outline Backup: 2026-04-13-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 71 insertions(+), 26 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   c119e45..0dea8a7  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 3da7e67] Outline Backup: 2026-04-14-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 49 insertions(+), 15 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   0dea8a7..3da7e67  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup becee67] Outline Backup: 2026-04-15-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 188 insertions(+), 98 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   3da7e67..becee67  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 8705838] Outline Backup: 2026-04-16-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 128 insertions(+), 47 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   becee67..8705838  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 2cd5d92] Outline Backup: 2026-04-17-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 160 insertions(+), 57 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   8705838..2cd5d92  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 5f3a08f] Outline Backup: 2026-04-18-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 136 insertions(+), 25 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   2cd5d92..5f3a08f  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	backup.log
+[auto-backup 8e920d4] Outline Backup: 2026-04-19-0300 (Path: Documents/Outline-backup)
+ 1 file changed, 16 insertions(+)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   5f3a08f..8e920d4  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 89780f0] Outline Backup: 2026-04-20-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 55 insertions(+), 22 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   8e920d4..89780f0  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
+[auto-backup 77aca6f] Outline Backup: 2026-04-21-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 136 insertions(+), 31 deletions(-)
+To https://github.com/MStar-Miles/PRIBIT-Technical-Support.git
+   89780f0..77aca6f  auto-backup -> auto-backup
+a pull request for branch "auto-backup" into branch "latest" already exists:
+https://github.com/MStar-Miles/PRIBIT-Technical-Support/pull/62
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+Already up to date.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
