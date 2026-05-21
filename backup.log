@@ -1210,3 +1210,32 @@ fatal: Need to specify how to reconcile divergent branches.
 Reset branch 'auto-backup'
 M	Documents/Outline-backup/outline_db_backup.sql
 M	backup.log
+[auto-backup 9b40ab3] Outline Backup: 2026-05-20-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 116 insertions(+), 24 deletions(-)
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/MStar-Miles/PRIBIT-Technical-Support.git/'
+HTTP 401: Bad credentials (https://api.github.com/graphql)
+Try authenticating with:  gh auth login
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+From https://github.com/MStar-Miles/PRIBIT-Technical-Support
+ * branch            latest     -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint:
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint:
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+Reset branch 'auto-backup'
+M	Documents/Outline-backup/outline_db_backup.sql
+M	backup.log
