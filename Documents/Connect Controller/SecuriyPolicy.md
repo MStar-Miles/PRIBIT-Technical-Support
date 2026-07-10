@@ -365,8 +365,8 @@ OTP 인증 방식이 `한 가지`만 설정되어 있을 경우, OTP 코드는 �
 > 테스트용 바이러스 프로그램 만들기  
 > 1. 바탕화면에서 [마우스 오른쪽을 클릭] > [새로 만들기] > [텍스트 문서] 를 순서대로 선택합니다.  
 > 2. 새로 만들어진 텍스트 문서에 임시로 아무 이름을 지어 줍니다. *ex) inspect_virus_test*
-> 3. 새로 만든 텍스트 문서를 열어주고 다음 값을 저장합니다. 
->   X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H* 
+> 3. 새로 만든 텍스트 문서를 열어주고 다음 값을 저장합니다.  
+>   X5O!P%@AP[4\PZX54(P^)7CC)7}$EICAR-STANDARD-ANTIVIRUS-TEST-FILE!$H+H*  
 > 4. 입력을 마치신 후 [파일] > [다른 이름으로 저장]을 선택합니다. 
 > 5. 파일 형식을 `모든 파일`로 하신 후 저장합니다. 
 > 6. 백신 프로그램(또는 Windows Defender)에서 실시간으로 파일을 검사하고 있다면, 해당 파일을 감지하여 알림을 발생시킵니다.  
@@ -381,6 +381,19 @@ PCA 접속 시 차단 화면
 설명: 이 설정을 적용하면 치료되지 않은 바이러스가 단말에 존재하는 경우 접속을 차단합니다.  
 
 ![Security Policy - Untreated Virus Detected](./img/security_policy_untreated_virus_detected.png)  
+
+미치료 바이러스가 Windows Defender 에 탐지되면 일반적인 방법으로는 삭제가 되지 않습니다.  
+
+아래 방법으로 진행합니다.  
+윈도우 안전모드로 접속해서 아래 경로로 접근합니다.  
+```윈도우 안전모드 접근 방법 Win + R ```   
+msconfig 명령 입력 후 부팅 탭에서 안전모드 선택 후 재부팅합니다. 
+```
+C:/ProgramData/Microsoft/Windows Defender/Scans/History/Service/DetectionHistory  
+```
+안전모드에 접속하지 않으면 위 경로에 접근이 안됩니다.  
+해당 경로로 접근 후 안에 있는 내용들을 모두 깔끔하게 삭제해줍니다.  
+그리고, 다시 일반 재부팅하여 접속합니다. 
 
 > [!NOTE]  
 > WMI 서비스 활성화  
@@ -409,7 +422,17 @@ PCA 접속 시 차단 화면
 설명: 이 설정을 적용하면 접속 중 WiFi 네트워크가 변경될 경우 접속을 차단합니다.
 
 ### 비인가 WiFi 사용 시 접속 차단 (Block Access On Unauthorized WiFi Use)
-설명: 이 설정을 적용하면 승인되지 않은 WiFi 네트워크를 사용하는 경우 접속을 차단합니다.
+설명: 이 설정을 적용하면 승인되지 않은 WiFi 네트워크를 사용하는 경우 접속을 차단합니다. 
+
+![Security Policy - Block Access On Unauthorized WiFi Use](./img/security_policy_block_acces_on_unauthorized_wifi_use.png)
+
+차단할 WiFi SSID 를 입력합니다. 
+
+![Security Policy - Block Access On Unauthorized WiFi Use Agent](./img/security_policy_block_acces_on_unauthorized_wifi_use_agent.png)  
+
+차단 목록에 있는 SSID 로 에이전트 접속 시 차단합니다. 
+
+<br>  
 
 ### 인가된 WiFi 외 사용 시 접속 차단 (Block Access Outside Approved WiFi)
 설명: 이 설정을 적용하면 승인된 WiFi 목록에 없는 네트워크 사용 시 접속을 차단합니다.
@@ -478,7 +501,17 @@ PCA 에서 차단 화면
 <br>
 
 ### 인가된 IP 대역 외 접속 차단 (Block Access Outside Approved IP Ranges)
-설명: 이 설정을 적용하면 승인된 IP 대역 외의 네트워크에서 접속을 시도할 경우 차단합니다.
+설명: 이 설정을 적용하면 승인된 IP 대역 외의 네트워크에서 접속을 시도할 경우 차단합니다.  
+
+![Security Policy - Block Access Outside Approved IP Ranges](./img/security_policy_block_access_outside_approved_ip_ranges.png) 
+
+- ex) 192.168.0.0/24 와 같이 IP 주소 범위로 설정값을 입력해야 합니다. 
+
+![Security Policy - Block Access Outside Approved IP Ranges Agent](./img/security_policy_block_access_outside_approved_ip_ranges_agent.png) 
+
+사용자 PC 의 로컬 IP를 설정값과 비교합니다. 
+
+<br> 
 
 ### 미승인 IP 접속 시 승인 요청 및 접속 차단 (Require Approval And Block Access For Unapproved IPs)
 설명: 이 설정을 적용하면 미승인 IP에서 접속 시도 시 관리자에게 승인 요청을 보내고 승인 전까지 접속을 차단합니다.
@@ -731,14 +764,16 @@ PCA 에서 차단 화면
 - [ ] Google Android  
 - [ ] Google Android Tablet  
 검사 대상  
-- *ex) FileZilla Server*  
+- *ex) AhnLab V3 Lite*  
 비교 방법  
 - [x] 설치 경로 + 설치 프로그램명 *`default`*  
 - [ ] 설치 프로그램명  
 비교 정보  
-- *ex) C:\Program Files\FileZilla Server\FileZilla Server 1.11.1*  
+- *ex) C:\Program Files\AhnLab\V3Lite40\AhnLab V3 Lite*  
 다운로드 URL  
 - *ex) (blank)*  
+
+![Security Policy - Required Applications Not Installed Agent](./img/security_policy_required_applications_not_installed_agent.png)  
 
 > [!INFO]  
 > 검사 대상  
@@ -753,10 +788,10 @@ PCA 에서 차단 화면
 > 다운로드 URL  
 > - 설치되어야 하는 필수 프로그램의 설치 파일을 다운로드 할 수 있는 URL 정보를 입력합니다.  
 
-<br>
+<br> 
 
-### 필수 애플리케이션 미실행 시 접속 차단 (Block Access If Required Applications Not Running)
-설명: 이 설정을 적용하면 필수 애플리케이션이 실행되지 않은 상태에서의 접속을 차단합니다.
+### 필수 애플리케이션 미실행 시 접속 차단 (Block Access If Required Applications Not Running)  
+설명: 이 설정을 적용하면 필수 애플리케이션이 실행되지 않은 상태에서의 접속을 차단합니다.  
 
 필수 애플리케이션 미실행 시 접속 차단 상세 설정  
 
@@ -771,7 +806,7 @@ PCA 에서 차단 화면
 - [x] 설치 경로 + 설치 프로그램명 *`default`*  
 - [ ] 설치 프로그램명  
 비교 정보  
-- *ex) C:\Program Files\FileZilla Server\filezilla-server.exe*  
+- *ex) C:\Program Files\FileZilla Server\filezilla-server.exe*   
 다운로드 URL  
 - *ex) (blank)*  
 
@@ -795,13 +830,20 @@ PCA 에서 차단 화면
 ### 애플리케이션 무결성 훼손 시 애플리케이션 접속 차단 (Block Access To Applications With Tampered Integrity)
 설명: 이 설정을 적용하면 PCA 애플리케이션 파일이 변조되거나 무결성이 훼손된 경우 해당 애플리케이션 접속을 차단합니다.
 
+> [!INFO] 통신 애플리케이션에 실행 위치 비교 값 등록  
+> Object > 통신 애플리케이션 > 애플리케이션 유효성 검사 정보 > 실행 위치 비교 값을 등록해주어야 해당 정책을 적용할 수 있습니다.  
+
+![Security Policy - Block Access To Applications With Tampered Integrity](./img/security_policy_applications_with_tampered_integrity.png)
+
+- 실행 파일 해쉬값 비교
+  ex) Chrome.exe -> b430638d ... 63b756b0d  
+
+> [!INFO] 실행 해쉬값 비교 방법 
+>  ApplicationInfo_v2.1_dotnet 에서 프로그램 실행파일을 지정하고 Hash, Signature 값을 추출하여 사용합니다.  
+
 PCA 에서 접속 차단 화면  
 
-![Security Policy - To Applications With Tampered Integrity](./img/security_policy_to_application_with_tampered_integrity.png)
-
-> [!INFO] 애플리케이션 무결성  
-> 현재 2.6.4.18 버전 기준  
-> 무결성 정책 적용 없이 PCA 실행 시 무결성 검사를 수행하도록 되어 있습니다.  
+![Security Policy - Block Access To Applications With Tampered Integrity](./img/security_policy_applications_with_tampered_integrity_agent.png)
 
 <br>
 
@@ -1155,8 +1197,28 @@ RDP를 이용한 파일 전송이나 클립보드에 공유된 내용은 Remote 
 
 <br>
 
-### 데이터 플로우 기본 허용 모드 활성화 (Enable Default-Allow Data Flow Mode)
-설명: 이 설정을 적용하면 데이터 플로우에 대해 기본적으로 허용 정책을 적용하고 특정 항목만 차단합니다.
+### 데이터 플로우 기본 허용 모드 활성화 (Enable Default-Allow Data Flow Mode)  
+설명: 이 설정을 적용하면 데이터 플로우에 대해 기본적으로 허용 정책을 적용하고 특정 항목만 차단합니다. 
+
+![Security Policy - Default-Allow Data Flow Mode](./img/security_policy_default_allow_dataflow_mode.png)  
+
+어플리케이션 플로우에 등록(허용)되지 않는 목적지도 기본으로 허용되도록하는 모드입니다. 
+
+![Security Policy - Default-Allow Data Flow Mode Deny](./img/security_policy_default_allow_dataflow_mode_disable.png)  
+
+- 예시) 애플리케이션 Flow 에 192.168.0.128 ~ 192.168.0.254 까지(Port ALL Allow) 설정되어 있으면, 기본적으로 192.168.0.1 ~ 192.168.0.127 주소로 접속 시 차단됩니다. 
+
+데이터 플로우 기본 허용 모드 활성화 정책이 설정되어 기본 허용 모드로 변경됩니다. 
+
+![Security Policy - Default-Allow Data Flow Mode Allow](./img/security_policy_default_allow_dataflow_mode_enable.png)  
+
+- 192.168.0.1 ~ 192.168.0.127 주소로 접속 시도 해도 차단되지 않습니다. 
+
+![Security Policy - Default-Allow Data Flow Mode Logging](./img/security_policy_default_allow_dataflow_mode_logging.png)  
+
+데이터 플로우 기본 허용 모드 활성화 시 접속 차단 없이 사용하는 로그를 확인 할 수 있습니다.  
+
+<br>  
 
 ### 데이터 패킷 드롭 로깅 활성화 (Enable Data Packet Drop Logging)  
 
@@ -1170,19 +1232,41 @@ RDP를 이용한 파일 전송이나 클립보드에 공유된 내용은 Remote 
 
 <br>
 
-### 수신 대기 네트워크 포트 로깅 활성화 (Enable Listening Network Port Logging)
+### 수신 대기 네트워크 포트 로깅 활성화 (Enable Listening Network Port Logging)  
 설명: 이 설정을 적용하면 단말에서 열려있는 수신 대기 포트 정보를 로깅하여 비정상 포트 사용을 탐지합니다.
 
+![Security Policy - Enable Listening Network Port Logging](./img/security_policy_listening_network_port_logging.png) 
 
+해당 로그는 LOG > 전자증거 > 터널접속로그 > 전자증거 세부 항목 > 설치된 애플리케이션 > 상세 보기 에서 확인 할 수 있습니다. 
 
-### 프로세스 설치 이벤트 로깅 활성화 (Enable Process Install Event Logging)
+![Security Policy - Enable Listening Network Port Logging Details](./img/security_policy_listening_network_port_logging_details.png) 
+
+프로세스 아이디 그리고 프로세스 명, 프로토콜, 포트 정보를 확인할 수 있습니다. 
+
+<br>
+
+### 프로세스 설치 이벤트 로깅 활성화 (Enable Process Install Event Logging)  
 설명: 이 설정을 적용하면 프로세스 설치 이벤트를 로깅하여 비인가 소프트웨어 설치를 추적합니다.
 
+![Security Policy - Enable Process Install Event Logging](./img/security_policy_process_install_event_logging.png) 
 
+해당 로그는 LOG > 전자증거 > 터널접속로그 > 전자증거 세부 항목 > 설치된 애플리케이션 > 상세 보기 에서 확인 할 수 있습니다. 
 
-### 프로세스 실행 이벤트 로깅 활성화 (Enable Process Execution Event Logging)
+![Security Policy - Enable Process Install Event Logging Details](./img/security_policy_process_install_event_logging_detail.png)
+
+애플리케이션 명 그리고 설치 경로, 배포명(제조사), 설치된 일자를 확인 할 수 있습니다. 
+
+<br>
+
+### 프로세스 실행 이벤트 로깅 활성화 (Enable Process Execution Event Logging)  
 설명: 이 설정을 적용하면 프로세스 실행 이벤트를 로깅하여 악성 프로세스 실행을 탐지하고 추적합니다.
 
+![Security Policy - Enable Process Execution Event Logging](./img/security_policy_process_execution_event_logging.png)  
 
+해당 로그는 LOG > 전자증거 > 터널접속로그 > 전자증거 세부 항목 > 실행중인 애플리케이션 > 상세 보기 에서 확인 할 수 있습니다. 
 
+![Security Policy - Enable Process Execution Event Logging Details](./img/security_policy_process_execution_event_logging_details.png) 
 
+프로세스 아이디(PID), 프로세스 명, 실행 경로, 코드 사인 여부를 확인 할 수 있습니다. 
+
+<br>
