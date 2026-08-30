@@ -3548,3 +3548,23 @@ and the repository exists.
 Reset branch 'auto-backup'
 M	Documents/Outline-backup/outline_db_backup.sql
 M	backup.log
+[auto-backup cc42d85] Outline Backup: 2026-08-29-0300 (Path: Documents/Outline-backup)
+ 2 files changed, 36 insertions(+), 7 deletions(-)
+ssh: connect to host ssh.github.com port 443: Connection timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Post "https://api.github.com/graphql": dial tcp 20.200.245.245:443: i/o timeout
+기존 PR이 이미 존재하여 브랜치만 업데이트되었습니다.
+error: Your local changes to the following files would be overwritten by checkout:
+	backup.log
+Please commit your changes or stash them before you switch branches.
+Aborting
+ssh: connect to host ssh.github.com port 443: Connection timed out
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+Reset branch 'auto-backup'
+M	backup.log
