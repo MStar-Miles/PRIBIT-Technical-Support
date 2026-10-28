@@ -516,6 +516,8 @@ PCA 에서 차단 화면
 ### 미승인 IP 접속 시 승인 요청 및 접속 차단 (Require Approval And Block Access For Unapproved IPs)
 설명: 이 설정을 적용하면 미승인 IP에서 접속 시도 시 관리자에게 승인 요청을 보내고 승인 전까지 접속을 차단합니다.
 
+단, **미승인 IP 접속 시 승인 요청 및 접속 차단** 정책은 유선으로 접속된 단말에만 적용됩니다.   
+
 미승인 IP에서 접속 시도 시 관리자에게 승인 요청 화면  
 
 ![Security Policy - Require Approval for Unapproved IPs](./img/secuirty_policy_require_approval_for_unapproved_ips.png)   
